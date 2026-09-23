@@ -1,324 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>wmn-lab — домашняя страничка</title>
-<style>
-  :root{
-    --desk:#2B5CA8;
-    --silver:#D4D0C8;
-    --silver-hi:#FFFFFF;
-    --silver-lo:#808080;
-    --silver-dk:#404040;
-    --navy:#0A246A;
-    --sky:#A6CAF0;
-    --link:#0000EE;
-    --visited:#551A8B;
-    --new:#FFE600;
-    --paper:#FFFFFF;
-    --ui:Tahoma, Verdana, "Segoe UI", sans-serif;
-    --serif:"Times New Roman", Times, Georgia, serif;
-    --mono:"Courier New", Courier, monospace;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0}
-  body{
-    font-family:var(--serif);
-    font-size:18px;
-    line-height:1.5;
-    color:#000;
-    background-color:var(--desk);
-    background-image:
-      radial-gradient(1px 1px at 12px 18px, #ffffffcc 50%, transparent 51%),
-      radial-gradient(1px 1px at 58px 71px, #ffffff88 50%, transparent 51%),
-      radial-gradient(1.5px 1.5px at 91px 34px, #fff 50%, transparent 51%),
-      radial-gradient(1px 1px at 33px 96px, #ffffff66 50%, transparent 51%);
-    background-size:110px 110px;
-    padding:28px 16px 48px;
-    min-height:100vh;
-  }
-
-  /* ---------- WordArt-заголовок: главный «вау» страницы ---------- */
-  .masthead{text-align:center;margin:8px auto 22px;max-width:900px}
-  .wordart{
-    display:inline-block;
-    font-family:"Arial Black", Impact, var(--ui);
-    font-weight:900;
-    font-size:clamp(48px, 13vw, 116px);
-    line-height:1;
-    letter-spacing:-1px;
-    background:linear-gradient(180deg,#FFF6A0 0%,#FFD400 38%,#FF8A00 62%,#E0301E 100%);
-    -webkit-background-clip:text;background-clip:text;
-    color:transparent;
-    filter:drop-shadow(2px 2px 0 #7A1200) drop-shadow(2px 2px 0 #7A1200) drop-shadow(3px 3px 0 #3a0800) drop-shadow(6px 8px 0 rgba(0,0,0,.35));
-    transform:perspective(500px) rotateX(14deg) skewX(-6deg);
-    transform-origin:bottom center;
-    padding:0 .08em .06em;
-  }
-  .tagline{
-    font-family:var(--serif);font-style:italic;color:#fff;
-    font-size:19px;margin:14px 0 0;text-shadow:1px 1px 0 #000;
-  }
-
-  /* ---------- Окно в стиле Win98 ---------- */
-  .window{
-    max-width:900px;margin:0 auto;overflow:hidden;
-    background:var(--silver);
-    border:2px solid;
-    border-color:var(--silver-hi) var(--silver-dk) var(--silver-dk) var(--silver-hi);
-    box-shadow:inset -1px -1px 0 var(--silver-lo), inset 1px 1px 0 #DFDFDF, 6px 6px 0 rgba(0,0,0,.25);
-    padding:3px;
-  }
-  .titlebar{
-    display:flex;align-items:center;gap:8px;
-    background:linear-gradient(90deg,var(--navy),var(--sky));
-    color:#fff;font-family:var(--ui);font-weight:bold;font-size:14px;
-    padding:4px 4px 4px 8px;
-  }
-  .titlebar .t{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .tb-btn{
-    width:22px;height:20px;display:grid;place-items:center;
-    background:var(--silver);color:#000;font-size:12px;line-height:1;
-    border:2px solid;border-color:var(--silver-hi) var(--silver-dk) var(--silver-dk) var(--silver-hi);
-  }
-  .menubar{font-family:var(--ui);font-size:14px;padding:4px 6px;display:flex;gap:16px;flex-wrap:wrap}
-  .menubar span:first-letter{text-decoration:underline}
-
-  .body{display:grid;grid-template-columns:minmax(0,1fr);gap:0;background:var(--silver);padding:4px}
-
-  /* ---------- Навигация ---------- */
-  nav{padding:6px 10px 6px 4px}
-  nav .navtitle{font-family:var(--ui);font-size:13px;font-weight:bold;margin:4px 0 8px;color:var(--navy)}
-  .navbtn{
-    display:flex;align-items:center;gap:8px;width:100%;
-    font-family:var(--ui);font-size:15px;text-align:left;
-    background:var(--silver);color:#000;cursor:pointer;
-    padding:7px 10px;margin:0 0 6px;
-    border:2px solid;border-color:var(--silver-hi) var(--silver-dk) var(--silver-dk) var(--silver-hi);
-    box-shadow:inset -1px -1px 0 var(--silver-lo);
-  }
-  .navbtn .ico{font-size:18px;width:22px;text-align:center}
-  .navbtn[aria-selected="true"]{
-    border-color:var(--silver-dk) var(--silver-hi) var(--silver-hi) var(--silver-dk);
-    box-shadow:inset 1px 1px 0 var(--silver-lo);
-    background:#C8C4BC;font-weight:bold;
-  }
-  .navbtn:active{border-color:var(--silver-dk) var(--silver-hi) var(--silver-hi) var(--silver-dk)}
-  :focus-visible{outline:2px dotted #000;outline-offset:2px}
-
-  .badge-new{
-    display:inline-block;font-family:"Arial Black",var(--ui);font-size:11px;
-    background:var(--new);color:#C00000;padding:1px 5px;border:1px solid #C00000;
-    transform:rotate(-6deg);animation:blink 1.1s steps(2,start) infinite;
-  }
-  @keyframes blink{to{visibility:hidden}}
-
-  /* ---------- Контент ---------- */
-  .content{
-    background:var(--paper);
-    border:2px solid;border-color:var(--silver-dk) var(--silver-hi) var(--silver-hi) var(--silver-dk);
-    box-shadow:inset 1px 1px 0 var(--silver-lo);
-    padding:22px 28px 28px;min-height:520px;min-width:0;
-  }
-  .content h2{
-    font-family:var(--serif);font-size:30px;line-height:1.15;margin:0 0 6px;color:var(--navy);
-  }
-  .content p{max-width:62ch}
-  a{color:var(--link)} a:visited{color:var(--visited)}
-  hr.groove{border:0;height:4px;margin:22px 0;
-    background:linear-gradient(#808080 0 1px,#fff 1px 2px,transparent 2px) , repeating-linear-gradient(90deg,#FF0000 0 12px,#FF9900 12px 24px,#FFE600 24px 36px,#00B050 36px 48px,#0070FF 48px 60px,#7030A0 60px 72px);
-    background-size:100% 2px,100% 2px;background-position:0 0,0 2px;background-repeat:no-repeat}
-
-  .marquee{
-    overflow:hidden;white-space:nowrap;background:#000;color:#00FF66;
-    font-family:var(--mono);font-size:15px;padding:5px 0;margin:0 0 18px;
-    border:2px inset #808080;
-  }
-  .marquee span{display:inline-block;padding-left:100%;animation:scroll 22s linear -7s infinite}
-  @keyframes scroll{to{transform:translateX(-100%)}}
-
-  .log{list-style:none;padding:0;margin:0}
-  .log li{padding:8px 0;border-bottom:1px dashed #bbb;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
-  .log time{font-family:var(--mono);font-size:14px;color:#555;min-width:88px}
-
-  /* Промпты */
-  .file{
-    display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:start;
-    padding:14px 0;border-bottom:1px dashed #bbb;
-  }
-  .file .doc{font-size:30px;line-height:1}
-  .file h3{margin:0;font-size:20px}
-  .file p{margin:2px 0 8px;font-size:16px;color:#333}
-  .file .actions{display:flex;gap:8px;flex-wrap:wrap}
-  pre.prompt{
-    grid-column:2;margin:6px 0 0;padding:10px 12px;font-family:var(--mono);font-size:14px;
-    background:#FFFFE1;border:1px solid #000;white-space:pre-wrap;display:none;
-  }
-  pre.prompt.open{display:block}
-
-  .btn98{
-    font-family:var(--ui);font-size:14px;cursor:pointer;
-    background:var(--silver);color:#000;padding:5px 14px;min-height:30px;
-    border:2px solid;border-color:var(--silver-hi) var(--silver-dk) var(--silver-dk) var(--silver-hi);
-    box-shadow:inset -1px -1px 0 var(--silver-lo);
-  }
-  .btn98:active{border-color:var(--silver-dk) var(--silver-hi) var(--silver-hi) var(--silver-dk);box-shadow:inset 1px 1px 0 var(--silver-lo)}
-
-  /* Калькулятор */
-  fieldset{border:2px groove #d0d0d0;padding:12px 14px 14px;margin:0 0 16px}
-  legend{font-family:var(--ui);font-size:14px;font-weight:bold;padding:0 6px;color:var(--navy)}
-  .row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:6px 0}
-  label{font-family:var(--ui);font-size:14px}
-  select,input[type=number]{
-    font-family:var(--ui);font-size:15px;padding:4px 6px;background:#fff;
-    border:2px solid;border-color:var(--silver-lo) var(--silver-hi) var(--silver-hi) var(--silver-lo);
-    box-shadow:inset 1px 1px 0 var(--silver-dk);
-  }
-  input[type=number]{width:80px}
-  .result{width:100%;border-collapse:collapse;font-size:17px;margin-top:4px}
-  .result td{padding:6px 4px;border-bottom:1px dotted #999}
-  .result td:last-child{text-align:right;font-family:var(--mono);font-weight:bold;white-space:nowrap}
-  .factor{font-family:var(--ui);font-size:14px;background:#FFFFE1;border:1px solid #000;padding:6px 10px;display:inline-block;margin:4px 0 10px}
-  ol.steps{padding-left:22px} ol.steps li{margin:4px 0}
-
-
-  .soon{list-style:none;padding:0;margin:0}
-  .soon li{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;padding:12px 0;border-bottom:1px dashed #bbb}
-  .soon-ico{font-size:30px;line-height:1;text-align:center;filter:grayscale(.35)}
-  .soon h3{margin:0 0 2px;font-size:20px}
-  .soon p{margin:0;font-size:16px;color:#333}
-  .soon-note{font-style:italic;color:#555;margin:14px 0 0}
-
-  /* Стройка */
-  .construction{
-    background:repeating-linear-gradient(-45deg,#FFD400 0 18px,#000 18px 36px);
-    padding:8px;margin:16px 0;
-  }
-  .construction div{background:#FFD400;text-align:center;font-family:"Arial Black",var(--ui);padding:10px;font-size:17px}
-
-  /* ---------- Футер ---------- */
-  .statusbar{
-    display:flex;gap:4px;font-family:var(--ui);font-size:13px;padding:3px 0 0;
-  }
-  .statusbar div{flex:1;padding:3px 8px;border:1px solid;border-color:var(--silver-lo) var(--silver-hi) var(--silver-hi) var(--silver-lo);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .statusbar div:first-child{flex:3}
-
-  footer{max-width:900px;margin:22px auto 0;text-align:center;color:#fff;font-family:var(--ui);font-size:13px}
-  .counter{display:inline-flex;gap:2px;background:#000;padding:4px;border:2px inset #888;margin:6px 0 14px}
-  .counter b{font-family:var(--mono);font-size:22px;color:#FF3030;background:#1a0000;padding:0 5px;text-shadow:0 0 6px #ff0000}
-  .buttons88{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:6px 0 14px}
-  .b88{
-    width:88px;height:31px;display:flex;flex-direction:column;justify-content:center;
-    font-family:var(--ui);font-size:9px;line-height:1.1;font-weight:bold;text-align:center;
-    border:1px solid #000;box-shadow:inset 1px 1px 0 #ffffff88, inset -1px -1px 0 #00000066;
-  }
-  .b88.a{background:linear-gradient(#3a3a3a,#000);color:#0f0}
-  .b88.b{background:linear-gradient(#2f5fd0,#0033aa);color:#fff}
-  .b88.c{background:#FFE600;color:#000}
-  .b88.d{background:linear-gradient(#ff7ad9,#b000a0);color:#fff}
-  .webring{margin-top:8px}
-  .webring a{color:var(--new)}
-
-  .hidden{display:none}
-
-  /* ---------- Мобилка ---------- */
-  @media (max-width:680px){
-    body{padding:18px 8px 36px;font-size:17px}
-    .body{grid-template-columns:minmax(0,1fr)}
-    nav{padding:4px 2px 8px}
-    nav .navtitle{display:none}
-    .navlist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
-    .navbtn{margin:0;font-size:14px;padding:8px}
-    .content{padding:16px 14px 20px;min-height:0}
-    .content h2{font-size:25px}
-    .menubar{display:none}
-    .statusbar div:nth-child(3){display:none}
-  }
-  @media (prefers-reduced-motion:reduce){
-    .marquee span{animation:none;padding-left:12px}
-    .badge-new{animation:none}
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wmn-lab — домашняя страничка</title>
+  <meta name="description" content="Домашняя страничка wmn: промпты для нейросетей, гайды, маленькие инструменты и прочие приколы.">
+  <!-- Превью ссылки в соцсетях и мессенджерах -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="wmn-lab">
+  <meta property="og:title" content="wmn-lab — домашняя страничка">
+  <meta property="og:description" content="Промпты для нейросетей, гайды, маленькие инструменты и прочие приколы.">
+  <meta property="og:url" content="https://wmn-lab.ru/">
+  <meta property="og:image" content="https://wmn-lab.ru/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#2B5CA8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/base.css?v=1">
 </head>
-<body>
+<body data-section="home">
 
-<header class="masthead">
-  <div class="wordart">wmn-lab</div>
-  <p class="tagline">домашняя страничка: проекты, промпты и прочие приколы</p>
-</header>
+<main id="page" data-title="Главная">
+  <div data-marquee></div>
 
-<div class="window" role="main">
-  <div class="titlebar">
-    <span aria-hidden="true">🖥️</span>
-    <span class="t">Главная — wmn-lab.ru</span>
-    <span class="tb-btn" aria-hidden="true">_</span>
-    <span class="tb-btn" aria-hidden="true">□</span>
-    <span class="tb-btn" aria-hidden="true">×</span>
+  <h1>Привет! Добро пожаловать на мою страничку</h1>
+  <p>Меня зовут Владимир. Я занимаюсь дизайном, монтажом и соцсетями, а в свободное время вайбкожу всякие штуки. Сюда складываю то, что может пригодиться не только мне: промпты, гайды, маленькие инструменты.</p>
+  <p>Берите что нравится, всё бесплатно и без регистрации.</p>
+
+  <hr class="groove">
+
+  <h2>Что нового</h2>
+  <ul class="log" id="news"><li class="muted">Загружаю…</li></ul>
+
+  <div id="soon-block">
+    <hr class="groove">
+    <h2>Что тут будет</h2>
+    <div class="construction"><div>🚧 Разделы в разработке 🚧</div></div>
+    <ul class="soon" id="soon"></ul>
+    <p class="soon-note">…и всё, что ещё придёт в голову.</p>
   </div>
-  <div class="menubar" aria-hidden="true"><span>Файл</span><span>Правка</span><span>Вид</span><span>Избранное</span><span>Справка</span></div>
+</main>
 
-  <div class="body">
+<script src="/assets/js/site.js?v=1"></script>
+<script>
+  // «Что нового» — из data/news.json
+  WMN.loadJSON('/data/news.json').then(items => {
+    document.getElementById('news').innerHTML = items.slice(0, 5).map(n => `
+      <li><time datetime="${n.date}">${WMN.date(n.date)}</time>
+      <span>${n.link ? `<a href="${n.link}">${WMN.esc(n.text)}</a>` : WMN.esc(n.text)}</span>
+      ${WMN.isFresh(n.date) ? '<span class="badge-new">NEW!</span>' : ''}</li>`).join('');
+  }).catch(() => { document.getElementById('news').innerHTML = '<li class="muted">Не удалось загрузить новости.</li>'; });
 
-    <section class="content">
-
-      <!-- ГЛАВНАЯ -->
-      <div id="tab-home" role="tabpanel">
-        <div class="marquee" aria-hidden="true"><span>*** Добро пожаловать на wmn-lab! *** Сайт только открылся и понемногу обживается *** Заходите почаще ***</span></div>
-        <h2>Привет! Добро пожаловать на мою страничку</h2>
-        <p>Меня зовут Владимир. Я занимаюсь дизайном, монтажом и соцсетями, а в свободное время вайбкожу всякие штуки. Сюда складываю то, что может пригодиться не только мне: промпты, гайды, маленькие инструменты.</p>
-        <p>Берите что нравится, всё бесплатно и без регистрации.</p>
-
-        <hr class="groove">
-
-        <h2 style="font-size:24px">Что нового</h2>
-        <ul class="log">
-          <li><time>23.09.2026</time><span>Сайт открылся! Пока тут только главная, но это ненадолго</span><span class="badge-new">NEW!</span></li>
-        </ul>
-
-        <hr class="groove">
-
-        <h2 style="font-size:24px">Что тут будет</h2>
-        <div class="construction"><div>🚧 Разделы в разработке 🚧</div></div>
-        <ul class="soon">
-          <li>
-            <span class="soon-ico" aria-hidden="true">📜</span>
-            <div><h3>Промпты и гайды</h3><p>Готовые сценарии для нейросетей и подсказки, как с ними работать. Можно будет скопировать или скачать файлом.</p></div>
-          </li>
-          <li>
-            <span class="soon-ico" aria-hidden="true">🥧</span>
-            <div><h3>Калькулятор теста</h3><p>Выбираете рецепт и свою форму, а количество ингредиентов пересчитывается само.</p></div>
-          </li>
-          <li>
-            <span class="soon-ico" aria-hidden="true">🤖</span>
-            <div><h3>Бот с подписями на картинках</h3><p>Мой телеграм-бот для мемов и, если всё получится, его версия прямо в браузере.</p></div>
-          </li>
-        </ul>
-        <p class="soon-note">…и всё, что ещё придёт в голову.</p>
-      </div>
-
-    </section>
-  </div>
-
-  <div class="statusbar">
-    <div id="status">Готово</div>
-    <div>Интернет</div>
-    <div>🔒 https</div>
-  </div>
-</div>
-
-<footer>
-  <div>Вы посетитель №</div>
-  <div class="counter" aria-label="Счётчик посещений: 427"><b>0</b><b>0</b><b>0</b><b>4</b><b>2</b><b>7</b></div>
-  <div class="buttons88" aria-hidden="true">
-    <div class="b88 a"><span>СДЕЛАНО</span><span>В БЛОКНОТЕ</span></div>
-    <div class="b88 b"><span>HTML</span><span>ручной работы</span></div>
-    <div class="b88 c"><span>БЕЗ РЕГИСТРАЦИИ</span><span>И СМС</span></div>
-    <div class="b88 d"><span>СМОТРЕТЬ</span><span>В ЛЮБОМ БРАУЗЕРЕ</span></div>
-  </div>
-  <div>Последнее обновление: 23.09.2026</div>
-  <div class="webring">Кольцо самодельных сайтов: <a href="#">предыдущий</a> | <a href="#">случайный</a> | <a href="#">следующий</a></div>
-</footer>
-
+  // «Что тут будет» — из разделов с ready: false в site.js
+  const upcoming = SITE.sections.filter(s => !s.ready && s.soon);
+  if (upcoming.length) {
+    document.getElementById('soon').innerHTML = upcoming.map(s => `
+      <li><span class="soon-ico" aria-hidden="true">${s.icon}</span>
+      <div><h3>${s.soonTitle || s.title}</h3><p>${s.soon}</p></div></li>`).join('');
+  } else {
+    document.getElementById('soon-block').remove();
+  }
+</script>
 </body>
 </html>

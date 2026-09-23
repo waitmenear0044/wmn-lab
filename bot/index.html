@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бот с картинками — wmn-lab</title>
+  <meta name="description" content="Телеграм-бот, который делает мемы с подписями на картинках.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="wmn-lab">
+  <meta property="og:title" content="Бот с картинками — wmn-lab">
+  <meta property="og:description" content="Телеграм-бот, который делает мемы с подписями на картинках.">
+  <meta property="og:url" content="https://wmn-lab.ru/bot/">
+  <meta property="og:image" content="https://wmn-lab.ru/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#2B5CA8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/base.css?v=1">
+</head>
+<body data-section="bot">
+
+<main id="page" data-title="Бот с картинками">
+  <h1>Бот с подписями на картинках</h1>
+  <p>Телеграм-бот, который делает из картинки мем с подписью. Скоро здесь будет веб-версия, чтобы делать то же самое прямо в браузере.</p>
+  <div class="construction"><div>🚧 Страница строится 🚧</div></div>
+  <p><a class="btn98" id="botlink" href="#">Открыть бота в Telegram</a></p>
+  <p class="muted">Бот живёт на донатах звёздами Telegram: если он вам нравится, внутри есть кнопка «Поддержать бота».</p>
+</main>
+
+<script src="/assets/js/site.js?v=1"></script>
+<script>
+  // Ссылка на бота: впиши сюда адрес вида https://t.me/имя_бота
+  const BOT_URL = '';
+  const a = document.getElementById('botlink');
+  if (BOT_URL) a.href = BOT_URL; else a.closest('p').innerHTML = '<span class="muted">Ссылка на бота появится здесь совсем скоро.</span>';
+</script>
+</body>
+</html>

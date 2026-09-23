@@ -1,0 +1,6 @@
+# Служебный мусор операционных систем и редакторов
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+*.tmp

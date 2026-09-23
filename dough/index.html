@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор теста — wmn-lab</title>
+  <meta name="description" content="Пересчёт рецепта теста под размер вашей формы.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="wmn-lab">
+  <meta property="og:title" content="Калькулятор теста — wmn-lab">
+  <meta property="og:description" content="Пересчёт рецепта теста под размер вашей формы.">
+  <meta property="og:url" content="https://wmn-lab.ru/dough/">
+  <meta property="og:image" content="https://wmn-lab.ru/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#2B5CA8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/base.css?v=1">
+</head>
+<body data-section="dough">
+
+<main id="page" data-title="Калькулятор теста">
+  <h1>Калькулятор теста</h1>
+  <p>Выберите рецепт и свою форму: количество ингредиентов пересчитается по площади дна.</p>
+
+  <fieldset>
+    <legend>Рецепт</legend>
+    <div class="row"><label for="recipe">Тесто:</label><select id="recipe"></select></div>
+    <div class="row muted" id="basenote"></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Ваша форма</legend>
+    <div class="row">
+      <label><input type="radio" name="shape" value="round" checked> Круглая</label>
+      <label><input type="radio" name="shape" value="rect"> Прямоугольная</label>
+    </div>
+    <div class="row" id="roundIn"><label for="dia">Диаметр, см</label><input id="dia" type="number" min="8" max="60" value="24"></div>
+    <div class="row hidden" id="rectIn">
+      <label for="w">Ширина, см</label><input id="w" type="number" min="8" max="80" value="30">
+      <label for="h">Длина, см</label><input id="h" type="number" min="8" max="80" value="20">
+    </div>
+  </fieldset>
+
+  <div class="factor" id="factor"></div>
+  <table class="result" id="result"></table>
+  <h2 style="margin-top:18px">Как готовить</h2>
+  <ol class="steps" id="steps"></ol>
+</main>
+
+<script src="/assets/js/site.js?v=1"></script>
+<script src="/dough/dough.js?v=1"></script>
+</body>
+</html>

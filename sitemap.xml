@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Сюда добавляются разделы, когда они открываются (ready: true в site.js) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://wmn-lab.ru/</loc></url>
+</urlset>
