@@ -4,3 +4,6 @@ Thumbs.db
 desktop.ini
 .vscode/
 *.tmp
+
+# Счётчик посетителей: файл создаёт сервер, в репозитории его нет
+data/counter.json

@@ -4,51 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Калькулятор теста — wmn-lab</title>
-  <meta name="description" content="Пересчёт рецепта теста под размер вашей формы.">
+  <meta name="description" content="Пересчёт рецептов теста под вашу форму или нужное количество: пироги, тарты, пицца, хлеб, лепёшки и блины.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="wmn-lab">
   <meta property="og:title" content="Калькулятор теста — wmn-lab">
-  <meta property="og:description" content="Пересчёт рецепта теста под размер вашей формы.">
+  <meta property="og:description" content="Пересчёт рецептов теста под вашу форму или нужное количество: пироги, тарты, пицца, хлеб, лепёшки и блины.">
   <meta property="og:url" content="https://wmn-lab.ru/dough/">
   <meta property="og:image" content="https://wmn-lab.ru/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#2B5CA8">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/css/base.css?v=1">
+  <link rel="stylesheet" href="/assets/css/base.css?v=4">
+  <script>try{var v=JSON.parse(localStorage.getItem("wmn-view"))||{},r=document.documentElement;r.dataset.theme=v.theme||"classic";if(v.big)r.classList.add("big");if(v.noanim)r.classList.add("noanim")}catch(e){}</script>
 </head>
 <body data-section="dough">
 
 <main id="page" data-title="Калькулятор теста">
   <h1>Калькулятор теста</h1>
-  <p>Выберите рецепт и свою форму: количество ингредиентов пересчитается по площади дна.</p>
+  <p>Выберите рецепт и укажите свою форму или нужное количество: ингредиенты пересчитаются сами.</p>
 
   <fieldset>
     <legend>Рецепт</legend>
     <div class="row"><label for="recipe">Тесто:</label><select id="recipe"></select></div>
-    <div class="row muted" id="basenote"></div>
+    <p class="about" id="about"></p>
+    <div class="recipe-meta" id="meta"></div>
   </fieldset>
 
-  <fieldset>
+  <fieldset id="formBox">
     <legend>Ваша форма</legend>
     <div class="row">
       <label><input type="radio" name="shape" value="round" checked> Круглая</label>
       <label><input type="radio" name="shape" value="rect"> Прямоугольная</label>
     </div>
-    <div class="row" id="roundIn"><label for="dia">Диаметр, см</label><input id="dia" type="number" min="8" max="60" value="24"></div>
-    <div class="row hidden" id="rectIn">
-      <label for="w">Ширина, см</label><input id="w" type="number" min="8" max="80" value="30">
-      <label for="h">Длина, см</label><input id="h" type="number" min="8" max="80" value="20">
+    <div id="roundIn">
+      <div class="slider-row">
+        <label for="dia">Диаметр</label>
+        <input type="range" class="slider98" id="dia-r" min="10" max="40" step="1" aria-hidden="true" tabindex="-1">
+        <span class="num"><input id="dia" type="number" min="1" max="100" step="0.5"> см</span>
+      </div>
     </div>
+    <div id="rectIn" class="hidden">
+      <div class="slider-row">
+        <label for="w">Ширина</label>
+        <input type="range" class="slider98" id="w-r" min="10" max="60" step="1" aria-hidden="true" tabindex="-1">
+        <span class="num"><input id="w" type="number" min="1" max="150" step="0.5"> см</span>
+      </div>
+      <div class="slider-row">
+        <label for="h">Длина</label>
+        <input type="range" class="slider98" id="h-r" min="10" max="60" step="1" aria-hidden="true" tabindex="-1">
+        <span class="num"><input id="h" type="number" min="1" max="150" step="0.5"> см</span>
+      </div>
+    </div>
+    <div class="row muted" id="basenote"></div>
+  </fieldset>
+
+  <fieldset id="yieldBox" class="hidden">
+    <legend>Сколько нужно</legend>
+    <div class="slider-row">
+      <label for="yieldIn" id="yieldLabel"></label>
+      <input type="range" class="slider98" id="yieldIn-r" min="1" max="20" step="1" aria-hidden="true" tabindex="-1">
+      <span class="num"><input id="yieldIn" type="number" min="0.5" max="200" step="0.5"></span>
+    </div>
+    <div class="row muted" id="yieldnote"></div>
   </fieldset>
 
   <div class="factor" id="factor"></div>
+  <div class="hint" id="hint"></div>
   <table class="result" id="result"></table>
+
   <h2 style="margin-top:18px">Как готовить</h2>
   <ol class="steps" id="steps"></ol>
+  <div class="notes hidden" id="notes"></div>
+
+  <div class="tips hidden" id="tips">
+    <h2>💡 Полезные хитрости</h2>
+    <ul id="tipsList"></ul>
+  </div>
 </main>
 
-<script src="/assets/js/site.js?v=1"></script>
-<script src="/dough/dough.js?v=1"></script>
+<script src="/assets/js/site.js?v=3"></script>
+<script src="/dough/dough.js?v=5"></script>
 </body>
 </html>
