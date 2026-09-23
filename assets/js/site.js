@@ -19,7 +19,7 @@ const SITE = {
      ready: false — раздел скрыт из меню и попадает в блок «Что тут будет» на главной. */
   sections: [
     { id: 'home',    title: 'Главная',           icon: '🏠', href: '/',         ready: true },
-    { id: 'prompts', title: 'Промпты',           icon: '📜', href: '/prompts/', ready: false,
+    { id: 'prompts', title: 'Промпты',           icon: '📜', href: '/prompts/', ready: true,
       soonTitle: 'Промпты и гайды',
       soon: 'Готовые сценарии для нейросетей и подсказки, как с ними работать. Можно будет скопировать или скачать файлом.' },
     { id: 'dough',   title: 'Калькулятор теста', icon: '🥧', href: '/dough/',   ready: true,
@@ -73,6 +73,7 @@ const WMN = {
     return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
   },
   date(iso) { const [y, m, d] = iso.split('-'); return `${d}.${m}.${y}`; },
+  icon(name) { return (window.__ICONS && window.__ICONS[name]) || `/assets/img/icons/${name}.png`; },
   isFresh(iso) { return (Date.now() - new Date(iso).getTime()) < 14 * 864e5; },
 
   /* Диалоговое окно в стиле Win98.
@@ -110,13 +111,13 @@ const WMN = {
 WMN._z = 900;
 WMN._wins = {};
 WMN.activeWin = null;
-WMN.window = function ({ id, title, icon = '🗔', width = 360, build, onKey }) {
+WMN.window = function ({ id, title, icon = '🗔', width = 360, big = false, build, onKey }) {
   if (WMN._wins[id]) { WMN._wins[id].focus(); return WMN._wins[id]; }
   const el = document.createElement('div');
-  el.className = 'gwin';
+  el.className = 'gwin' + (big ? ' big' : '');
   el.style.width = `min(${width}px, calc(100vw - 16px))`;
   el.innerHTML = `
-    <div class="titlebar"><span aria-hidden="true">${icon}</span><span class="t">${WMN.esc(title)}</span>
+    <div class="titlebar"><span class="gwin-ico" aria-hidden="true">${icon}</span><span class="t">${WMN.esc(title)}</span>
       <button class="tb-btn" data-x aria-label="Закрыть">×</button></div>
     <div class="gwin-body"></div>`;
   document.body.appendChild(el);

@@ -4,71 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Промпты — wmn-lab</title>
-  <meta name="description" content="Готовые промпты для нейросетей: скопировать или скачать файлом.">
+  <meta name="description" content="Проверенные промпты для нейросетей по сферам жизни: работа, дом, фото. Заполняете своё и копируете.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="wmn-lab">
   <meta property="og:title" content="Промпты — wmn-lab">
-  <meta property="og:description" content="Готовые промпты для нейросетей: скопировать или скачать файлом.">
+  <meta property="og:description" content="Проверенные промпты для нейросетей по сферам жизни: работа, дом, фото. Заполняете своё и копируете.">
   <meta property="og:url" content="https://wmn-lab.ru/prompts/">
   <meta property="og:image" content="https://wmn-lab.ru/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#2B5CA8">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/css/base.css?v=8">
+  <link rel="stylesheet" href="/assets/css/base.css?v=11">
   <script>try{var v=JSON.parse(localStorage.getItem("wmn-view"))||{},r=document.documentElement;r.dataset.theme=v.theme||"classic";if(v.big)r.classList.add("big");if(v.noanim)r.classList.add("noanim")}catch(e){}</script>
 </head>
 <body data-section="prompts">
 
 <main id="page" data-title="Промпты">
-  <h1>Промпты и гайды</h1>
-  <p>Готовые сценарии для нейросетей. Можно подсмотреть текст, скопировать или скачать как .md-файл.</p>
-  <div id="list"><p class="muted">Загружаю…</p></div>
+  <h1>Промпты для нейросетей</h1>
+  <p>95 проверенных промптов для ChatGPT, Claude и Gemini: работа, дом, деньги, фото и всё остальное. Открывайте папки, вписывайте своё и копируйте.</p>
+  <div class="desk" id="desk" role="list" aria-label="Рабочий стол с разделами промптов"></div>
 </main>
 
-<script src="/assets/js/site.js?v=6"></script>
-<script>
-  // Список промптов — из prompts/prompts.json, тексты — из prompts/files/*.md
-  const list = document.getElementById('list');
-  WMN.loadJSON('/prompts/prompts.json').then(items => {
-    if (!items.length) {
-      list.innerHTML = '<div class="construction"><div>🚧 Первые промпты уже в пути 🚧</div></div>';
-      return;
-    }
-    list.innerHTML = items.map((p, i) => `
-      <div class="file">
-        <div class="doc" aria-hidden="true">📄</div>
-        <div>
-          <h3>${WMN.esc(p.title)}</h3>
-          <p>${WMN.esc(p.desc)}</p>
-          ${p.tags && p.tags.length ? `<div class="tags">${p.tags.map(t => '#' + WMN.esc(t)).join(' ')}</div>` : ''}
-          <div class="actions">
-            <button class="btn98" data-act="show" data-i="${i}">Показать</button>
-            <button class="btn98" data-act="copy" data-i="${i}">Скопировать</button>
-            <a class="btn98" href="/prompts/files/${p.file}" download>Скачать .md</a>
-          </div>
-        </div>
-        <pre class="prompt" id="p${i}"></pre>
-      </div>`).join('');
-
-    const cache = {};
-    const getText = i => cache[i] ??= WMN.loadText('/prompts/files/' + items[i].file);
-
-    list.addEventListener('click', async e => {
-      const b = e.target.closest('button[data-act]'); if (!b) return;
-      const i = b.dataset.i;
-      const text = await getText(i);
-      if (b.dataset.act === 'show') {
-        const pre = document.getElementById('p' + i);
-        pre.textContent = text; pre.classList.toggle('open');
-        b.textContent = pre.classList.contains('open') ? 'Скрыть' : 'Показать';
-      } else {
-        await WMN.copy(text);
-        b.textContent = 'Скопировано'; WMN.status('Промпт скопирован в буфер обмена');
-        setTimeout(() => b.textContent = 'Скопировать', 1600);
-      }
-    });
-  }).catch(() => { list.innerHTML = '<p class="muted">Не удалось загрузить список промптов.</p>'; });
-</script>
+<script src="/assets/js/site.js?v=7"></script>
+<script src="/prompts/prompts.js?v=3"></script>
 </body>
 </html>

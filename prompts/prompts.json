@@ -1,23 +1,2598 @@
-[
+{
+ "spheres": [
   {
-    "title": "Разбор любого текста по полочкам",
-    "desc": "Превращает длинную статью в тезисы, выводы и список вопросов к автору.",
-    "file": "razbor-teksta.md",
-    "tags": ["тексты", "анализ"],
-    "date": "2026-09-23"
+   "id": "work",
+   "title": "Работа и карьера",
+   "icon": "💼"
   },
   {
-    "title": "Идеи для постов в соцсети",
-    "desc": "Двадцать идей под нишу и аудиторию, сразу с форматом и зацепкой.",
-    "file": "idei-postov.md",
-    "tags": ["smm", "контент"],
-    "date": "2026-09-23"
+   "id": "study",
+   "title": "Учёба",
+   "icon": "📚"
   },
   {
-    "title": "Вайбкодинг: как просить код у нейросети",
-    "desc": "Шаблон запроса, после которого код обычно работает с первого раза.",
-    "file": "vibecoding.md",
-    "tags": ["код", "вайбкодинг"],
-    "date": "2026-09-23"
+   "id": "money",
+   "title": "Деньги",
+   "icon": "💰"
+  },
+  {
+   "id": "health",
+   "title": "Здоровье и спорт",
+   "icon": "🏃"
+  },
+  {
+   "id": "people",
+   "title": "Общение",
+   "icon": "💬"
+  },
+  {
+   "id": "home",
+   "title": "Дом и быт",
+   "icon": "🏠"
+  },
+  {
+   "id": "travel",
+   "title": "Путешествия",
+   "icon": "✈️"
+  },
+  {
+   "id": "shopping",
+   "title": "Покупки",
+   "icon": "🛒"
+  },
+  {
+   "id": "style",
+   "title": "Стиль и внешность",
+   "icon": "👗"
+  },
+  {
+   "id": "docs",
+   "title": "Документы и права",
+   "icon": "📄"
+  },
+  {
+   "id": "texts",
+   "title": "Тексты и соцсети",
+   "icon": "✍️"
+  },
+  {
+   "id": "creative",
+   "title": "Творчество",
+   "icon": "🎨"
+  },
+  {
+   "id": "business",
+   "title": "Своё дело",
+   "icon": "🚀"
+  },
+  {
+   "id": "family",
+   "title": "Семья и дети",
+   "icon": "👨‍👩‍👧"
+  },
+  {
+   "id": "mind",
+   "title": "Мысли и решения",
+   "icon": "🧠"
+  },
+  {
+   "id": "tech",
+   "title": "Техника",
+   "icon": "🛠"
   }
-]
+ ],
+ "tasks": [
+  {
+   "id": "explain",
+   "title": "Объяснить",
+   "format": "text"
+  },
+  {
+   "id": "write",
+   "title": "Написать",
+   "format": "text"
+  },
+  {
+   "id": "improve",
+   "title": "Улучшить текст",
+   "format": "text"
+  },
+  {
+   "id": "plan",
+   "title": "Спланировать",
+   "format": "text"
+  },
+  {
+   "id": "choose",
+   "title": "Помочь выбрать",
+   "format": "text"
+  },
+  {
+   "id": "analyze",
+   "title": "Разобрать",
+   "format": "text"
+  },
+  {
+   "id": "ideas",
+   "title": "Придумать",
+   "format": "text"
+  },
+  {
+   "id": "practice",
+   "title": "Потренироваться",
+   "format": "text"
+  },
+  {
+   "id": "weak",
+   "title": "Найти слабые места",
+   "format": "text"
+  },
+  {
+   "id": "portrait",
+   "title": "Портрет",
+   "format": "photo"
+  },
+  {
+   "id": "restore",
+   "title": "Реставрация",
+   "format": "photo"
+  },
+  {
+   "id": "background",
+   "title": "Фон и лишнее",
+   "format": "photo"
+  },
+  {
+   "id": "tryon",
+   "title": "Примерка",
+   "format": "photo"
+  },
+  {
+   "id": "product",
+   "title": "Товары",
+   "format": "photo"
+  },
+  {
+   "id": "color",
+   "title": "Цвет и настроение",
+   "format": "photo"
+  }
+ ],
+ "prompts": [
+  {
+   "id": "t1",
+   "n": 1,
+   "title": "Резюме под конкретную вакансию",
+   "desc": "Резюме, переписанное под вакансию: нужные слова из описания, достижения в цифрах, лишнее убрано.",
+   "format": "text",
+   "spheres": [
+    "work"
+   ],
+   "tasks": [
+    "improve"
+   ],
+   "attach": "Текст своего резюме и текст вакансии (вставить в сообщение или прикрепить файлом).",
+   "lang": "en",
+   "prompt": {
+    "ru": "Я откликаюсь на эту вакансию и хочу адаптировать под неё резюме.\n\nВакансия:\n[текст вакансии: вставьте сюда описание вакансии целиком]\n\nМоё резюме сейчас:\n[ваше резюме: вставьте сюда текст резюме]\n\nДействуй по шагам:\n1. Выпиши из вакансии 5 главных требований и ключевые слова, которые будет искать рекрутер или автоматический фильтр.\n2. Покажи, какие из них в моём резюме уже есть, какие раскрыты слабо, а каких нет совсем.\n3. Прежде чем переписывать, задай мне до 5 коротких вопросов, чтобы найти реальные достижения, цифры и опыт, о которых я забыл. Дождись ответов.\n4. Потом перепиши резюме: главное для этой вакансии — наверх, обязанности превращай в результаты с цифрами (там, где я их дал), используй формулировки из вакансии, если они правда про меня, убери лишнее.\n\nПравила: не выдумывай опыт, навыки, цифры и места работы. Если чего-то важного не хватает — честно скажи, а не сочиняй. Объём — одна страница. Формат для [где размещаю: hh.ru].",
+    "en": "I am applying for this job and want my resume tailored to it.\n\nJob posting:\n[текст вакансии: вставьте сюда описание вакансии целиком]\n\nMy current resume:\n[ваше резюме: вставьте сюда текст резюме]\n\nDo this step by step:\n1. From the job posting, list the 5 most important requirements and the key words a recruiter or an automatic filter will look for.\n2. Show which of them my resume already covers, which are covered weakly, and which are missing.\n3. Before rewriting, ask me up to 5 short questions to find real achievements, numbers and experience I forgot to mention. Wait for my answers.\n4. Then rewrite the resume: lead with what matters most for this job, turn duties into results with numbers where I gave them, use the posting's wording where it truthfully applies, cut what is irrelevant.\n\nRules: never invent experience, skills, numbers or employers. If something important is missing, tell me honestly instead of making it up. Keep it to one page. Format for [где размещаю: hh.ru].\n\nReply in Russian."
+   },
+   "fix": [
+    "Вышло слишком «пафосно»: «Make the wording simpler and more human, less corporate».",
+    "Нейросеть приписала то, чего не было: «Remove anything I did not tell you, keep only facts from my answers»."
+   ],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t2",
+   "n": 2,
+   "title": "Сопроводительное письмо, которое не звучит как шаблон",
+   "desc": "Короткое письмо, где видно, что вы прочитали вакансию и знаете, чем полезны.",
+   "format": "text",
+   "spheres": [
+    "work"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": "Текст вакансии и пару фактов о себе.",
+   "lang": "en",
+   "prompt": {
+    "ru": "Напиши сопроводительное письмо к этой вакансии.\n\nВакансия:\n[текст вакансии: вставьте описание вакансии]\n\nОбо мне:\n[о себе: 5 лет в SMM, вёл аккаунты трёх брендов, поднял охваты в 2 раза]\n\nПочему хочу именно сюда:\n[почему именно сюда: нравится их продукт, хочу расти в дизайне]\n\nТребования:\n- 120–180 слов, 3 коротких абзаца.\n- Первая фраза — конкретно про эту компанию и должность, а не «Прошу рассмотреть мою кандидатуру».\n- В середине — 2 конкретных примера из моего опыта под их главные требования.\n- В конце — простое уверенное предложение созвониться, без заискивания.\n- Тон: [тон: живой и уверенный, без канцелярита].\n- Без штампов вроде «стрессоустойчивый», «нацелен на результат», «командный игрок».\n- Не выдумывай факты обо мне и о компании.\n\nДай 2 варианта: построже и более личный.",
+    "en": "Write a cover letter for this job.\n\nJob posting:\n[текст вакансии: вставьте описание вакансии]\n\nAbout me:\n[о себе: 5 лет в SMM, вёл аккаунты трёх брендов, поднял охваты в 2 раза]\n\nWhy I want this job specifically:\n[почему именно сюда: нравится их продукт, хочу расти в дизайне]\n\nRequirements:\n- 120–180 words, 3 short paragraphs.\n- First sentence must be specific to this company and role, not \"I am writing to apply for...\".\n- Middle: 2 concrete examples from my experience that match their top requirements.\n- End: a simple, confident call to talk, without begging.\n- Tone: [тон: живой и уверенный, без канцелярита].\n- No clichés like \"team player\", \"highly motivated\", \"dynamic environment\".\n- Do not invent facts about me or the company.\n\nGive me 2 versions: one more formal, one more personal.\n\nReply in Russian."
+   },
+   "fix": [
+    "Слишком длинно: «Cut it to 100 words, keep only the strongest example»."
+   ],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t3",
+   "n": 3,
+   "title": "Тренировка собеседования",
+   "desc": "Репетиция с «интервьюером», который не подыгрывает: вопросы по одному, разбор каждого ответа и итоговая оценка.",
+   "format": "text",
+   "spheres": [
+    "work"
+   ],
+   "tasks": [
+    "practice"
+   ],
+   "attach": "Текст вакансии (желательно).",
+   "lang": "en",
+   "prompt": {
+    "ru": "Проведи со мной реалистичное пробное собеседование в роли опытного интервьюера.\n\nДолжность: [должность: менеджер по маркетингу]\nКомпания или сфера: [компания или сфера: онлайн-школа]\nМой опыт: [мой опыт: 3 года в маркетинге, в основном соцсети]\nВакансия (по желанию): [вакансия: вставьте текст или удалите эту строку]\n\nКак проводить:\n- Задавай по одному вопросу и жди моего ответа. Не показывай все вопросы сразу.\n- Чередуй типы вопросов: обо мне, об опыте, ситуационные («что вы сделаете, если…») и 1–2 неудобных (перерывы в работе, слабые места, почему ухожу).\n- После каждого ответа дай короткий честный разбор: что было сильным, что слабым и как звучал бы ответ сильнее. Затем задай уточняющий или следующий вопрос.\n- Не будь слишком добрым. Если ответ размытый — дави, как настоящий интервьюер.\n- После 7 вопросов остановись и подведи итог: общее впечатление, 3 моих сильных стороны, 3 вещи, которые нужно исправить, и оценка готовности от 1 до 10.\n\nНачни с первого вопроса.",
+    "en": "Act as an experienced interviewer for this position and run a realistic mock interview with me.\n\nPosition: [должность: менеджер по маркетингу]\nCompany or industry: [компания или сфера: онлайн-школа]\nMy experience: [мой опыт: 3 года в маркетинге, в основном соцсети]\nJob posting (optional): [вакансия: вставьте текст или удалите эту строку]\n\nHow to run it:\n- Ask one question at a time and wait for my answer. Do not show all questions at once.\n- Mix question types: about me, about experience, situational (\"what would you do if...\"), and 1–2 uncomfortable ones (gaps, weak spots, why I'm leaving).\n- After each of my answers, give short honest feedback: what was strong, what was weak, and how a stronger answer would sound. Then ask a realistic follow-up or the next question.\n- Do not be overly nice. Push back the way a real interviewer would when my answer is vague.\n- After 7 questions, stop and give a summary: overall impression, my 3 main strengths, 3 things to fix, and a score from 1 to 10 for readiness.\n\nStart with the first question.\n\nReply in Russian."
+   },
+   "fix": [
+    "Нейросеть вывалила все вопросы сразу: «Stop. Ask only one question and wait for my answer».",
+    "Слишком мягкая: «Be a tougher interviewer, challenge my answers».",
+    "В приложении ChatGPT и Gemini можно включить голосовой режим и отвечать вслух: так тренировка ближе к настоящей."
+   ],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t4",
+   "n": 4,
+   "title": "Разговор о повышении зарплаты",
+   "desc": "Стратегия, аргументы и репетиция разговора с «начальником», который сопротивляется.",
+   "format": "text",
+   "spheres": [
+    "work",
+    "money"
+   ],
+   "tasks": [
+    "practice",
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги мне подготовиться к разговору с руководителем о повышении зарплаты.\n\nМоя ситуация:\n- Должность и сколько работаю: [должность и стаж: дизайнер, 2 года в компании]\n- Чего добился: [мои достижения: запустил новый сайт, взял на себя ещё двух клиентов]\n- Сколько получаю и сколько хочу: [сейчас и сколько хочу: 90 тысяч, хочу 120]\n- Что знаю о руководителе: [какой начальник: занятой, любит цифры, не любит давление]\n\nЧасть 1 — Стратегия:\n- Собери 3 моих самых сильных аргумента — через пользу для компании, а не через мои личные нужды.\n- Подскажи, когда лучше заводить разговор, и дай первые 2–3 фразы.\n- Перечисли 5 самых вероятных возражений и спокойный ответ на каждое.\n- Подскажи, о чём просить, если ответ «сейчас денег нет» (например, дата пересмотра, премия, обучение, новая должность).\n- Если упоминаешь зарплаты на рынке — прямо скажи, что реальные цифры мне нужно проверить самому (например, на сайтах вакансий). Не выдумывай цифры.\n\nЧасть 2 — Репетиция:\nПотом сыграй моего руководителя. Реалистично и без поблажек: возражай, откладывай, проси доказательств. Отвечай по одной реплике. Когда я напишу «стоп» — разбери, где я был убедителен, а где слишком быстро сдался.",
+    "en": "Help me prepare for a conversation with my manager about a raise.\n\nMy situation:\n- Role and how long I've been here: [должность и стаж: дизайнер, 2 года в компании]\n- What I've achieved: [мои достижения: запустил новый сайт, взял на себя ещё двух клиентов]\n- Current salary and what I want: [сейчас и сколько хочу: 90 тысяч, хочу 120]\n- What I know about my manager: [какой начальник: занятой, любит цифры, не любит давление]\n\nPart 1 — Strategy:\n- Build my 3 strongest arguments, based on value to the company, not on my personal needs.\n- Suggest the best timing and the first 2–3 sentences to open the conversation.\n- List the 5 most likely objections and a calm answer to each.\n- Suggest what to ask for if the answer is \"no money right now\" (for example, a date to revisit, a bonus, training, a title change).\n- If you mention market salary levels, say clearly that I need to check real numbers myself (for example on job sites) — do not invent figures.\n\nPart 2 — Rehearsal:\nThen play my manager. Be realistic and don't make it easy: object, delay, ask for proof. Reply one message at a time. When I write \"стоп\", give feedback on where I was convincing and where I gave in too fast.\n\nReply in Russian."
+   },
+   "fix": [
+    "Проговаривайте свои реплики вслух, прежде чем отправить: на бумаге всё звучит увереннее, чем в жизни."
+   ],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t5",
+   "n": 5,
+   "title": "Разобрать вакансию: что им на самом деле нужно",
+   "desc": "Расшифровка вакансии простым языком, настоящие приоритеты работодателя и тревожные сигналы.",
+   "format": "text",
+   "spheres": [
+    "work"
+   ],
+   "tasks": [
+    "analyze"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Разбери эту вакансию как опытный рекрутер, который на моей стороне.\n\n[текст вакансии: вставьте описание вакансии целиком]\n\nРасскажи:\n1. Простыми словами: чем этот человек будет заниматься каждый день.\n2. Что им нужнее всего (топ-3), а что «было бы неплохо» и чем можно пренебречь.\n3. На что намекают формулировки между строк: размер команды, нагрузка, уровень хаоса, насколько на самом деле высокая должность.\n4. Тревожные сигналы, если есть (размытые обязанности, «стрессоустойчивость», нереальный список навыков за такие деньги и т.п.). Конкретно и без преувеличений.\n5. 5 умных вопросов, которые стоит задать им на собеседовании, чтобы всё это проверить.\n\nМой опыт для контекста: [мой опыт: коротко, 2–3 строки]\nИсходя из него, честно оцени, насколько я подхожу и на что мне делать упор.",
+    "en": "Analyze this job posting like an experienced recruiter who is on my side.\n\n[текст вакансии: вставьте описание вакансии целиком]\n\nTell me:\n1. In plain words: what this person will actually do day to day.\n2. What they need most (top 3), and what is \"nice to have\" that I can skip.\n3. What the wording hints at between the lines: team size, workload, chaos level, how senior the role really is.\n4. Red flags, if any (vague duties, \"stress resistance\", unrealistic list of skills for the salary, etc.). Be specific and don't exaggerate.\n5. 5 smart questions I should ask them at the interview to check these points.\n\nMy background for context: [мой опыт: коротко, 2–3 строки]\nBased on it, estimate honestly how well I fit and what I should emphasize.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t6",
+   "n": 6,
+   "title": "Сравнить два предложения о работе",
+   "desc": "Честное сравнение офферов по тому, что важно именно вам, и вопросы, которые стоит задать до решения.",
+   "format": "text",
+   "spheres": [
+    "work",
+    "mind"
+   ],
+   "tasks": [
+    "choose"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги выбрать между двумя предложениями о работе. Не решай за меня — помоги увидеть картину ясно.\n\nПредложение А: [предложение А: зарплата, график, офис/удалёнка, задачи, команда, что нравится и что смущает]\nПредложение Б: [предложение Б: то же самое про второе предложение]\n\nЧто для меня сейчас важнее всего: [мои приоритеты: рост, деньги, свободное время, стабильность]\n\nСделай так:\n1. Сначала задай мне 3–5 вопросов о том, что я мог не учесть (дорога, рост, испытательный срок, атмосфера в команде, планы на несколько лет вперёд). Дождись ответов.\n2. Потом сравни предложения в таблице по важным для меня критериям, с честным комментарием к каждому.\n3. Покажи скрытые издержки и риски каждого варианта.\n4. Скажи, какое предложение лучше подходит под мои приоритеты и почему, и при каком условии лучше оказалось бы другое.\n5. Перечисли, что стоит уточнить у каждого работодателя до решения.",
+    "en": "Help me choose between two job offers. Don't decide for me; help me see clearly.\n\nOffer A: [предложение А: зарплата, график, офис/удалёнка, задачи, команда, что нравится и что смущает]\nOffer B: [предложение Б: то же самое про второе предложение]\n\nWhat matters to me most right now: [мои приоритеты: рост, деньги, свободное время, стабильность]\n\nDo this:\n1. First ask me 3–5 questions about things I may not have considered (commute, growth, probation, how the team feels, long-term plans). Wait for my answers.\n2. Then compare the offers in a table by the criteria that matter to me, with an honest note for each.\n3. Show hidden costs and risks of each option.\n4. Tell me which one fits my priorities better and why, and what would have to be true for the other one to be the better choice.\n5. List what I should clarify with each employer before deciding.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t7",
+   "n": 7,
+   "title": "Сложное письмо начальнику или коллеге",
+   "desc": "Письмо, которое решает проблему и не портит отношения: сорванный срок, отказ от задачи, просьба о помощи.",
+   "format": "text",
+   "spheres": [
+    "work",
+    "people"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги написать непростое рабочее сообщение.\n\nКому: [кому: руководителю]\nСитуация: [что случилось: не успеваю сдать проект к пятнице из-за правок клиента]\nЧего хочу добиться, когда он прочитает: [чего хочу добиться: перенести срок на среду без конфликта]\nКакие у нас отношения и какой у него стиль: [какие отношения: нормальные, он ценит прямоту]\nГде отправляю: [где отправляю: рабочий чат]\n\nТребования:\n- Суть — в первой фразе.\n- Признать свою часть ответственности без лишних извинений.\n- Причину — одной фразой, без оправданий.\n- Предложить конкретное решение или варианты, чтобы ему оставалось только сказать «да».\n- Коротко: не больше 6–8 предложений для письма, 3–4 для чата.\n\nДай 2 варианта: помягче и попрямее. Отметь фразы, которые могут звучать как оправдание или пассивная агрессия.",
+    "en": "Help me write a difficult work message.\n\nWho it's for: [кому: руководителю]\nSituation: [что случилось: не успеваю сдать проект к пятнице из-за правок клиента]\nWhat I want to happen after they read it: [чего хочу добиться: перенести срок на среду без конфликта]\nOur relationship and their style: [какие отношения: нормальные, он ценит прямоту]\nChannel: [где отправляю: рабочий чат]\n\nRequirements:\n- Get to the point in the first sentence.\n- Take responsibility for my part without over-apologizing.\n- Explain the reason in one sentence, without excuses.\n- Offer a concrete solution or options, so they only need to say \"yes\".\n- Short: no more than 6–8 sentences for email, 3–4 for a chat.\n\nGive me 2 versions: a softer one and a more direct one. Point out any phrase that could sound defensive or passive-aggressive.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t8",
+   "n": 8,
+   "title": "План на первые 90 дней на новой работе",
+   "desc": "Понятный план: что сделать в первый месяц, во второй и в третий, чтобы быстро влиться и показать результат.",
+   "format": "text",
+   "spheres": [
+    "work"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Я выхожу на новую работу, и мне нужен план на 30, 60 и 90 дней.\n\nДолжность: [должность: руководитель отдела продаж]\nКомпания: [компания: небольшой интернет-магазин, 20 человек]\nЧто от меня ждут: [что от меня ждут: навести порядок в продажах и увеличить выручку]\nМой уровень: [мой уровень: первый раз руковожу]\n\nСоставь план:\n- Дни 1–30: разобраться — с кем познакомиться, что понять, какие вопросы задать, что пока не трогать.\n- Дни 31–60: первый вклад — быстрые победы, заметные, но с небольшим риском.\n- Дни 61–90: крупный результат — что предложить и как это измерить.\nНа каждый этап — 3–5 конкретных действий и один понятный результат, который можно показать руководителю.\n\nЕщё добавь: типичные ошибки новичков на такой должности и короткий список вопросов для первой встречи один на один с руководителем.",
+    "en": "I'm starting a new job and want a 30-60-90 day plan.\n\nRole: [должность: руководитель отдела продаж]\nCompany: [компания: небольшой интернет-магазин, 20 человек]\nWhat I know about the expectations: [что от меня ждут: навести порядок в продажах и увеличить выручку]\nMy experience level: [мой уровень: первый раз руковожу]\n\nBuild the plan:\n- Days 1–30: learn — who to meet, what to understand, which questions to ask, what not to change yet.\n- Days 31–60: first contributions — quick wins that are visible but low-risk.\n- Days 61–90: bigger impact — what to propose and how to measure it.\nFor each stage, give 3–5 concrete actions and one clear result to show my manager.\n\nAlso add: typical mistakes newcomers make in this kind of role, and a short list of questions for my first one-on-one with my manager.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t9",
+   "n": 9,
+   "title": "Самооценка для отчёта о работе",
+   "desc": "Итоги года или квартала, написанные через результаты, а не через «выполнял обязанности».",
+   "format": "text",
+   "spheres": [
+    "work"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги написать самооценку моей работы за [период: последний год].\n\nМоя должность: [должность: SMM-менеджер]\nЧто я делал (пишу как попало, это нормально): [что делал: вёл 3 аккаунта, запустил рилсы, провёл два конкурса, обучил стажёра…]\n\nШаг 1: Задай мне до 5 вопросов, чтобы превратить этот список в измеримые результаты (цифры, было/стало, кому это помогло). Дождись ответов.\nШаг 2: Напиши самооценку:\n- 3–5 главных достижений, каждое в формате «что сделал → что изменилось → почему это важно», с цифрами там, где я их дал.\n- 1–2 честные зоны роста, сформулированные конструктивно.\n- Цели на следующий период, связанные с целями команды.\n\nПравила: не выдумывай цифры и результаты. Тон — уверенный, но без хвастовства.",
+    "en": "Help me write a self-review of my work for [период: последний год].\n\nMy role: [должность: SMM-менеджер]\nWhat I did (write freely, messy is fine): [что делал: вёл 3 аккаунта, запустил рилсы, провёл два конкурса, обучил стажёра…]\n\nStep 1: Ask me up to 5 questions to turn my list into measurable results (numbers, before/after, who benefited). Wait for my answers.\nStep 2: Write the self-review:\n- 3–5 key achievements, each as \"what I did → what changed → why it mattered\", with numbers where I gave them.\n- 1–2 honest areas for growth, framed constructively.\n- Goals for the next period that connect to the team's goals.\n\nRules: don't invent numbers or results. Keep the tone confident but not boastful.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t10",
+   "n": 10,
+   "title": "План смены профессии",
+   "desc": "Реалистичный план перехода в новую сферу с учётом того, что вы уже умеете.",
+   "format": "text",
+   "spheres": [
+    "work",
+    "study"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Я хочу сменить профессию, и мне нужен честный, реалистичный план.\n\nСейчас работаю: [кем работаю сейчас: бухгалтер, 6 лет]\nХочу стать: [кем хочу стать: UX-дизайнер]\nСколько времени есть на учёбу: [сколько времени есть: 8 часов в неделю]\nБюджет на обучение: [бюджет: до 30 тысяч, лучше бесплатно]\nФинансовая подушка / могу ли зарабатывать меньше: [финансы: могу полгода получать меньше]\n\nСделай так:\n1. Сначала задай мне 3–4 вопроса о моих навыках, интересах и ограничениях. Дождись ответов.\n2. Честно скажи, насколько реален для меня этот переход и какие будут главные трудности.\n3. Перечисли навыки, которые я могу перенести в новую сферу, и как их подать.\n4. Составь пошаговый план по месяцам: что учить, какие небольшие проекты сделать для портфолио, когда начинать откликаться.\n5. Предложи способ дёшево попробовать новую сферу, прежде чем прыгать в неё целиком.\n\nЕсли упоминаешь конкретные курсы, зарплаты или спрос на рынке — напомни, что их нужно проверить. Не выдавай догадки за факты.",
+    "en": "I want to change careers and need an honest, realistic plan.\n\nNow I work as: [кем работаю сейчас: бухгалтер, 6 лет]\nI want to become: [кем хочу стать: UX-дизайнер]\nTime I can spend on learning: [сколько времени есть: 8 часов в неделю]\nBudget for learning: [бюджет: до 30 тысяч, лучше бесплатно]\nFinancial cushion / can I take a pay cut: [финансы: могу полгода получать меньше]\n\nDo this:\n1. Ask me 3–4 questions about my skills, interests and constraints first. Wait for my answers.\n2. Tell me honestly how realistic this switch is for me and what the main difficulties will be.\n3. List my existing skills that transfer to the new field and how to present them.\n4. Build a step-by-step plan by month: what to learn, which small projects to do for a portfolio, when to start applying.\n5. Suggest a way to test the new field cheaply before fully committing.\n\nIf you mention specific courses, salaries or market demand, remind me to verify them — do not present guesses as facts.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t11",
+   "n": 11,
+   "title": "Репетиция трудного разговора",
+   "desc": "Тренировка разговора, которого вы боитесь: нейросеть играет собеседника, возражает, а потом разбирает, где вы звучали уверенно, а где сдались.",
+   "format": "text",
+   "spheres": [
+    "people",
+    "work",
+    "family"
+   ],
+   "tasks": [
+    "practice"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги мне отрепетировать трудный разговор.\n\nС кем мне нужно поговорить: [с кем: с мамой]\nО чём разговор: [о чём: хочу сказать, что на Новый год мы не приедем]\nКакой исход я считаю хорошим: [чего хочу добиться: она поймёт и не обидится надолго]\nКак этот человек обычно реагирует: [как обычно реагирует: обижается, давит на чувство вины]\nЧего я больше всего боюсь: [чего боюсь: что начну оправдываться и сдамся]\n\nШаг 1: Дай короткий план: как начать, главная мысль одной фразой и 2–3 фразы на моменты, когда станет тяжело.\nШаг 2: Сыграй этого человека реалистично, по моему описанию. Не упрощай мне задачу, но будь правдоподобным, а не карикатурным. Отвечай по одной реплике и жди меня.\nШаг 3: Когда я напишу «стоп», разбери: где я говорил ясно и спокойно, где начал оправдываться или сдался и что именно стоило сказать вместо этого.",
+    "en": "Help me rehearse a difficult conversation.\n\nWho I need to talk to: [с кем: с мамой]\nWhat it's about: [о чём: хочу сказать, что на Новый год мы не приедем]\nWhat a good outcome looks like for me: [чего хочу добиться: она поймёт и не обидится надолго]\nHow this person usually reacts: [как обычно реагирует: обижается, давит на чувство вины]\nWhat I'm most afraid of: [чего боюсь: что начну оправдываться и сдамся]\n\nStep 1: Give me a short plan: how to open, the key message in one sentence, and 2–3 phrases for the moments when it gets hard.\nStep 2: Play this person realistically, based on my description. Don't make it easy for me, but stay believable, not cartoonish. Reply one message at a time and wait for me.\nStep 3: When I write \"стоп\", give me feedback: where I was clear and calm, where I started over-explaining or gave in, and what exactly to say instead.\n\nReply in Russian."
+   },
+   "fix": [
+    "Если в отношениях есть угрозы, давление или насилие, это не история для тренировки с нейросетью. Здесь важнее поговорить с близкими людьми или специалистом."
+   ],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t12",
+   "n": 12,
+   "title": "Ответить на неприятное сообщение спокойно",
+   "desc": "Три варианта ответа на грубость, претензию или пассивную агрессию: от мягкого до твёрдого, без ответной грубости.",
+   "format": "text",
+   "spheres": [
+    "people",
+    "work"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Мне прислали неприятное сообщение, и я хочу ответить спокойно и с достоинством.\n\nСообщение:\n[сообщение: вставьте сюда то, что вам написали]\n\nКонтекст — кто мне этот человек и что было до этого: [контекст: коллега из соседнего отдела, спорим из-за сроков]\nЧего хочу добиться ответом: [чего хочу: закрыть спор и договориться]\n\nСначала в 2–3 предложениях скажи, чем человек, скорее всего, недоволен или чего хочет, — отдельно факты, отдельно эмоции.\nПотом дай 3 варианта ответа:\n1. Мягкий — снижает градус и сохраняет отношения.\n2. Нейтральный — спокойный и деловой.\n3. Твёрдый — чётко обозначает границу, но остаётся вежливым.\n\nПравила: без сарказма, без оправданий, без ответного нападения. Каждый вариант — коротко. Скажи, какой отправил бы ты на моём месте и почему.",
+    "en": "Someone sent me an unpleasant message and I want to answer calmly and with dignity.\n\nTheir message:\n[сообщение: вставьте сюда то, что вам написали]\n\nContext: who this person is to me and what happened before: [контекст: коллега из соседнего отдела, спорим из-за сроков]\nWhat I want to achieve with my reply: [чего хочу: закрыть спор и договориться]\n\nFirst, in 2–3 sentences, tell me what the person is most likely upset about or asking for, separating facts from emotions.\nThen give me 3 replies:\n1. Soft — de-escalates and keeps the relationship.\n2. Neutral — calm and businesslike.\n3. Firm — sets a clear boundary, still polite.\n\nRules: no sarcasm, no excuses, no counter-attack. Keep each reply short. Tell me which one you'd send in my place and why.\n\nReply in Russian."
+   },
+   "fix": [
+    "Иногда лучший ответ — пауза. Если внутри всё кипит, отправьте ответ через час."
+   ],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t13",
+   "n": 13,
+   "title": "Разобрать конфликт с двух сторон",
+   "desc": "Честный взгляд со стороны, в том числе на то, в чём вы сами могли быть неправы, и шаги, как из конфликта выйти.",
+   "format": "text",
+   "spheres": [
+    "people",
+    "mind"
+   ],
+   "tasks": [
+    "analyze"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Я в конфликте и хочу честный взгляд со стороны, а не просто поддержку.\n\nЧто произошло, с моей стороны: [что произошло: подробно, как было]\nКто мне этот человек: [кто он для меня: друг, дружим 10 лет]\nЧто я уже пробовал: [что уже пробовал: пытался поговорить, он отмалчивается]\n\nПожалуйста:\n1. Перескажи ситуацию с точки зрения другого человека — настолько честно, насколько возможно.\n2. Отдели факты от интерпретаций — в моём рассказе и в его версии.\n3. Честно скажи, чем я мог сам поспособствовать конфликту. Не смягчай.\n4. Назови, что на самом деле нужно каждому из нас под этим спором.\n5. Предложи 2–3 реалистичных следующих шага и точную первую фразу, с которой можно заново начать разговор.\n\nПомни, что ты знаешь только мою версию, и отметь, чего ты знать не можешь.",
+    "en": "I'm in a conflict and want an honest outside view, not just support.\n\nWhat happened, from my side: [что произошло: подробно, как было]\nWho the other person is to me: [кто он для меня: друг, дружим 10 лет]\nWhat I've already tried: [что уже пробовал: пытался поговорить, он отмалчивается]\n\nPlease:\n1. Retell the situation from the other person's point of view, as fairly as you can.\n2. Separate facts from interpretations — in my story and in theirs.\n3. Tell me honestly where I may have contributed to the conflict. Don't soften it.\n4. Name what each of us probably needs underneath the argument.\n5. Suggest 2–3 realistic next steps and the exact first sentence I could use to restart the conversation.\n\nRemember you only have my side of the story, so point out what you can't know.\n\nReply in Russian."
+   },
+   "fix": [
+    "Если в отношениях есть угрозы или насилие, это вопрос не для нейросети, а для помощи близких и специалистов."
+   ],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t14",
+   "n": 14,
+   "title": "Вежливо отказать",
+   "desc": "Отказ, после которого не стыдно и отношения не портятся: коллеге, другу, родственнику, клиенту.",
+   "format": "text",
+   "spheres": [
+    "people",
+    "work"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги сказать «нет» вежливо, но однозначно.\n\nКто просит: [кто просит: подруга]\nО чём просят: [о чём просят: одолжить крупную сумму денег]\nПочему отказываю (для тебя, не обязательно для неё): [почему отказываю: не хочу рисковать отношениями и деньгами]\nЧто могу предложить взамен, если могу: [что могу предложить взамен: помочь найти подработку / ничего]\nГде отвечаю: [где отвечаю: в мессенджере]\n\nНапиши 2 варианта: тёплый и короткий.\nПравила: «нет» — ясно, в первых двух предложениях. Без долгих оправданий, без выдуманных причин, без «может быть, потом», если я имею в виду «нет». По-доброму.",
+    "en": "Help me say \"no\" politely but clearly.\n\nWho's asking: [кто просит: подруга]\nWhat they're asking for: [о чём просят: одолжить крупную сумму денег]\nWhy I'm saying no (for me, not necessarily to share): [почему отказываю: не хочу рисковать отношениями и деньгами]\nWhat I can offer instead, if anything: [что могу предложить взамен: помочь найти подработку / ничего]\nChannel: [где отвечаю: в мессенджере]\n\nWrite 2 versions: a warm one and a short one.\nRules: say \"no\" clearly in the first two sentences, no long excuses, no fake reasons, no \"maybe later\" if I mean no. Keep it kind.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t15",
+   "n": 15,
+   "title": "Извиниться по-настоящему",
+   "desc": "Извинение без «прости, если тебя задело»: признание, понимание последствий и что вы исправите.",
+   "format": "text",
+   "spheres": [
+    "people",
+    "family"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Я накосячил и хочу искренне извиниться.\n\nЧто я сделал: [что я сделал: забыл про день рождения друга и не поздравил]\nКак это на него повлияло: [как это на него повлияло: он обиделся, считает, что мне всё равно]\nКто он мне: [кто он мне: близкий друг]\nКак буду извиняться: [как: сообщением / скажу при встрече]\n\nНапиши извинение, в котором:\n- прямо названо, что я сделал, без «если я тебя задел» и «извини, что ты так это воспринял»;\n- видно, что я понимаю, как это на него повлияло;\n- нет оправданий и никаких «но»;\n- сказано, что я сделаю, чтобы исправить или не повторить;\n- нет требования простить.\nКоротко и моими словами, не официально. Если буду говорить вслух — чтобы звучало естественно.",
+    "en": "I messed up and want to apologize sincerely.\n\nWhat I did: [что я сделал: забыл про день рождения друга и не поздравил]\nHow it affected the other person: [как это на него повлияло: он обиделся, считает, что мне всё равно]\nWho they are to me: [кто он мне: близкий друг]\nHow I'll apologize: [как: сообщением / скажу при встрече]\n\nWrite an apology that:\n- names clearly what I did, without \"if I hurt you\" or \"sorry you feel that way\";\n- shows I understand how it affected them;\n- has no excuses or \"but\";\n- says what I'll do to fix it or to not repeat it;\n- does not demand forgiveness.\nKeep it short and in my natural voice, not formal. If I'm going to say it in person, make it sound natural when spoken.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t16",
+   "n": 16,
+   "title": "Поздравление или тост, который про человека",
+   "desc": "Поздравление с живыми деталями, а не открытка из интернета: сначала вопросы о человеке, потом текст.",
+   "format": "text",
+   "spheres": [
+    "people",
+    "family",
+    "creative"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги написать [что: тост на свадьбу] для [кому: мой лучший друг Саша].\n\nПрежде чем писать, задай мне 5 вопросов, чтобы собрать живые детали: общие воспоминания, смешные случаи, чем этот человек особенный, наши внутренние шутки. Дождись ответов.\n\nПотом напиши:\n- Длина: [длина: на 1–2 минуты вслух]\n- Тон: [тон: смешно, но в конце трогательно]\n- В основе — 1–2 конкретные истории из моих ответов, а не общие пожелания.\n- Без штампов вроде «счастья, здоровья и любви».\n- Легко произносить вслух: короткие фразы, естественный ритм.\n\nДай основной вариант и запасной покороче.",
+    "en": "Help me write a [что: тост на свадьбу] for [кому: мой лучший друг Саша].\n\nBefore writing, ask me 5 questions to get real details: shared memories, funny moments, what makes this person special, inside jokes. Wait for my answers.\n\nThen write it:\n- Length: [длина: на 1–2 минуты вслух]\n- Tone: [тон: смешно, но в конце трогательно]\n- Built around 1–2 specific stories from my answers, not generic wishes.\n- No clichés like \"happiness, health and love\".\n- Easy to say out loud: short sentences, natural rhythm.\n\nGive one main version and one shorter backup.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t17",
+   "n": 17,
+   "title": "Что он имел в виду? Разбор сообщения",
+   "desc": "Спокойный разбор непонятного сообщения: возможные смыслы и как уточнить, вместо того чтобы накручивать себя.",
+   "format": "text",
+   "spheres": [
+    "people"
+   ],
+   "tasks": [
+    "analyze"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Мне пришло сообщение, и я не понимаю, как его воспринимать.\n\nСообщение: [сообщение: «ну ок, как знаешь»]\nКто написал и какие у нас отношения: [кто написал: девушка, встречаемся полгода]\nЧто было до этого: [что было до этого: я отменил наши планы на выходные]\n\nПожалуйста:\n1. Дай 2–3 возможных трактовки — от самой вероятной к наименее вероятной — и что в контексте говорит в пользу каждой.\n2. Не делай вид, что читаешь мысли: прямо скажи, что наверняка знать нельзя.\n3. Подскажи, как просто и спокойно уточнить, что человек имел в виду, — с 2 примерами сообщений.",
+    "en": "I received a message and I'm not sure how to read it.\n\nThe message: [сообщение: «ну ок, как знаешь»]\nWho sent it and our relationship: [кто написал: девушка, встречаемся полгода]\nWhat happened before: [что было до этого: я отменил наши планы на выходные]\n\nPlease:\n1. Give me 2–3 possible interpretations, from the most likely to the least, and what in the context supports each one.\n2. Don't claim to read their mind — be clear that you can't know for sure.\n3. Suggest how I can simply and calmly clarify what they meant, with 2 example messages.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t18",
+   "n": 18,
+   "title": "Написать другу, с которым давно не общались",
+   "desc": "Лёгкое сообщение, после которого не неловко: без долгих объяснений, почему пропал.",
+   "format": "text",
+   "spheres": [
+    "people"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Хочу снова начать общаться с человеком, с которым давно не разговаривал.\n\nКто: [кто: однокурсник Дима]\nСколько не общались: [сколько не общались: года три]\nПочему пропали (если знаю): [почему пропали: просто разъехались по разным городам]\nЧто нас связывает или повод написать сейчас: [повод: увидел фото с нашей поездки / его пост]\n\nНапиши 3 коротких варианта (по 2–4 предложения): непринуждённый, тёплый и с лёгкой шуткой.\nПравила: без долгих извинений за то, что пропал, без давления ответить, чтобы ему было легко написать в ответ. В конце — простой вопрос или предложение.",
+    "en": "I want to reconnect with someone I haven't talked to in a long time.\n\nWho: [кто: однокурсник Дима]\nHow long it's been: [сколько не общались: года три]\nWhy we lost touch (if I know): [почему пропали: просто разъехались по разным городам]\nSomething we shared or a reason to write now: [повод: увидел фото с нашей поездки / его пост]\n\nWrite 3 short options (2–4 sentences each): casual, warm, and one with a light joke.\nRules: no long apologies for disappearing, no pressure to answer, make it easy for them to reply. End with a simple question or suggestion.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t19",
+   "n": 19,
+   "title": "Обозначить границу",
+   "desc": "Как спокойно сказать «так со мной нельзя»: родственнику с непрошеными советами, коллеге, который перекидывает задачи, другу, который постоянно опаздывает.",
+   "format": "text",
+   "spheres": [
+    "people",
+    "family",
+    "work"
+   ],
+   "tasks": [
+    "write",
+    "practice"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Мне нужно обозначить границу и при этом остаться спокойным.\n\nС кем: [кто: свекровь]\nЧто повторяется: [что происходит: без предупреждения приходит в гости и даёт советы по воспитанию]\nКак это на меня влияет: [как это на меня влияет: чувствую, что меня не уважают в моём же доме]\nЧего я хочу вместо этого: [чего хочу: чтобы предупреждала заранее и не критиковала при ребёнке]\n\nПожалуйста:\n1. Помоги сформулировать границу в 2–3 предложениях: конкретное поведение (а не характер человека), как оно на меня влияет и о чём я прошу.\n2. Дай короткие ответы на 3 вероятные реакции (обида, «я же хочу как лучше», игнорирование).\n3. Подскажи, что я сделаю, если границу снова нарушат, — что-то спокойное, что я правда смогу выполнить.\n4. Предложи отрепетировать разговор: сыграй этого человека реалистично, по одной реплике, а когда я напишу «стоп» — разбери, как я держался.",
+    "en": "I need to set a boundary with someone and stay calm while doing it.\n\nWho: [кто: свекровь]\nWhat keeps happening: [что происходит: без предупреждения приходит в гости и даёт советы по воспитанию]\nHow it affects me: [как это на меня влияет: чувствую, что меня не уважают в моём же доме]\nWhat I want instead: [чего хочу: чтобы предупреждала заранее и не критиковала при ребёнке]\n\nPlease:\n1. Help me phrase the boundary in 2–3 sentences: describe the specific behavior (not their character), how it affects me, and what I'm asking for.\n2. Give me short answers for 3 likely reactions (hurt feelings, \"I'm just trying to help\", ignoring it).\n3. Suggest what I will do if the boundary is crossed again — something calm that I can actually follow through on.\n4. Offer to role-play the conversation: play this person realistically, one message at a time, and give me feedback when I write \"стоп\".\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t20",
+   "n": 20,
+   "title": "Объяснить сложную тему «на пальцах»",
+   "desc": "Объяснение под ваш уровень, с примерами из жизни и проверкой, что вы правда поняли.",
+   "format": "text",
+   "spheres": [
+    "study"
+   ],
+   "tasks": [
+    "explain"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Объясни мне тему: [тема: как работает инфляция].\n\nМой уровень: [мой уровень: школьные знания, в экономике не разбираюсь]\nЗачем мне это: [зачем: хочу понимать новости]\n\nКак объяснять:\n1. Сначала — суть в 2–3 простых предложениях, без терминов.\n2. Потом — пример или аналогия из обычной жизни.\n3. Потом — подробнее, по шагам. Каждый новый термин объясняй сразу, когда он появляется.\n4. Назови 2–3 частых заблуждения по этой теме.\n5. В конце задай мне 3 вопроса на понимание — по одному, дождись ответа и разбери его.\n\nЕсли я чего-то не понял, объясни по-другому, а не теми же словами.",
+    "en": "Explain this topic to me: [тема: как работает инфляция].\n\nMy level: [мой уровень: школьные знания, в экономике не разбираюсь]\nWhy I need it: [зачем: хочу понимать новости]\n\nHow to explain:\n1. First, the core idea in 2–3 simple sentences, no jargon.\n2. Then an example or analogy from everyday life.\n3. Then go deeper step by step. Explain every new term right when it appears.\n4. Name 2–3 common misconceptions about this topic.\n5. At the end, ask me 3 questions to check my understanding — one at a time, wait for my answer and review it.\n\nIf I don't get something, explain it differently, not with the same words.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t21",
+   "n": 21,
+   "title": "План изучения нового навыка",
+   "desc": "Реальный план по неделям с учётом вашего времени, а не абстрактный список «что почитать».",
+   "format": "text",
+   "spheres": [
+    "study"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Составь мне план изучения: [что хочу освоить: Figma для дизайна интерфейсов].\n\nС чего начинаю: [мой уровень сейчас: знаю основы Photoshop]\nСколько времени в неделю: [время: 5 часов]\nКакой результат хочу и к какому сроку: [цель: сделать 3 проекта для портфолио за 2 месяца]\nКак мне удобнее учиться: [формат: видео и практика, книги не люблю]\n\nСначала задай мне 2–3 уточняющих вопроса. Дождись ответов.\nПотом составь план по неделям: что изучить, какое практическое задание сделать и как понять, что неделя удалась.\nСамые важные 20% навыка, которые дают 80% результата, — вперёд. Добавь, как не бросить на третьей неделе.\nЕсли советуешь конкретные курсы или ресурсы — отметь, что их актуальность нужно проверить.",
+    "en": "Make me a learning plan for: [что хочу освоить: Figma для дизайна интерфейсов].\n\nWhere I'm starting: [мой уровень сейчас: знаю основы Photoshop]\nTime per week: [время: 5 часов]\nThe result I want and by when: [цель: сделать 3 проекта для портфолио за 2 месяца]\nHow I like to learn: [формат: видео и практика, книги не люблю]\n\nFirst ask me 2–3 clarifying questions. Wait for my answers.\nThen build a week-by-week plan: what to learn, which practical task to do, and how to know the week went well.\nPut the 20% of the skill that gives 80% of the result first. Add tips on how not to quit in week three.\nIf you recommend specific courses or resources, note that I need to check they are still relevant.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t22",
+   "n": 22,
+   "title": "Подготовка к экзамену: тренировка вопросами",
+   "desc": "«экзаменатор», который гоняет по вопросам, находит пробелы и возвращается к слабым местам.",
+   "format": "text",
+   "spheres": [
+    "study"
+   ],
+   "tasks": [
+    "practice"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги подготовиться к экзамену: [экзамен: история России, ЕГЭ].\nТемы: [темы: вставьте список билетов или тем]\nЭкзамен через: [срок: 3 недели]\n\nРежим тренировки:\n- Задавай по одному вопросу, жди мой ответ.\n- После ответа: верно или нет, что упущено, короткое правильное объяснение.\n- Отслеживай, в каких темах я ошибаюсь, и возвращайся к ним чаще.\n- Чередуй простые вопросы и сложные, как на настоящем экзамене.\n- Каждые 10 вопросов — короткий отчёт: сильные темы, слабые темы, что повторить.\n\nНачни с вопроса средней сложности.",
+    "en": "Help me prepare for an exam: [экзамен: история России, ЕГЭ].\nTopics: [темы: вставьте список билетов или тем]\nThe exam is in: [срок: 3 недели]\n\nPractice mode:\n- Ask one question at a time and wait for my answer.\n- After each answer: correct or not, what I missed, and a short correct explanation.\n- Track the topics where I make mistakes and come back to them more often.\n- Mix easy and hard questions, like a real exam.\n- Every 10 questions, give a short report: strong topics, weak topics, what to review.\n\nStart with a medium-difficulty question.\n\nReply in Russian."
+   },
+   "fix": [
+    "Можно прикрепить свой конспект или учебник: «Задавай вопросы только по этому материалу»."
+   ],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t23",
+   "n": 23,
+   "title": "Разговорная практика иностранного языка",
+   "desc": "Собеседник на иностранном, который подстраивается под ваш уровень и мягко исправляет ошибки.",
+   "format": "text",
+   "spheres": [
+    "study"
+   ],
+   "tasks": [
+    "practice"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Давай практиковать [язык: английский] в разговоре.\n\nМой уровень: [уровень: A2, понимаю простые фразы, говорю с трудом]\nТема разговора: [тема: заказ еды в кафе / собеседование / просто болтовня]\n\nПравила:\n- Говори со мной только на [язык: английский], простыми фразами под мой уровень.\n- Задавай вопросы, чтобы разговор продолжался.\n- Если я ошибаюсь, в конце своей реплики коротко покажи: как я написал → как правильно, и почему (одной фразой по-русски).\n- Раз в 5 реплик добавляй 2–3 полезных выражения по теме.\n- Если я пишу по-русски, помоги сказать это на [язык: английский].\n\nНачни разговор первым.",
+    "en": "Let's practice [язык: английский] in conversation.\n\nMy level: [уровень: A2, понимаю простые фразы, говорю с трудом]\nTopic: [тема: заказ еды в кафе / собеседование / просто болтовня]\n\nRules:\n- Speak to me only in [язык: английский], using simple sentences that match my level.\n- Ask questions to keep the conversation going.\n- If I make a mistake, at the end of your message briefly show: what I wrote → the correct version, and why (one sentence in Russian).\n- Every 5 messages, add 2–3 useful phrases on the topic.\n- If I write in Russian, help me say it in [язык: английский].\n\nYou start the conversation."
+   },
+   "fix": [
+    "В приложении ChatGPT или Gemini включите голосовой режим: так практика получается разговорной, а не письменной."
+   ],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t24",
+   "n": 24,
+   "title": "Проверить мою работу и объяснить ошибки",
+   "desc": "Разбор эссе, курсовой или домашки как у строгого, но доброго преподавателя — без переписывания за вас.",
+   "format": "text",
+   "spheres": [
+    "study"
+   ],
+   "tasks": [
+    "weak"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Проверь мою работу как строгий, но доброжелательный преподаватель.\n\nЧто это за работа: [тип работы: эссе на 2 страницы по литературе]\nТребования к ней: [требования: вставьте задание или критерии оценки]\nМоя работа:\n[текст работы: вставьте сюда]\n\nНе переписывай работу за меня. Вместо этого:\n1. Общая оценка: что получилось, что нет.\n2. Главные проблемы по важности: логика, аргументы, соответствие заданию, структура, язык.\n3. Для каждой проблемы — где именно она (процитируй кусок) и как исправить своими силами.\n4. Какую оценку, скорее всего, поставят сейчас и что поднимет её сильнее всего.",
+    "en": "Review my work like a strict but kind teacher.\n\nWhat kind of work it is: [тип работы: эссе на 2 страницы по литературе]\nThe requirements: [требования: вставьте задание или критерии оценки]\nMy work:\n[текст работы: вставьте сюда]\n\nDon't rewrite it for me. Instead:\n1. Overall assessment: what works and what doesn't.\n2. The main problems in order of importance: logic, arguments, fit to the assignment, structure, language.\n3. For each problem — where exactly it is (quote the passage) and how I can fix it myself.\n4. What grade it would most likely get now, and what would raise it the most.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t25",
+   "n": 25,
+   "title": "Разобрать траты и составить бюджет",
+   "desc": "Куда уходят деньги, где утекает больше всего и реалистичный бюджет на месяц.",
+   "format": "text",
+   "spheres": [
+    "money"
+   ],
+   "tasks": [
+    "analyze",
+    "plan"
+   ],
+   "attach": "Выписку трат за месяц (без номеров карт и счетов!) или просто список.",
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги разобраться с моими деньгами.\n\nДоход в месяц: [доход: 80 тысяч]\nОбязательные платежи: [обязательные: аренда 30, кредит 8, коммуналка 5]\nМои траты за месяц:\n[траты: вставьте список или выписку — без номеров карт и счетов]\nЦель: [цель: откладывать 10 тысяч в месяц]\n\nСделай так:\n1. Сгруппируй траты по категориям и покажи, сколько уходит на каждую и какой это процент дохода.\n2. Найди 3 места, где деньги утекают незаметнее всего.\n3. Предложи реалистичный бюджет на месяц — без жёсткой экономии, от которой я сорвусь через неделю.\n4. Подскажи простую систему учёта, которую реально вести.\n\nЭто не финансовая консультация, а помощь с разбором. Не советуй конкретные банки и инвестиции.",
+    "en": "Help me get my money under control.\n\nMonthly income: [доход: 80 тысяч]\nFixed payments: [обязательные: аренда 30, кредит 8, коммуналка 5]\nMy spending for the month:\n[траты: вставьте список или выписку — без номеров карт и счетов]\nGoal: [цель: откладывать 10 тысяч в месяц]\n\nDo this:\n1. Group the spending into categories and show how much goes to each and what percentage of income it is.\n2. Find the 3 places where money leaks most quietly.\n3. Suggest a realistic monthly budget — without extreme cuts that will make me give up in a week.\n4. Suggest a simple tracking system I can actually keep up.\n\nThis is not financial advice, just help with the analysis. Don't recommend specific banks or investments.\n\nReply in Russian."
+   },
+   "fix": [
+    "Перед отправкой выписки удалите номера карт и счетов: нейросети они не нужны."
+   ],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t26",
+   "n": 26,
+   "title": "План накопить на цель",
+   "desc": "Сколько откладывать, в какие сроки и что делать, если месяц не удался.",
+   "format": "text",
+   "spheres": [
+    "money"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Составь план, как накопить на цель.\n\nЦель и сумма: [цель: отпуск, 150 тысяч]\nК какому сроку: [срок: к июлю следующего года]\nСколько могу откладывать сейчас: [сколько откладываю: около 10 тысяч в месяц]\nЧто уже есть: [накоплено: 20 тысяч]\n\n1. Посчитай, реально ли успеть, и сколько нужно откладывать в месяц.\n2. Если не успеваю — предложи варианты: сдвинуть срок, уменьшить сумму, найти дополнительные деньги.\n3. Разбей путь на промежуточные цели, чтобы видеть прогресс.\n4. Что делать, если в какой-то месяц отложить не получилось, чтобы не бросить всё.\nСчитай аккуратно и показывай расчёт.",
+    "en": "Make a plan to save for a goal.\n\nGoal and amount: [цель: отпуск, 150 тысяч]\nDeadline: [срок: к июлю следующего года]\nHow much I can save now: [сколько откладываю: около 10 тысяч в месяц]\nWhat I already have: [накоплено: 20 тысяч]\n\n1. Calculate whether it's realistic and how much I need to save per month.\n2. If I can't make it, suggest options: move the deadline, lower the amount, find extra money.\n3. Break the path into milestones so I can see progress.\n4. What to do if one month I can't save anything, so I don't give up entirely.\nCalculate carefully and show your math.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t27",
+   "n": 27,
+   "title": "Крупная покупка: сейчас, копить или в кредит",
+   "desc": "Честный расчёт вариантов с переплатой и рисками — чтобы решение было вашим, а не импульсивным.",
+   "format": "text",
+   "spheres": [
+    "money"
+   ],
+   "tasks": [
+    "choose"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Хочу купить [что: ноутбук за 120 тысяч] и не могу решить, как лучше.\n\nЗачем мне эта покупка: [зачем: для работы, старый сильно тормозит]\nНасколько срочно: [срочность: могу подождать 2–3 месяца]\nМои деньги: [финансы: накоплено 40 тысяч, откладываю 15 в месяц]\nВарианты оплаты, которые рассматриваю: [варианты: копить / рассрочка на 12 месяцев / кредитная карта]\nУсловия, которые мне предлагают: [условия: вставьте условия рассрочки или кредита]\n\n1. Посчитай каждый вариант: сколько я заплачу в итоге и сколько переплачу.\n2. Какие риски у каждого (например, что будет, если доход упадёт).\n3. Есть ли разумные альтернативы (дешевле модель, б/у, апгрейд старого).\n4. Помоги понять, это потребность или импульс: задай мне 2–3 честных вопроса.\n\nЭто не финансовая консультация: условия кредитов проверяй по договору, я могу ошибаться.",
+    "en": "I want to buy [что: ноутбук за 120 тысяч] and can't decide how best to pay for it.\n\nWhy I need it: [зачем: для работы, старый сильно тормозит]\nHow urgent it is: [срочность: могу подождать 2–3 месяца]\nMy finances: [финансы: накоплено 40 тысяч, откладываю 15 в месяц]\nPayment options I'm considering: [варианты: копить / рассрочка на 12 месяцев / кредитная карта]\nThe terms I've been offered: [условия: вставьте условия рассрочки или кредита]\n\n1. Calculate each option: how much I'll pay in total and how much extra.\n2. The risks of each (for example, what happens if my income drops).\n3. Whether there are sensible alternatives (a cheaper model, used, upgrading the old one).\n4. Help me figure out whether this is a need or an impulse: ask me 2–3 honest questions.\n\nThis is not financial advice: check loan terms in the contract itself, I may be wrong.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t28",
+   "n": 28,
+   "title": "Кредит или рассрочка простым языком",
+   "desc": "Что на самом деле написано в условиях, сколько переплата и где подвох.",
+   "format": "text",
+   "spheres": [
+    "money"
+   ],
+   "tasks": [
+    "analyze"
+   ],
+   "attach": "Текст условий или договора (без персональных данных).",
+   "lang": "en",
+   "prompt": {
+    "ru": "Объясни простыми словами условия этого кредита или рассрочки.\n\n[условия: вставьте текст условий или договора — без паспортных данных и номеров]\n\n1. Сколько я получу, сколько и как часто буду платить, сколько отдам в итоге.\n2. Полная стоимость и переплата — в рублях и в процентах. Если данных не хватает для точного расчёта, так и скажи.\n3. Все дополнительные платежи: страховки, комиссии, штрафы за просрочку, платные услуги.\n4. Подводные камни: что может сделать кредит дороже, чем кажется.\n5. Какие вопросы задать банку до подписания.\n\nТы не юрист и не финансовый консультант — отметь, что важно перепроверить в самом договоре.",
+    "en": "Explain the terms of this loan or installment plan in plain words.\n\n[условия: вставьте текст условий или договора — без паспортных данных и номеров]\n\n1. How much I get, how much and how often I'll pay, and how much I'll pay back in total.\n2. The full cost and the overpayment — in rubles and in percent. If there isn't enough data for an exact calculation, say so.\n3. All extra payments: insurance, fees, late-payment penalties, paid add-ons.\n4. Hidden traps: what could make this loan more expensive than it looks.\n5. Which questions to ask the bank before signing.\n\nYou are not a lawyer or a financial advisor — point out what I should double-check in the contract itself.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t29",
+   "n": 29,
+   "title": "Поговорить о деньгах с партнёром",
+   "desc": "Спокойный разговор о деньгах в паре без взаимных упрёков: план и первые фразы.",
+   "format": "text",
+   "spheres": [
+    "money",
+    "people"
+   ],
+   "tasks": [
+    "plan",
+    "practice"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Хочу поговорить с [с кем: моей девушкой] о наших деньгах и боюсь поругаться.\n\nЧто меня беспокоит: [что беспокоит: тратим больше, чем зарабатываем, и не обсуждаем это]\nКак у нас сейчас устроены финансы: [как устроено: у каждого свои деньги, общие траты делим как придётся]\nЧего я хочу добиться: [чего хочу: общий бюджет на жильё и еду и понятный план]\n\n1. Помоги начать разговор без обвинений: первые 2–3 фразы.\n2. Предложи 2–3 модели общего бюджета (всё общее, пропорционально доходам, общий счёт на общие траты) с плюсами и минусами.\n3. Какие темы важно обсудить, а какие лучше отложить.\n4. Предложи отрепетировать: сыграй партнёра реалистично, по одной реплике, а по слову «стоп» разбери, как я держался.",
+    "en": "I want to talk to [с кем: моей девушкой] about our money and I'm afraid we'll fight.\n\nWhat worries me: [что беспокоит: тратим больше, чем зарабатываем, и не обсуждаем это]\nHow our finances work now: [как устроено: у каждого свои деньги, общие траты делим как придётся]\nWhat I want to achieve: [чего хочу: общий бюджет на жильё и еду и понятный план]\n\n1. Help me start the conversation without blame: the first 2–3 sentences.\n2. Suggest 2–3 models of a shared budget (everything shared, proportional to income, a joint account for joint expenses) with pros and cons.\n3. Which topics are important to discuss now and which are better left for later.\n4. Offer to rehearse: play my partner realistically, one message at a time, and when I write \"стоп\", tell me how I did.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t30",
+   "n": 30,
+   "title": "План тренировок под мой уровень",
+   "desc": "Программа, которую реально выполнять: под ваш уровень, время и место.",
+   "format": "text",
+   "spheres": [
+    "health"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Составь мне план тренировок.\n\nЦель: [цель: стать выносливее и подтянуть мышцы]\nУровень: [уровень: давно не занимался, одышка на лестнице]\nСколько раз в неделю и сколько минут: [время: 3 раза по 40 минут]\nГде занимаюсь и что есть: [место: дома, есть коврик и гантели 5 кг]\nОграничения и что нельзя: [ограничения: болит колено после бега]\n\n1. Сначала задай 2–3 вопроса о моём здоровье и опыте. Дождись ответов.\n2. Составь план на 4 недели с постепенным ростом нагрузки.\n3. Для каждого упражнения — как делать правильно и лёгкая замена, если тяжело.\n4. Как понять, что нагрузка подходит, а когда нужно остановиться.\n\nТы не врач. Если у меня есть заболевания, травмы или боль, напомни проконсультироваться с врачом перед началом.",
+    "en": "Create a workout plan for me.\n\nGoal: [цель: стать выносливее и подтянуть мышцы]\nLevel: [уровень: давно не занимался, одышка на лестнице]\nTimes per week and minutes: [время: 3 раза по 40 минут]\nWhere I train and what I have: [место: дома, есть коврик и гантели 5 кг]\nLimitations: [ограничения: болит колено после бега]\n\n1. First ask me 2–3 questions about my health and experience. Wait for my answers.\n2. Build a 4-week plan with a gradual increase in load.\n3. For each exercise — how to do it correctly and an easier alternative if it's too hard.\n4. How to tell the load is right, and when I should stop.\n\nYou are not a doctor. If I have medical conditions, injuries or pain, remind me to consult a doctor before starting.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t31",
+   "n": 31,
+   "title": "Подготовиться к приёму у врача",
+   "desc": "Чёткое описание симптомов и список вопросов, чтобы за 15 минут приёма успеть главное. Без диагнозов от нейросети.",
+   "format": "text",
+   "spheres": [
+    "health"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги подготовиться к приёму у врача. Мне не нужен диагноз — мне нужно хорошо описать проблему и ничего не забыть спросить.\n\nК какому врачу: [врач: терапевт]\nЧто беспокоит: [что беспокоит: головные боли около месяца]\nКогда началось и как меняется: [подробности: чаще вечером, сильнее после работы за компьютером]\nЧто уже пробовал: [что пробовал: таблетки от головы помогают на пару часов]\nЧто принимаю постоянно: [лекарства: ничего / перечислите]\n\n1. Помоги коротко и по делу описать симптомы: что, где, когда, как часто, что усиливает, что облегчает.\n2. Составь список вопросов врачу — самые важные вначале.\n3. Подскажи, что взять с собой на приём.\n4. Какие признаки означают, что ждать приёма не стоит и нужно обращаться за помощью срочно.\n\nНе ставь диагнозы и не назначай лечение.",
+    "en": "Help me prepare for a doctor's appointment. I don't want a diagnosis — I want to describe the problem well and not forget anything.\n\nWhich doctor: [врач: терапевт]\nWhat's bothering me: [что беспокоит: головные боли около месяца]\nWhen it started and how it changes: [подробности: чаще вечером, сильнее после работы за компьютером]\nWhat I've tried: [что пробовал: таблетки от головы помогают на пару часов]\nMedications I take regularly: [лекарства: ничего / перечислите]\n\n1. Help me describe the symptoms briefly and clearly: what, where, when, how often, what makes it worse, what helps.\n2. Make a list of questions for the doctor — the most important first.\n3. Tell me what to bring to the appointment.\n4. Which signs mean I shouldn't wait for the appointment and need urgent help.\n\nDo not diagnose and do not prescribe treatment.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t32",
+   "n": 32,
+   "title": "Меню на неделю и список покупок",
+   "desc": "Простое сбалансированное меню из доступных продуктов и готовый список для магазина.",
+   "format": "text",
+   "spheres": [
+    "health",
+    "home"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Составь меню на неделю и список покупок.\n\nСколько человек и кто: [кто ест: двое взрослых и ребёнок 6 лет]\nЧто не едим или нельзя: [ограничения: не едим свинину, у ребёнка непереносимость лактозы]\nСколько времени на готовку: [время: в будни до 30 минут, в выходные можно дольше]\nБюджет на неделю: [бюджет: около 6 тысяч]\nЧто любим: [предпочтения: курицу, крупы, супы]\n\n1. Меню на 7 дней: завтрак, обед, ужин. Сбалансированно и без экзотики.\n2. Используй одни продукты в нескольких блюдах, чтобы ничего не пропадало.\n3. Список покупок, сгруппированный по отделам магазина.\n4. Что можно приготовить заранее в выходные.\n\nБез жёстких диет и подсчёта калорий: просто нормальная еда.",
+    "en": "Create a weekly menu and a shopping list.\n\nHow many people and who: [кто ест: двое взрослых и ребёнок 6 лет]\nWhat we don't eat or can't eat: [ограничения: не едим свинину, у ребёнка непереносимость лактозы]\nTime for cooking: [время: в будни до 30 минут, в выходные можно дольше]\nWeekly budget: [бюджет: около 6 тысяч]\nWhat we like: [предпочтения: курицу, крупы, супы]\n\n1. A 7-day menu: breakfast, lunch, dinner. Balanced and nothing exotic.\n2. Reuse ingredients across several dishes so nothing goes to waste.\n3. A shopping list grouped by store section.\n4. What can be prepared in advance on the weekend.\n\nNo strict diets or calorie counting: just normal, good food.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t33",
+   "n": 33,
+   "title": "Понять, что написано в медицинском заключении",
+   "desc": "Перевод медицинских терминов на обычный язык и вопросы, которые стоит задать врачу. Без выводов вместо врача.",
+   "format": "text",
+   "spheres": [
+    "health"
+   ],
+   "tasks": [
+    "explain"
+   ],
+   "attach": "Текст заключения (без ФИО и номера полиса).",
+   "lang": "en",
+   "prompt": {
+    "ru": "Объясни простыми словами, что означают термины в этом медицинском заключении.\n\n[текст заключения: вставьте, удалив ФИО, даты рождения и номера документов]\n\n1. Переведи каждый медицинский термин на понятный язык.\n2. Объясни в общих чертах, что обычно означают такие формулировки.\n3. Составь список вопросов, которые стоит задать своему врачу по этому заключению.\n\nВажно: ты не врач и не видишь всей картины. Не делай выводов о моём здоровье, не пугай и не успокаивай. Если в заключении есть что-то, что обычно требует срочного внимания, прямо скажи обратиться к врачу как можно скорее.",
+    "en": "Explain in plain words what the terms in this medical report mean.\n\n[текст заключения: вставьте, удалив ФИО, даты рождения и номера документов]\n\n1. Translate every medical term into everyday language.\n2. Explain in general terms what such wording usually means.\n3. Make a list of questions I should ask my own doctor about this report.\n\nImportant: you are not a doctor and you don't see the whole picture. Don't draw conclusions about my health, don't scare me and don't reassure me. If the report contains something that usually needs urgent attention, tell me directly to see a doctor as soon as possible.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t34",
+   "n": 34,
+   "title": "Наладить сон",
+   "desc": "Небольшие изменения, которые реально внедрить, а не список из двадцати правил.",
+   "format": "text",
+   "spheres": [
+    "health"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги наладить сон.\n\nКак сейчас: [как сплю: ложусь в 2 ночи, встаю в 8, днём разбитый]\nЧто мешает: [что мешает: телефон перед сном, кофе после обеда, мысли о работе]\nМой график: [график: работаю с 10 до 19, удалённо]\nЧего хочу: [цель: ложиться до полуночи и высыпаться]\n\n1. Задай 2–3 вопроса о моих привычках. Дождись ответов.\n2. Предложи 3 самых важных изменения для моего случая — не больше.\n3. План на 2 недели: что менять постепенно и в каком порядке.\n4. Что делать, если не могу уснуть.\n\nЕсли проблемы со сном длятся давно или похожи на серьёзное нарушение (храп с остановками дыхания, бессонница месяцами), скажи, что с этим лучше к врачу.",
+    "en": "Help me fix my sleep.\n\nHow I sleep now: [как сплю: ложусь в 2 ночи, встаю в 8, днём разбитый]\nWhat gets in the way: [что мешает: телефон перед сном, кофе после обеда, мысли о работе]\nMy schedule: [график: работаю с 10 до 19, удалённо]\nWhat I want: [цель: ложиться до полуночи и высыпаться]\n\n1. Ask me 2–3 questions about my habits. Wait for my answers.\n2. Suggest the 3 most important changes for my case — no more.\n3. A 2-week plan: what to change gradually and in what order.\n4. What to do if I can't fall asleep.\n\nIf the sleep problems have lasted a long time or look like a serious disorder (snoring with pauses in breathing, insomnia for months), tell me it's better to see a doctor.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t35",
+   "n": 35,
+   "title": "Что приготовить из того, что есть",
+   "desc": "3 блюда из продуктов, которые уже лежат в холодильнике, с пошаговым рецептом.",
+   "format": "text",
+   "spheres": [
+    "home"
+   ],
+   "tasks": [
+    "ideas"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Что приготовить из того, что у меня есть?\n\nПродукты: [что есть: курица, рис, морковь, лук, яйца, полбанки сметаны, сыр]\nСпеции и базовые продукты: [что ещё есть: соль, перец, масло, мука]\nСколько времени: [время: до 40 минут]\nЧем готовлю: [техника: плита и духовка]\nДля кого: [кто ест: двое взрослых]\n\nПредложи 3 варианта: простой, поинтереснее и «на завтра тоже хватит».\nИспользуй только то, что есть, — максимум одна недостающая мелочь (напиши, чем её заменить).\nДля выбранного варианта дай пошаговый рецепт с граммовками и временем.",
+    "en": "What can I cook from what I have?\n\nIngredients: [что есть: курица, рис, морковь, лук, яйца, полбанки сметаны, сыр]\nSpices and basics: [что ещё есть: соль, перец, масло, мука]\nTime: [время: до 40 минут]\nEquipment: [техника: плита и духовка]\nWho's eating: [кто ест: двое взрослых]\n\nSuggest 3 options: a simple one, a more interesting one, and \"enough for tomorrow too\".\nUse only what I have — at most one small missing item (say what to replace it with).\nFor the option I choose, give a step-by-step recipe with amounts in grams and times.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t36",
+   "n": 36,
+   "title": "Уборка и расхламление без выгорания",
+   "desc": "План по комнатам небольшими порциями и правила, что выбрасывать, а что оставить.",
+   "format": "text",
+   "spheres": [
+    "home"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги навести порядок дома и не бросить на середине.\n\nКакое жильё: [жильё: двушка, живём вдвоём с котом]\nЧто больше всего бесит: [проблемные места: кладовка, шкаф с одеждой, стол]\nСколько времени готов тратить: [время: по 20 минут в будни, пару часов в выходные]\n\n1. План по неделям: какое место разбираем, начиная с того, что даст самый быстрый видимый результат.\n2. Простые правила, что выбрасывать, что отдать, что оставить.\n3. Куда деть ненужные вещи: продать, отдать, сдать на переработку.\n4. Как поддерживать порядок потом — 3–4 привычки, не больше.",
+    "en": "Help me tidy up my home without burning out halfway.\n\nHome: [жильё: двушка, живём вдвоём с котом]\nWhat annoys me most: [проблемные места: кладовка, шкаф с одеждой, стол]\nTime I'm ready to spend: [время: по 20 минут в будни, пару часов в выходные]\n\n1. A week-by-week plan: which area to sort, starting with what gives the fastest visible result.\n2. Simple rules for what to throw away, what to give away and what to keep.\n3. What to do with unwanted things: sell, give away, recycle.\n4. How to keep things tidy afterwards — 3–4 habits, no more.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t37",
+   "n": 37,
+   "title": "Организовать переезд",
+   "desc": "Чек-лист по неделям: от поиска перевозчика до «где ключи и зарядки» в первый вечер.",
+   "format": "text",
+   "spheres": [
+    "home"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Составь план переезда.\n\nОткуда и куда: [переезд: из квартиры в квартиру в том же городе]\nКогда: [дата: через 5 недель]\nСколько людей и вещей: [масштаб: двое, однушка, есть мебель]\nКак перевозим: [перевозка: планирую нанять грузчиков]\nЧто особенного: [особенности: кот, пианино, работаю из дома]\n\n1. Чек-лист по неделям до переезда: что сделать и когда.\n2. Как упаковать вещи, чтобы потом не искать: подписи, коробка «первого дня».\n3. Вопросы, которые задать перевозчику, прежде чем договариваться.\n4. Что сделать в день переезда и в первую неделю на новом месте (адрес, счётчики, интернет, документы).",
+    "en": "Make a moving plan.\n\nFrom where to where: [переезд: из квартиры в квартиру в том же городе]\nWhen: [дата: через 5 недель]\nHow many people and things: [масштаб: двое, однушка, есть мебель]\nHow we're moving: [перевозка: планирую нанять грузчиков]\nAnything special: [особенности: кот, пианино, работаю из дома]\n\n1. A week-by-week checklist before the move: what to do and when.\n2. How to pack so I don't have to search later: labels, a \"first day\" box.\n3. Questions to ask the movers before hiring them.\n4. What to do on moving day and in the first week at the new place (address, meters, internet, documents).\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t38",
+   "n": 38,
+   "title": "Ремонт: что и в каком порядке",
+   "desc": "Последовательность работ, чтобы ничего не переделывать, и вопросы к мастеру, чтобы понимать, за что платите.",
+   "format": "text",
+   "spheres": [
+    "home"
+   ],
+   "tasks": [
+    "plan",
+    "explain"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги разобраться с ремонтом.\n\nЧто ремонтирую: [что: ванная комната, 4 кв. м]\nЧто хочу сделать: [планы: заменить плитку, сантехнику и трубы]\nСвоими силами или с мастерами: [как: нанимаю мастеров]\nБюджет: [бюджет: около 250 тысяч]\n\n1. В каком порядке делаются работы и почему именно так.\n2. Где чаще всего ошибаются и что потом приходится переделывать.\n3. Вопросы к мастеру до начала работ, чтобы понять, что он знает, что делает.\n4. На чём можно сэкономить без потери качества, а на чём нельзя.\n5. Что проверить при приёмке работ.\n\nНе называй точные цены — они зависят от города. Если что-то требует согласования (перепланировка, газ, электрика), скажи об этом.",
+    "en": "Help me figure out a renovation.\n\nWhat I'm renovating: [что: ванная комната, 4 кв. м]\nWhat I want to do: [планы: заменить плитку, сантехнику и трубы]\nDIY or hiring: [как: нанимаю мастеров]\nBudget: [бюджет: около 250 тысяч]\n\n1. The order in which the work is done and why exactly that order.\n2. Where people most often make mistakes that later need redoing.\n3. Questions to ask the contractor before starting, to see if they know what they're doing.\n4. Where I can save money without losing quality, and where I shouldn't.\n5. What to check when accepting the finished work.\n\nDon't give exact prices — they depend on the city. If something requires official approval (layout changes, gas, electrics), say so.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t39",
+   "n": 39,
+   "title": "Честно поделить домашние дела",
+   "desc": "Справедливое распределение обязанностей, которое можно обсудить вместе, а не спорить «кто больше делает».",
+   "format": "text",
+   "spheres": [
+    "home",
+    "people"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги честно распределить домашние дела.\n\nКто живёт: [кто: я и муж, оба работаем, у мужа график сменный]\nКакие дела есть: [дела: готовка, посуда, уборка, стирка, покупки, кот, счета]\nЧто каждый любит и терпеть не может: [предпочтения: я люблю готовить, ненавижу мыть полы]\nЧто сейчас не так: [проблема: почти всё делаю я]\n\n1. Составь список всех дел, включая «невидимые» (помнить, планировать, записывать к врачам).\n2. Оцени примерно, сколько времени в неделю занимает каждое.\n3. Предложи 2 варианта распределения с учётом графиков и предпочтений.\n4. Подскажи, как предложить это обсуждение, чтобы не звучало как упрёк: первые 2–3 фразы.",
+    "en": "Help me divide household chores fairly.\n\nWho lives here: [кто: я и муж, оба работаем, у мужа график сменный]\nWhat chores there are: [дела: готовка, посуда, уборка, стирка, покупки, кот, счета]\nWhat each of us likes and hates: [предпочтения: я люблю готовить, ненавижу мыть полы]\nWhat's wrong now: [проблема: почти всё делаю я]\n\n1. List all the chores, including the \"invisible\" ones (remembering, planning, booking doctors).\n2. Roughly estimate how much time each takes per week.\n3. Suggest 2 ways to divide them, taking schedules and preferences into account.\n4. How to suggest this discussion without it sounding like a reproach: the first 2–3 sentences.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t40",
+   "n": 40,
+   "title": "Маршрут по дням под мой темп",
+   "desc": "Маршрут без беготни, с учётом того, что вам интересно, и запасом на отдых.",
+   "format": "text",
+   "spheres": [
+    "travel"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Составь маршрут поездки.\n\nКуда и на сколько: [куда: Стамбул, 5 дней]\nКто едет: [кто: двое, 30 лет]\nЧто любим: [интересы: еда, красивые виды, неочевидные места; музеи — в меру]\nТемп: [темп: спокойный, не больше 2–3 мест в день]\nГде живём: [жильё: в районе Бейоглу]\nБюджет: [бюджет: средний]\n\n1. Маршрут по дням: утро, день, вечер. Места рядом друг с другом — в один день.\n2. Где поесть по пути и что попробовать.\n3. Один день запасной — на случай дождя или усталости.\n4. Советы, которые обычно узнают только на месте.\n\nЧасы работы, цены и правила могли измениться — отметь, что нужно проверить перед поездкой.",
+    "en": "Plan my trip itinerary.\n\nWhere and how long: [куда: Стамбул, 5 дней]\nWho's going: [кто: двое, 30 лет]\nWhat we like: [интересы: еда, красивые виды, неочевидные места; музеи — в меру]\nPace: [темп: спокойный, не больше 2–3 мест в день]\nWhere we're staying: [жильё: в районе Бейоглу]\nBudget: [бюджет: средний]\n\n1. A day-by-day plan: morning, afternoon, evening. Group nearby places on the same day.\n2. Where to eat along the way and what to try.\n3. One spare day in case of rain or fatigue.\n4. Tips that people usually only learn on the spot.\n\nOpening hours, prices and rules may have changed — note what I should check before the trip.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t41",
+   "n": 41,
+   "title": "Что взять с собой",
+   "desc": "Список вещей под вашу поездку, чтобы не забыть главное и не тащить лишнее.",
+   "format": "text",
+   "spheres": [
+    "travel"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Составь список вещей в поездку.\n\nКуда, когда и на сколько: [поездка: Грузия, октябрь, 7 дней]\nКак едем: [как: самолёт, только ручная кладь]\nЧто планируем: [планы: город плюс горы, одна ночь в палатке]\nКто едет: [кто: я и ребёнок 8 лет]\n\nСгруппируй по категориям: документы и деньги, одежда, гигиена, аптечка, техника, для ребёнка, для особых планов.\nОтдельно отметь то, что обычно забывают.\nПроверь, что всё поместится в ручную кладь, и подскажи, от чего можно отказаться.\nПравила провоза жидкостей и лекарств могут отличаться — напомни проверить у авиакомпании.",
+    "en": "Make a packing list for my trip.\n\nWhere, when and how long: [поездка: Грузия, октябрь, 7 дней]\nHow we travel: [как: самолёт, только ручная кладь]\nWhat we're planning: [планы: город плюс горы, одна ночь в палатке]\nWho's going: [кто: я и ребёнок 8 лет]\n\nGroup by category: documents and money, clothes, toiletries, first aid kit, electronics, for the child, for special plans.\nSeparately mark the things people usually forget.\nCheck that everything fits in carry-on luggage and tell me what I can leave behind.\nRules for liquids and medications may differ — remind me to check with the airline.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t42",
+   "n": 42,
+   "title": "Бюджет поездки",
+   "desc": "Примерная смета по статьям и где можно сэкономить без потери удовольствия.",
+   "format": "text",
+   "spheres": [
+    "travel",
+    "money"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги посчитать бюджет поездки.\n\nКуда и на сколько: [поездка: Казань, 4 дня]\nКто едет: [кто: двое]\nУже известные траты: [известно: билеты на поезд 12 тысяч, отель 16 тысяч]\nСтиль отдыха: [стиль: не шикуем, но и не экономим на еде]\n\n1. Разбей бюджет по статьям: дорога, жильё, еда, транспорт на месте, развлечения, сувениры, запас на непредвиденное.\n2. Дай примерную оценку каждой статьи и общий итог.\n3. Где можно сэкономить без потери удовольствия.\n\nВсе цены — ориентировочные, отметь, что их нужно проверить: могу опираться на устаревшие данные.",
+    "en": "Help me estimate a trip budget.\n\nWhere and how long: [поездка: Казань, 4 дня]\nWho's going: [кто: двое]\nCosts I already know: [известно: билеты на поезд 12 тысяч, отель 16 тысяч]\nTravel style: [стиль: не шикуем, но и не экономим на еде]\n\n1. Break the budget into items: transport there, accommodation, food, local transport, activities, souvenirs, a reserve for the unexpected.\n2. Give a rough estimate for each item and the total.\n3. Where we can save without losing the fun.\n\nAll prices are approximate — note that they need checking: I may be relying on outdated data.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t43",
+   "n": 43,
+   "title": "Что нужно знать перед поездкой в страну",
+   "desc": "Шпаргалка: розетки, деньги, связь, чаевые, местные правила и то, что может неприятно удивить.",
+   "format": "text",
+   "spheres": [
+    "travel"
+   ],
+   "tasks": [
+    "explain"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Я еду в [страна: Вьетнам] через [срок: месяц]. Составь шпаргалку перед поездкой.\n\n1. Документы и въезд: что обычно требуется.\n2. Деньги: чем платить, нужна ли наличность, как лучше обменивать.\n3. Связь и интернет: как обычно решают вопрос туристы.\n4. Розетки и напряжение: нужен ли переходник.\n5. Местные правила и обычаи: чаевые, одежда в храмах, что считается невежливым.\n6. Безопасность: частые уловки и разводы на туристов.\n7. Здоровье: вода из-под крана, что взять в аптечку.\n\nПравила въезда, платёжные системы и ограничения часто меняются. Обязательно напиши, что всё про документы и деньги нужно перепроверить на официальных сайтах перед поездкой.",
+    "en": "I'm going to [страна: Вьетнам] in [срок: месяц]. Make me a cheat sheet for the trip.\n\n1. Documents and entry: what is usually required.\n2. Money: how to pay, whether I need cash, how best to exchange.\n3. Phone and internet: how tourists usually handle it.\n4. Plugs and voltage: do I need an adapter.\n5. Local rules and customs: tipping, clothing in temples, what's considered rude.\n6. Safety: common tricks and scams targeting tourists.\n7. Health: tap water, what to put in the first aid kit.\n\nEntry rules, payment systems and restrictions change often. Make it clear that everything about documents and money must be double-checked on official websites before the trip.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t44",
+   "n": 44,
+   "title": "Выбрать технику под мои задачи",
+   "desc": "Что важно именно вам, на чём можно сэкономить и какие характеристики — маркетинг.",
+   "format": "text",
+   "spheres": [
+    "shopping"
+   ],
+   "tasks": [
+    "choose"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги выбрать [что: пылесос].\n\nДля чего: [задачи: квартира 60 метров, кот линяет, есть ковёр]\nБюджет: [бюджет: до 25 тысяч]\nЧто было раньше и что не устраивало: [опыт: старый пылесос громкий и тяжёлый]\n\n1. Сначала задай мне 3 вопроса, которые помогут выбрать правильно. Дождись ответов.\n2. Какие характеристики для моих задач действительно важны, а какие — маркетинг.\n3. На что обратить внимание в отзывах и при покупке.\n4. Какие типы или классы устройств подходят, с плюсами и минусами.\n\nМодели, цены и наличие быстро меняются. Если называешь конкретные модели — отметь, что их нужно проверить в магазине.",
+    "en": "Help me choose [что: пылесос].\n\nWhat for: [задачи: квартира 60 метров, кот линяет, есть ковёр]\nBudget: [бюджет: до 25 тысяч]\nWhat I had before and what I didn't like: [опыт: старый пылесос громкий и тяжёлый]\n\n1. First ask me 3 questions that will help choose correctly. Wait for my answers.\n2. Which specs actually matter for my needs, and which are just marketing.\n3. What to look for in reviews and when buying.\n4. Which types or classes of devices fit, with pros and cons.\n\nModels, prices and availability change quickly. If you name specific models, note that I should check them in the store.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t45",
+   "n": 45,
+   "title": "Разобрать отзывы",
+   "desc": "Выжимка из сотни отзывов: реальные плюсы, повторяющиеся проблемы и признаки накрученных оценок.",
+   "format": "text",
+   "spheres": [
+    "shopping"
+   ],
+   "tasks": [
+    "analyze"
+   ],
+   "attach": "Скопированные отзывы с сайта магазина.",
+   "lang": "en",
+   "prompt": {
+    "ru": "Разбери отзывы на товар: [товар: беспроводные наушники X].\n\n[отзывы: вставьте сюда отзывы, чем больше, тем лучше]\n\n1. Что хвалят чаще всего.\n2. На что жалуются чаще всего — особенно проблемы, которые проявляются через время.\n3. Есть ли признаки накрученных отзывов (одинаковые формулировки, только пятёрки без подробностей).\n4. Кому этот товар подойдёт, а кому лучше взять другой.\n5. Итог в 2–3 предложениях.",
+    "en": "Analyze the reviews of this product: [товар: беспроводные наушники X].\n\n[отзывы: вставьте сюда отзывы, чем больше, тем лучше]\n\n1. What people praise most often.\n2. What they complain about most often — especially problems that appear over time.\n3. Any signs of fake reviews (identical wording, only 5 stars with no details).\n4. Who this product suits, and who should pick something else.\n5. A summary in 2–3 sentences.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t46",
+   "n": 46,
+   "title": "Сравнить несколько моделей",
+   "desc": "Таблица сравнения по тому, что важно вам, и честный вывод.",
+   "format": "text",
+   "spheres": [
+    "shopping"
+   ],
+   "tasks": [
+    "choose"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Сравни модели: [модели: iPhone 15, Samsung S24, Pixel 8].\n\nДля чего мне: [задачи: много снимаю видео, важна батарея, играю мало]\nБюджет: [бюджет: до 80 тысяч]\nЧто уже решил: [предпочтения: хочу компактный]\n\n1. Таблица сравнения по характеристикам, важным для моих задач.\n2. Главный плюс и главный минус каждой модели.\n3. Какую выбрал бы ты для меня и почему.\n4. При каком условии лучше выбор другой.\n\nХарактеристики и цены могли измениться — отметь, что сравнивать нужно по актуальным данным магазина.",
+    "en": "Compare these models: [модели: iPhone 15, Samsung S24, Pixel 8].\n\nWhat I need it for: [задачи: много снимаю видео, важна батарея, играю мало]\nBudget: [бюджет: до 80 тысяч]\nWhat I've already decided: [предпочтения: хочу компактный]\n\n1. A comparison table of the specs that matter for my needs.\n2. The main strength and the main weakness of each model.\n3. Which one you'd pick for me and why.\n4. Under what condition a different choice would be better.\n\nSpecs and prices may have changed — note that the comparison should be based on current store data.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t47",
+   "n": 47,
+   "title": "Подарок, который попадёт в точку",
+   "desc": "Идеи под конкретного человека, а не «набор для душа», с вариантами под разный бюджет.",
+   "format": "text",
+   "spheres": [
+    "shopping",
+    "people"
+   ],
+   "tasks": [
+    "ideas"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги придумать подарок.\n\nКому и по какому поводу: [кому: папе на 60 лет]\nКакой он: [какой человек: любит рыбалку и старые фильмы, всё покупает себе сам]\nЧто уже дарили: [что дарили: часы, спиннинг]\nБюджет: [бюджет: до 15 тысяч]\n\n1. Задай мне 3 вопроса, чтобы лучше понять человека. Дождись ответов.\n2. Предложи 10 идей: вещи, впечатления и что-то сделанное своими руками.\n3. Для каждой — почему это подойдёт именно ему.\n4. Отметь 2 идеи, которые ты считаешь самыми удачными.",
+    "en": "Help me come up with a gift.\n\nFor whom and the occasion: [кому: папе на 60 лет]\nWhat they're like: [какой человек: любит рыбалку и старые фильмы, всё покупает себе сам]\nWhat we've already given: [что дарили: часы, спиннинг]\nBudget: [бюджет: до 15 тысяч]\n\n1. Ask me 3 questions to understand the person better. Wait for my answers.\n2. Suggest 10 ideas: things, experiences and something handmade.\n3. For each — why it would suit this particular person.\n4. Mark the 2 ideas you think are best.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t48",
+   "n": 48,
+   "title": "Капсульный гардероб из того, что есть",
+   "desc": "Какие вещи сочетаются между собой, сколько образов из них собирается и чего не хватает.",
+   "format": "text",
+   "spheres": [
+    "style"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги собрать капсульный гардероб из моих вещей.\n\nМои вещи: [вещи: перечислите, например «чёрные джинсы, белая футболка, серый свитер, бежевый тренч…»]\nДля какой жизни: [образ жизни: офис 3 дня в неделю, остальное — дома и встречи с друзьями]\nКакой стиль нравится: [стиль: простой, спокойные цвета]\nСезон: [сезон: осень]\n\n1. Какие вещи — основа, а какие почти не сочетаются с остальными.\n2. Предложи 10 образов из того, что есть.\n3. Чего не хватает, чтобы вещи сочетались лучше: максимум 3–5 покупок, по важности.\n4. От чего можно спокойно избавиться.",
+    "en": "Help me build a capsule wardrobe from my clothes.\n\nMy clothes: [вещи: перечислите, например «чёрные джинсы, белая футболка, серый свитер, бежевый тренч…»]\nMy lifestyle: [образ жизни: офис 3 дня в неделю, остальное — дома и встречи с друзьями]\nStyle I like: [стиль: простой, спокойные цвета]\nSeason: [сезон: осень]\n\n1. Which items are the foundation, and which barely go with anything.\n2. Suggest 10 outfits from what I have.\n3. What's missing to make things combine better: at most 3–5 purchases, in order of importance.\n4. What I can safely get rid of.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t49",
+   "n": 49,
+   "title": "Что надеть на событие",
+   "desc": "3 варианта образа из ваших вещей под формат события.",
+   "format": "text",
+   "spheres": [
+    "style"
+   ],
+   "tasks": [
+    "ideas"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Что мне надеть на [событие: свадьбу друга, летом, на природе]?\n\nДресс-код, если есть: [дресс-код: не указан]\nМои вещи, из которых можно собрать: [вещи: перечислите подходящие]\nЧто для меня важно: [важно: удобно, можно танцевать, не жарко]\n\nПредложи 3 образа: попроще, поинтереснее и самый нарядный.\nДля каждого — обувь, верхний слой на вечер, аксессуары.\nОтдельно — чего точно не стоит надевать на такое событие.",
+    "en": "What should I wear to [событие: свадьбу друга, летом, на природе]?\n\nDress code, if any: [дресс-код: не указан]\nMy clothes to choose from: [вещи: перечислите подходящие]\nWhat matters to me: [важно: удобно, можно танцевать, не жарко]\n\nSuggest 3 outfits: simple, more interesting, and the most dressed-up.\nFor each — shoes, an outer layer for the evening, accessories.\nSeparately — what definitely shouldn't be worn to such an event.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t50",
+   "n": 50,
+   "title": "Договор простым языком",
+   "desc": "Что вы подписываете, какие у вас обязанности, где штрафы и какие пункты стоит обсудить.",
+   "format": "text",
+   "spheres": [
+    "docs"
+   ],
+   "tasks": [
+    "analyze"
+   ],
+   "attach": "Текст договора (без паспортных данных).",
+   "lang": "ru",
+   "prompt": {
+    "ru": "Объясни простыми словами договор, который мне предлагают подписать.\n\nЧто за договор: [тип договора: аренда квартиры]\nМоя роль: [кто я в договоре: арендатор]\n[текст договора: вставьте, удалив паспортные данные и номера документов]\n\n1. Суть договора в 5–7 пунктах: что я получаю, что обязан делать, сколько и когда плачу.\n2. Штрафы, неустойки и основания расторжения — для меня и для другой стороны.\n3. Пункты, которые невыгодны мне или сформулированы размыто.\n4. Что обычно в таких договорах бывает, а здесь отсутствует.\n5. Какие пункты стоит обсудить или изменить до подписания, с примером формулировки.\n\nТы не юрист. Отметь, что важные решения стоит проверить у юриста, особенно если на кону большие деньги.",
+    "en": "Explain in plain words the contract I'm being asked to sign.\n\nType of contract: [тип договора: аренда квартиры]\nMy role: [кто я в договоре: арендатор]\n[текст договора: вставьте, удалив паспортные данные и номера документов]\n\n1. The essence of the contract in 5–7 points: what I get, what I must do, how much and when I pay.\n2. Penalties, fines and grounds for termination — for me and for the other side.\n3. Clauses that are unfavorable to me or vaguely worded.\n4. What such contracts usually contain but is missing here.\n5. Which clauses to discuss or change before signing, with an example wording.\n\nYou are not a lawyer. Note that important decisions should be checked with a lawyer, especially when big money is at stake.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t51",
+   "n": 51,
+   "title": "Претензия продавцу или исполнителю",
+   "desc": "Грамотная претензия, чтобы вернуть деньги, заменить товар или заставить переделать работу.",
+   "format": "text",
+   "spheres": [
+    "docs"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги составить претензию.\n\nКому: [кому: интернет-магазин / исполнитель услуги]\nЧто купил или заказал и когда: [покупка: стиральная машина, 2 месяца назад]\nЧто случилось: [проблема: перестала сливать воду, сервис отказал в гарантийном ремонте]\nЧто уже сделал: [что сделал: звонил в поддержку, ответили отпиской]\nЧего хочу: [требование: вернуть деньги / заменить / отремонтировать]\n\n1. Составь текст претензии: кто, кому, суть проблемы, требование, срок ответа.\n2. Ссылайся на нормы закона о защите прав потребителей только там, где уверен, и отметь, что статьи нужно проверить по актуальной редакции.\n3. Подскажи, как правильно отправить претензию, чтобы остались доказательства.\n4. Что делать, если ответа не будет или откажут.\n\nТы не юрист. В спорных случаях посоветуй обратиться к юристу или в общество защиты прав потребителей.",
+    "en": "Help me write a formal complaint.\n\nTo whom: [кому: интернет-магазин / исполнитель услуги]\nWhat I bought or ordered and when: [покупка: стиральная машина, 2 месяца назад]\nWhat happened: [проблема: перестала сливать воду, сервис отказал в гарантийном ремонте]\nWhat I've already done: [что сделал: звонил в поддержку, ответили отпиской]\nWhat I want: [требование: вернуть деньги / заменить / отремонтировать]\n\n1. Write the complaint: who, to whom, the problem, the demand, the deadline for a response.\n2. Refer to Russian consumer protection law only where you are confident, and note that the articles must be checked against the current version of the law.\n3. Explain how to send the complaint properly so there is proof.\n4. What to do if there is no answer or a refusal.\n\nYou are not a lawyer. In disputed cases, advise me to contact a lawyer or a consumer rights organization.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t52",
+   "n": 52,
+   "title": "Жалоба или обращение в инстанцию",
+   "desc": "Куда писать по вашей проблеме, в каком порядке и готовый текст обращения.",
+   "format": "text",
+   "spheres": [
+    "docs"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги составить обращение по проблеме.\n\nПроблема: [что случилось: во дворе месяц не вывозят мусор]\nГде: [город: Екатеринбург]\nЧто уже пробовал: [что делал: звонил в управляющую компанию — обещают, но ничего не меняется]\nЧего хочу добиться: [результат: чтобы мусор вывозили по графику]\n\n1. Подскажи, куда обычно обращаются с такой проблемой и в каком порядке: сначала напрямую, потом выше.\n2. Составь текст обращения: кратко, по фактам, с датами и конкретным требованием.\n3. Какие доказательства приложить (фото, даты, номера обращений).\n4. Какие сроки ответа обычно бывают и что делать, если ответа нет.\n\nНазвания органов и порядок подачи могут отличаться по регионам — отметь, что это нужно проверить на официальных сайтах или Госуслугах.",
+    "en": "Help me write an official complaint about a problem.\n\nThe problem: [что случилось: во дворе месяц не вывозят мусор]\nWhere: [город: Екатеринбург]\nWhat I've already tried: [что делал: звонил в управляющую компанию — обещают, но ничего не меняется]\nWhat I want to achieve: [результат: чтобы мусор вывозили по графику]\n\n1. Tell me where people usually turn with this kind of problem and in what order: first directly, then higher up.\n2. Write the complaint: brief, factual, with dates and a specific demand.\n3. What evidence to attach (photos, dates, previous request numbers).\n4. Typical response times and what to do if there's no answer.\n\nNames of authorities and procedures may differ by region in Russia — note that this must be checked on official websites or Gosuslugi.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t53",
+   "n": 53,
+   "title": "Письмо соседям или в управляющую компанию",
+   "desc": "Вежливое, но твёрдое письмо о проблеме: шум, протечка, парковка, общий ремонт.",
+   "format": "text",
+   "spheres": [
+    "docs",
+    "people",
+    "home"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги написать [кому: соседям в общий чат дома / в управляющую компанию].\n\nПроблема: [проблема: соседи сверху шумят после 23:00]\nКак давно и что уже было: [история: полгода, пытался поговорить лично — не помогло]\nЧего хочу: [чего хочу: тишины после 23:00 в будни]\n\nСоставь 2 варианта: дружелюбный первый шаг и официальный, если первый не сработает.\nБез угроз и оскорблений, по фактам. В официальном — дата, адрес, суть, требование, срок.\nПодскажи, какие следующие шаги возможны, если не поможет.",
+    "en": "Help me write [кому: соседям в общий чат дома / в управляющую компанию].\n\nThe problem: [проблема: соседи сверху шумят после 23:00]\nHow long and what has happened: [история: полгода, пытался поговорить лично — не помогло]\nWhat I want: [чего хочу: тишины после 23:00 в будни]\n\nWrite 2 versions: a friendly first step, and an official one in case the first doesn't work.\nNo threats or insults, facts only. In the official one — date, address, the problem, the demand, the deadline.\nTell me what next steps are possible if this doesn't help.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t54",
+   "n": 54,
+   "title": "Пост в моём стиле",
+   "desc": "Пост, который звучит как вы, а не как нейросеть: нейросеть сначала изучает ваши прошлые тексты.",
+   "format": "text",
+   "spheres": [
+    "texts"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Напиши пост для [площадка: Telegram-канала] в моём стиле.\n\nВот мои прошлые посты, чтобы ты понял, как я пишу:\n[примеры: вставьте 2–3 своих поста]\n\nТема нового поста: [тема: почему я сделал себе сайт в стиле 2000-х]\nЧто хочу, чтобы сделал читатель: [цель: зашёл на сайт и написал в комментариях]\n\n1. Сначала коротко опиши мой стиль: длина фраз, тон, как я начинаю и заканчиваю, какие слова использую.\n2. Напиши пост в этом стиле. Первая строка должна цеплять.\n3. Без слов и оборотов, которые выдают нейросеть: «в современном мире», «давайте разберёмся», «важно отметить», «погрузимся».\n4. Дай 2 варианта первой строки на выбор.",
+    "en": "Write a post for [площадка: Telegram-канала] in my style.\n\nHere are my previous posts so you understand how I write:\n[примеры: вставьте 2–3 своих поста]\n\nTopic of the new post: [тема: почему я сделал себе сайт в стиле 2000-х]\nWhat I want the reader to do: [цель: зашёл на сайт и написал в комментариях]\n\n1. First briefly describe my style: sentence length, tone, how I start and end, what words I use.\n2. Write the post in this style. The first line must hook the reader.\n3. Avoid words and phrases that give away AI writing, such as \"in today's world\", \"let's dive in\", \"it's important to note\".\n4. Give me 2 alternative first lines to choose from.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t55",
+   "n": 55,
+   "title": "Контент-план на месяц",
+   "desc": "План публикаций с темами, форматами и заходами, а не просто «пост о нас».",
+   "format": "text",
+   "spheres": [
+    "texts"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Составь контент-план на месяц.\n\nПлощадка: [площадка: Instagram]\nО чём аккаунт: [тема: домашняя выпечка на заказ]\nКто моя аудитория: [аудитория: мамы 25–40 лет в моём городе]\nСколько публикаций в неделю: [частота: 3 поста и 5 сторис]\nЦель на месяц: [цель: больше заказов на праздники]\n\n1. Сначала задай 2–3 вопроса о моём аккаунте. Дождись ответов.\n2. План по неделям: дата, формат (пост, карусель, рилс, сторис), тема, первая строка.\n3. Баланс: польза, личное, продажа — не больше трети продающих.\n4. 3 идеи для вовлечения аудитории (опросы, вопросы, игры).",
+    "en": "Create a content plan for a month.\n\nPlatform: [площадка: Instagram]\nWhat the account is about: [тема: домашняя выпечка на заказ]\nMy audience: [аудитория: мамы 25–40 лет в моём городе]\nPosts per week: [частота: 3 поста и 5 сторис]\nGoal for the month: [цель: больше заказов на праздники]\n\n1. First ask me 2–3 questions about my account. Wait for my answers.\n2. A week-by-week plan: date, format (post, carousel, reel, stories), topic, first line.\n3. Balance: useful, personal, selling — no more than a third selling.\n4. 3 ideas to engage the audience (polls, questions, games).\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t56",
+   "n": 56,
+   "title": "Отредактировать текст, не потеряв свой голос",
+   "desc": "Чистый, понятный текст, который по-прежнему звучит как вы. С пояснениями, что и почему поменяно.",
+   "format": "text",
+   "spheres": [
+    "texts"
+   ],
+   "tasks": [
+    "improve"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Отредактируй мой текст.\n\n[текст: вставьте сюда]\n\nДля чего текст: [назначение: пост в блог]\nЧто меня не устраивает: [что не так: затянуто, много повторов]\n\nПравила редактуры:\n- Сохрани мой голос и стиль, не превращай в «правильный» гладкий текст.\n- Убери воду, повторы и канцелярит, сократи длинные фразы.\n- Не добавляй мыслей, которых у меня не было.\n- Исправь ошибки.\n\nПокажи отредактированный текст, а под ним — список главных правок с объяснением, чтобы я учился.",
+    "en": "Edit my text.\n\n[текст: вставьте сюда]\n\nWhat the text is for: [назначение: пост в блог]\nWhat I don't like about it: [что не так: затянуто, много повторов]\n\nEditing rules:\n- Keep my voice and style, don't turn it into a \"correct\" polished text.\n- Remove filler, repetition and bureaucratic language, shorten long sentences.\n- Don't add ideas I didn't have.\n- Fix mistakes.\n\nShow the edited text, and below it a list of the main edits with explanations, so I can learn.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t57",
+   "n": 57,
+   "title": "Идеи для коротких видео с цепляющим началом",
+   "desc": "Идеи для рилс и шортсов с первой фразой и сценарием на 15–30 секунд.",
+   "format": "text",
+   "spheres": [
+    "texts"
+   ],
+   "tasks": [
+    "ideas"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Придумай идеи для коротких видео.\n\nО чём мой блог: [тема: ремонт своими руками]\nКто смотрит: [аудитория: мужчины 25–45, делают ремонт сами]\nЧто я могу снимать: [возможности: снимаю на телефон, есть мастерская]\nЧто уже заходило: [что заходило: быстрые лайфхаки, ошибки новичков]\n\nДай 10 идей. Для каждой:\n- первая фраза или кадр, который удержит в первые 2 секунды;\n- короткий сценарий на 15–30 секунд по секундам;\n- чем закончить, чтобы досмотрели и написали комментарий.\nБез банальщины, которая есть у всех.",
+    "en": "Come up with ideas for short videos.\n\nWhat my blog is about: [тема: ремонт своими руками]\nWho watches: [аудитория: мужчины 25–45, делают ремонт сами]\nWhat I can film: [возможности: снимаю на телефон, есть мастерская]\nWhat has worked before: [что заходило: быстрые лайфхаки, ошибки новичков]\n\nGive me 10 ideas. For each:\n- the first line or shot that holds attention in the first 2 seconds;\n- a short 15–30 second script, second by second;\n- how to end it so people watch to the end and comment.\nNothing generic that everyone already does.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t58",
+   "n": 58,
+   "title": "Адаптировать текст под разные площадки",
+   "desc": "Один текст в нескольких версиях: для канала, для сторис, для короткого поста.",
+   "format": "text",
+   "spheres": [
+    "texts"
+   ],
+   "tasks": [
+    "improve"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Адаптируй мой текст под разные площадки.\n\nИсходный текст:\n[текст: вставьте сюда]\n\nНужны версии для: [площадки: Telegram-канал, пост в Instagram, 3 слайда для сторис, короткий текст для ВКонтакте]\n\nДля каждой площадки учитывай длину, формат и манеру общения, принятую там.\nСмысл и мой стиль сохраняй. Для сторис — разбей на слайды по одной мысли.",
+    "en": "Adapt my text for different platforms.\n\nOriginal text:\n[текст: вставьте сюда]\n\nVersions needed for: [площадки: Telegram-канал, пост в Instagram, 3 слайда для сторис, короткий текст для ВКонтакте]\n\nFor each platform, take into account the length, format and tone typical there.\nKeep the meaning and my style. For stories — split into slides, one idea per slide.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t59",
+   "n": 59,
+   "title": "Придумать историю или сюжет",
+   "desc": "Соавтор, который предлагает идеи, задаёт вопросы о героях и помогает довести сюжет до конца.",
+   "format": "text",
+   "spheres": [
+    "creative"
+   ],
+   "tasks": [
+    "ideas"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Давай вместе придумаем историю.\n\nЖанр: [жанр: научная фантастика]\nДля чего: [формат: комикс на 20 страниц]\nЧто уже есть: [идеи: герой — пёс-волк, который собирает предметы из ничего]\nКакое настроение: [настроение: приключение с грустинкой]\n\n1. Задай мне 5 вопросов о героях и мире. Дождись ответов.\n2. Предложи 3 разных направления сюжета, каждое в 3–4 предложениях.\n3. Когда я выберу, распиши структуру: завязка, развитие, кульминация, развязка.\n4. Предлагай неожиданные повороты, а не самые очевидные.\n\nРаботаем как соавторы: идеи — мои, ты помогаешь их развить, а не пишешь всё за меня.",
+    "en": "Let's come up with a story together.\n\nGenre: [жанр: научная фантастика]\nFormat: [формат: комикс на 20 страниц]\nWhat I already have: [идеи: герой — пёс-волк, который собирает предметы из ничего]\nMood: [настроение: приключение с грустинкой]\n\n1. Ask me 5 questions about the characters and the world. Wait for my answers.\n2. Suggest 3 different plot directions, each in 3–4 sentences.\n3. When I choose, lay out the structure: setup, rising action, climax, resolution.\n4. Suggest unexpected twists, not the most obvious ones.\n\nWe work as co-authors: the ideas are mine, you help develop them rather than writing everything for me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t60",
+   "n": 60,
+   "title": "Ведущий для настолки или ролевой игры",
+   "desc": "Нейросеть-ведущий: описывает мир, играет персонажей и реагирует на ваши решения.",
+   "format": "text",
+   "spheres": [
+    "creative"
+   ],
+   "tasks": [
+    "practice",
+    "ideas"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Будь ведущим текстовой ролевой игры.\n\nМир и жанр: [мир: таверна в фэнтези-мире, детектив]\nМой персонаж: [персонаж: бывший стражник, ищет пропавшую сестру]\nСколько игроков: [игроки: я один]\nТон: [тон: мрачновато, но с юмором]\n\nПравила:\n- Описывай сцену коротко и атмосферно, в конце — вопрос «что вы делаете?».\n- Играй персонажей мира живо, у каждого — своя манера речи.\n- Мои решения должны иметь последствия. Не подыгрывай.\n- Если действие рискованное — бросай кубик d20 и сообщай результат.\n- Держи в памяти, что уже произошло.\n\nНачни со сцены прибытия моего персонажа.",
+    "en": "Be the game master of a text role-playing game.\n\nWorld and genre: [мир: таверна в фэнтези-мире, детектив]\nMy character: [персонаж: бывший стражник, ищет пропавшую сестру]\nNumber of players: [игроки: я один]\nTone: [тон: мрачновато, но с юмором]\n\nRules:\n- Describe each scene briefly and atmospherically, and end with \"what do you do?\".\n- Play the world's characters vividly, each with their own way of speaking.\n- My decisions must have consequences. Don't go easy on me.\n- If an action is risky, roll a d20 and tell me the result.\n- Keep track of everything that has happened.\n\nStart with my character's arrival.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t61",
+   "n": 61,
+   "title": "Стихотворение или текст песни",
+   "desc": "Оригинальный текст с рифмой и ритмом под ваш повод, а не набор банальностей.",
+   "format": "text",
+   "spheres": [
+    "creative"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Напиши [что: стихотворение] на тему [тема: осень в маленьком городе].\n\nДля чего: [повод: подпись к фотографии / песня для группы]\nНастроение: [настроение: тёплая грусть]\nРазмер: [объём: 3 четверостишия]\nКакие образы или детали обязательно: [детали: трамвай, запах яблок]\n\nТребования:\n- Точная рифма и ровный ритм. Прочитай про себя, проверь, что строки не спотыкаются.\n- Без банальных рифм вроде «любовь — кровь», «осень — просинь».\n- Конкретные детали вместо общих слов.\n- Полностью оригинальный текст — не используй чужие строки.\n\nДай один вариант, а потом предложи, что можно усилить.",
+    "en": "Write [что: стихотворение] about [тема: осень в маленьком городе].\n\nWhat it's for: [повод: подпись к фотографии / песня для группы]\nMood: [настроение: тёплая грусть]\nLength: [объём: 3 четверостишия]\nImages or details that must be included: [детали: трамвай, запах яблок]\n\nRequirements:\n- It will be in Russian: use precise rhyme and an even rhythm. Check that no line stumbles.\n- No banal rhymes like «любовь — кровь».\n- Concrete details instead of general words.\n- Completely original text — don't use anyone else's lines.\n\nGive one version, then suggest what could be strengthened.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t62",
+   "n": 62,
+   "title": "Разбор моей работы как у редактора",
+   "desc": "Честный отзыв на ваш рассказ, сценарий или идею: что работает, что нет и почему.",
+   "format": "text",
+   "spheres": [
+    "creative"
+   ],
+   "tasks": [
+    "weak"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Разбери мою работу как опытный редактор. Мне нужна честная оценка, а не похвала.\n\nЧто это: [тип: рассказ на 5 страниц]\nДля кого: [аудитория: подростки]\n[работа: вставьте текст]\n\n1. Первое впечатление в 2–3 предложениях.\n2. Что работает — конкретно, с примерами.\n3. Главные проблемы по важности: сюжет, персонажи, темп, язык, логика.\n4. Для каждой проблемы — где она проявляется и как исправить.\n5. Одна самая важная правка, которая сильнее всего улучшит работу.\n\nНе переписывай мой текст — помогай мне самому его улучшить.",
+    "en": "Review my work like an experienced editor. I need an honest assessment, not praise.\n\nWhat it is: [тип: рассказ на 5 страниц]\nAudience: [аудитория: подростки]\n[работа: вставьте текст]\n\n1. First impression in 2–3 sentences.\n2. What works — specifically, with examples.\n3. The main problems in order of importance: plot, characters, pacing, language, logic.\n4. For each problem — where it shows up and how to fix it.\n5. The single most important change that would improve the work the most.\n\nDon't rewrite my text — help me improve it myself.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t63",
+   "n": 63,
+   "title": "Проверить бизнес-идею на прочность",
+   "desc": "«адвокат дьявола» для вашей идеи: слабые места, риски и дешёвый способ проверить спрос до вложений.",
+   "format": "text",
+   "spheres": [
+    "business"
+   ],
+   "tasks": [
+    "weak"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Проверь мою бизнес-идею на прочность. Будь честным критиком, а не болельщиком.\n\nИдея: [идея: сервис по выгулу собак в спальных районах]\nДля кого: [клиенты: занятые владельцы собак]\nКак буду зарабатывать: [модель: оплата за выгул и абонементы]\nЧто у меня есть: [ресурсы: 100 тысяч и свободные вечера]\n\n1. Главные слабые места и риски идеи.\n2. Кто конкуренты и чем клиенты пользуются сейчас вместо моей идеи.\n3. Вопросы, на которые мне нужно ответить до запуска.\n4. Как дёшево и быстро проверить спрос, не вкладывая много денег.\n5. Твоя честная оценка: стоит пробовать, стоит доработать или лучше отказаться — и почему.\n\nЕсли приводишь цифры рынка — отметь, что это оценка, которую нужно проверить.",
+    "en": "Stress-test my business idea. Be an honest critic, not a cheerleader.\n\nIdea: [идея: сервис по выгулу собак в спальных районах]\nCustomers: [клиенты: занятые владельцы собак]\nHow I'll make money: [модель: оплата за выгул и абонементы]\nWhat I have: [ресурсы: 100 тысяч и свободные вечера]\n\n1. The main weaknesses and risks of the idea.\n2. Who the competitors are and what customers use now instead of my idea.\n3. Questions I need to answer before launching.\n4. How to test demand cheaply and quickly, without investing much.\n5. Your honest verdict: worth trying, needs rework, or better to drop — and why.\n\nIf you give market numbers, note that they are estimates to be verified.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t64",
+   "n": 64,
+   "title": "Посчитать цену на свою услугу",
+   "desc": "Цена, которая покрывает расходы и время, и аргументы, как её объяснить клиенту.",
+   "format": "text",
+   "spheres": [
+    "business"
+   ],
+   "tasks": [
+    "plan",
+    "choose"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги определить цену на мою услугу.\n\nЧто за услуга: [услуга: монтаж видео для блогеров]\nСколько времени занимает: [время: один ролик — 4 часа]\nМои расходы: [расходы: подписка на программы, музыка, 3 тысячи в месяц]\nСколько хочу зарабатывать в месяц: [цель: 100 тысяч]\nМой опыт: [опыт: 2 года, есть портфолио]\n\n1. Посчитай минимальную цену, ниже которой работать невыгодно. Покажи расчёт.\n2. Предложи 3 пакета: базовый, стандартный, расширенный.\n3. Как отвечать на «а подешевле?».\n4. Когда и как поднимать цены.\n\nО рыночных ценах не выдумывай — подскажи, как узнать их самостоятельно.",
+    "en": "Help me set a price for my service.\n\nThe service: [услуга: монтаж видео для блогеров]\nHow long it takes: [время: один ролик — 4 часа]\nMy costs: [расходы: подписка на программы, музыка, 3 тысячи в месяц]\nHow much I want to earn per month: [цель: 100 тысяч]\nMy experience: [опыт: 2 года, есть портфолио]\n\n1. Calculate the minimum price below which the work isn't worth it. Show the math.\n2. Suggest 3 packages: basic, standard, extended.\n3. How to respond to \"can you make it cheaper?\".\n4. When and how to raise prices.\n\nDon't invent market prices — tell me how to find them out myself.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t65",
+   "n": 65,
+   "title": "Найти первых клиентов",
+   "desc": "Конкретный план на 30 дней, где искать клиентов, и тексты первых сообщений.",
+   "format": "text",
+   "spheres": [
+    "business"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги найти первых клиентов.\n\nЧто предлагаю: [услуга: дизайн логотипов для небольших кафе]\nГде я: [город или онлайн: онлайн, по всей России]\nЧто уже пробовал: [что пробовал: выложил портфолио, никто не пишет]\nСколько времени в день на поиск: [время: час в день]\n\n1. Где искать таких клиентов: 5–7 конкретных мест или способов.\n2. План на 30 дней: что делать каждую неделю.\n3. Текст первого сообщения потенциальному клиенту — короткий, без спама, с пользой для него.\n4. Как превратить первых клиентов в отзывы и рекомендации.",
+    "en": "Help me find my first clients.\n\nWhat I offer: [услуга: дизайн логотипов для небольших кафе]\nWhere: [город или онлайн: онлайн, по всей России]\nWhat I've tried: [что пробовал: выложил портфолио, никто не пишет]\nTime per day for finding clients: [время: час в день]\n\n1. Where to find such clients: 5–7 specific places or methods.\n2. A 30-day plan: what to do each week.\n3. A first message to a potential client — short, not spammy, useful to them.\n4. How to turn the first clients into reviews and referrals.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t66",
+   "n": 66,
+   "title": "Продающее описание услуги",
+   "desc": "Текст, в котором клиент узнаёт свою проблему и понимает, почему нужно к вам. Без крика «лучшие на рынке».",
+   "format": "text",
+   "spheres": [
+    "business"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Напиши описание моей услуги для [где: сайта / профиля / Авито].\n\nУслуга: [услуга: генеральная уборка квартир]\nКто клиенты и что их беспокоит: [клиенты: семьи с детьми, нет времени и сил на уборку]\nЧем я отличаюсь: [отличия: гипоаллергенные средства, приезжаем в выходные]\nЦены и условия: [условия: от 5 тысяч, выезд по городу бесплатно]\n\nСтруктура:\n1. Первая строка — про проблему клиента, а не про меня.\n2. Что клиент получит — выгоды, а не список функций.\n3. Почему доверять: факты, цифры, отзывы (если я их дал).\n4. Простой следующий шаг.\n\nБез штампов вроде «индивидуальный подход» и «высокое качество». Не выдумывай отзывы и цифры.",
+    "en": "Write a description of my service for [где: сайта / профиля / Авито].\n\nThe service: [услуга: генеральная уборка квартир]\nWho the clients are and what worries them: [клиенты: семьи с детьми, нет времени и сил на уборку]\nHow I'm different: [отличия: гипоаллергенные средства, приезжаем в выходные]\nPrices and conditions: [условия: от 5 тысяч, выезд по городу бесплатно]\n\nStructure:\n1. The first line is about the client's problem, not about me.\n2. What the client gets — benefits, not a list of features.\n3. Why they can trust me: facts, numbers, reviews (if I provided them).\n4. A simple next step.\n\nNo clichés like \"individual approach\" or \"high quality\". Don't invent reviews or numbers.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t67",
+   "n": 67,
+   "title": "Ответить сложному клиенту",
+   "desc": "Спокойный профессиональный ответ на претензию, торг или возражение, который сохраняет и клиента, и ваши нервы.",
+   "format": "text",
+   "spheres": [
+    "business",
+    "people"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги ответить клиенту.\n\nЧто он написал: [сообщение клиента: вставьте]\nСитуация: [контекст: сделал работу, он требует бесплатно переделать третий раз]\nЧто было в договорённостях: [условия: две правки включены, дальше платно]\nЧего хочу: [цель: сохранить клиента, но не работать бесплатно]\n\n1. Коротко: чего клиент на самом деле хочет и что его беспокоит.\n2. 2 варианта ответа: мягкий и твёрдый. Вежливо, по делу, со ссылкой на договорённости.\n3. Что сделать, чтобы такое не повторялось с другими клиентами.",
+    "en": "Help me reply to a client.\n\nWhat they wrote: [сообщение клиента: вставьте]\nThe situation: [контекст: сделал работу, он требует бесплатно переделать третий раз]\nWhat we agreed on: [условия: две правки включены, дальше платно]\nWhat I want: [цель: сохранить клиента, но не работать бесплатно]\n\n1. Briefly: what the client really wants and what worries them.\n2. 2 reply options: soft and firm. Polite, to the point, referring to our agreement.\n3. What to do so this doesn't happen again with other clients.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t68",
+   "n": 68,
+   "title": "Сказка на ночь про интересы ребёнка",
+   "desc": "Короткая добрая сказка, где герой — ваш ребёнок или его любимые игрушки, с мягким спокойным финалом.",
+   "format": "text",
+   "spheres": [
+    "family"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Придумай сказку на ночь.\n\nДля кого: [ребёнок: сын, 5 лет]\nЧто он любит: [интересы: динозавры, машинки, собака Бублик]\nГлавный герой: [герой: он сам / его игрушка]\nЧему может учить сказка: [тема: не бояться темноты]\nДлина: [длина: на 5 минут чтения]\n\nТребования:\n- Простой язык для этого возраста, короткие предложения.\n- Добрый сюжет без страшных моментов.\n- Спокойный, убаюкивающий финал — чтобы после сказки хотелось спать.\n- Мораль не в лоб, а через историю.",
+    "en": "Make up a bedtime story.\n\nFor whom: [ребёнок: сын, 5 лет]\nWhat he loves: [интересы: динозавры, машинки, собака Бублик]\nMain character: [герой: он сам / его игрушка]\nWhat the story can teach: [тема: не бояться темноты]\nLength: [длина: на 5 минут чтения]\n\nRequirements:\n- Simple language for this age, short sentences.\n- A kind plot with no scary moments.\n- A calm, soothing ending — so the child wants to sleep afterwards.\n- The lesson comes through the story, not stated directly.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t69",
+   "n": 69,
+   "title": "Объяснить ребёнку сложную вещь",
+   "desc": "Слова для непростого разговора с ребёнком: честно, без лишнего и по возрасту.",
+   "format": "text",
+   "spheres": [
+    "family"
+   ],
+   "tasks": [
+    "explain"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги объяснить ребёнку сложную тему.\n\nВозраст ребёнка: [возраст: 7 лет]\nЧто нужно объяснить: [тема: почему мы переезжаем в другой город]\nЧто он уже знает или спрашивал: [контекст: спросил, увидит ли друзей]\nКак он обычно реагирует на перемены: [реакция: переживает, долго привыкает]\n\n1. Как начать разговор: первые 2–3 фразы.\n2. Главное, что стоит сказать, — простыми словами для этого возраста.\n3. Ответы на вопросы, которые он, скорее всего, задаст.\n4. Чего лучше не говорить.\n5. Как поддержать его после разговора.\n\nЕсли тема связана с утратой, болезнью или травмой, добавь, когда стоит обратиться к детскому психологу.",
+    "en": "Help me explain a difficult topic to a child.\n\nChild's age: [возраст: 7 лет]\nWhat I need to explain: [тема: почему мы переезжаем в другой город]\nWhat they already know or asked: [контекст: спросил, увидит ли друзей]\nHow they usually react to changes: [реакция: переживает, долго привыкает]\n\n1. How to start the conversation: the first 2–3 sentences.\n2. The main things to say — in simple words for this age.\n3. Answers to the questions they'll most likely ask.\n4. What's better not to say.\n5. How to support them after the conversation.\n\nIf the topic involves loss, illness or trauma, add when it's worth seeing a child psychologist.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t70",
+   "n": 70,
+   "title": "Детский праздник",
+   "desc": "Сценарий праздника по минутам с играми под возраст, меню и список покупок.",
+   "format": "text",
+   "spheres": [
+    "family"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги организовать детский праздник.\n\nПовод и возраст: [повод: день рождения дочери, 6 лет]\nСколько детей: [гости: 8 детей и родители]\nГде: [место: дома, 2 комнаты]\nТема или что она любит: [тема: единороги и рисование]\nБюджет: [бюджет: до 10 тысяч]\nДлительность: [время: 3 часа]\n\n1. Сценарий по времени: встреча, игры, еда, торт, спокойное занятие перед уходом.\n2. 5–6 игр под этот возраст с правилами — активные и спокойные вперемешку.\n3. Простое меню, которое дети правда едят.\n4. Список покупок и что подготовить заранее.\n5. Что делать, если кто-то из детей заскучал или расплакался.",
+    "en": "Help me organize a children's party.\n\nOccasion and age: [повод: день рождения дочери, 6 лет]\nHow many kids: [гости: 8 детей и родители]\nWhere: [место: дома, 2 комнаты]\nTheme or what she loves: [тема: единороги и рисование]\nBudget: [бюджет: до 10 тысяч]\nDuration: [время: 3 часа]\n\n1. A timed schedule: arrival, games, food, cake, a calm activity before leaving.\n2. 5–6 games for this age with rules — alternating active and calm.\n3. A simple menu that kids actually eat.\n4. A shopping list and what to prepare in advance.\n5. What to do if a child gets bored or starts crying.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t71",
+   "n": 71,
+   "title": "Помочь с домашкой так, чтобы ребёнок понял сам",
+   "desc": "Нейросеть-репетитор, который ведёт наводящими вопросами и не выдаёт готовый ответ.",
+   "format": "text",
+   "spheres": [
+    "family",
+    "study"
+   ],
+   "tasks": [
+    "explain"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги моему ребёнку с домашним заданием, но не решай за него.\n\nКласс и предмет: [класс и предмет: 4 класс, математика]\nЗадание: [задание: вставьте задание или прикрепите фото]\nГде он застрял: [проблема: не понимает, как решать задачи на скорость]\n\nПравила:\n- Не давай готовый ответ.\n- Задавай наводящие вопросы по одному и жди ответа ребёнка.\n- Если он ошибся, не говори сразу правильно — помоги ему самому найти ошибку.\n- Объясняй простыми словами и на примерах из жизни, как для ребёнка этого возраста.\n- В конце дай похожую задачу для самопроверки.\n\nСейчас на вопросы будет отвечать ребёнок. Начни с простого вопроса.",
+    "en": "Help my child with homework, but don't solve it for them.\n\nGrade and subject: [класс и предмет: 4 класс, математика]\nThe task: [задание: вставьте задание или прикрепите фото]\nWhere they're stuck: [проблема: не понимает, как решать задачи на скорость]\n\nRules:\n- Don't give the ready answer.\n- Ask guiding questions one at a time and wait for the child's answer.\n- If they make a mistake, don't correct it right away — help them find it themselves.\n- Explain in simple words with everyday examples, suitable for a child of this age.\n- At the end, give a similar task for self-check.\n\nFrom now on, the child will be answering. Start with an easy question.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t72",
+   "n": 72,
+   "title": "Разложить сложный выбор",
+   "desc": "Решение становится понятнее: критерии, последствия, страхи отдельно от фактов.",
+   "format": "text",
+   "spheres": [
+    "mind"
+   ],
+   "tasks": [
+    "choose"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги мне разобраться со сложным выбором. Не решай за меня — помоги увидеть ситуацию ясно.\n\nВыбор: [выбор: остаться в родном городе или переехать в Москву]\nВарианты: [варианты: А — остаться, Б — переехать, В — переехать на пробу на полгода]\nЧто для меня важно: [ценности: близкие, деньги, развитие, спокойствие]\nЧто меня пугает: [страхи: не справлюсь, останусь один]\n\n1. Задай мне 5 вопросов, которые помогут понять, чего я на самом деле хочу. По одному, жди ответа.\n2. Разложи варианты по моим ценностям.\n3. Отдели факты от страхов и предположений.\n4. Для каждого варианта: худший реалистичный сценарий и что я смогу сделать, если он случится.\n5. Какой вариант больше соответствует тому, что я говорил, — и какие сомнения стоит учесть.",
+    "en": "Help me think through a hard choice. Don't decide for me — help me see the situation clearly.\n\nThe choice: [выбор: остаться в родном городе или переехать в Москву]\nOptions: [варианты: А — остаться, Б — переехать, В — переехать на пробу на полгода]\nWhat matters to me: [ценности: близкие, деньги, развитие, спокойствие]\nWhat scares me: [страхи: не справлюсь, останусь один]\n\n1. Ask me 5 questions that will help me understand what I really want. One at a time, wait for my answer.\n2. Lay out the options against my values.\n3. Separate facts from fears and assumptions.\n4. For each option: the worst realistic scenario and what I could do if it happens.\n5. Which option fits best with what I've said — and which doubts are worth considering.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t73",
+   "n": 73,
+   "title": "Разобраться в ситуации, которая не отпускает",
+   "desc": "Спокойный разговор-дневник: вопросы, которые помогают разложить мысли. Не терапия, а инструмент.",
+   "format": "text",
+   "spheres": [
+    "mind"
+   ],
+   "tasks": [
+    "analyze"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "У меня есть ситуация, которая не выходит из головы, и я хочу в ней разобраться.\n\nЧто произошло: [ситуация: поругался с другом, он сказал, что я эгоист]\nЧто я чувствую: [чувства: обиду и вину одновременно]\nЧто крутится в голове: [мысли: может, он прав?]\n\nЗадавай мне вопросы по одному, чтобы помочь разложить мысли: что было на самом деле, что я домысливаю, что для меня важно, что я могу сделать.\nНе утешай шаблонными фразами и не давай советов, пока я не попрошу. Помогай мне самому прийти к выводам.\nВ конце, когда я напишу «итог», коротко сформулируй, к чему я пришёл.\n\nТы не психолог и не заменяешь его. Если ситуация тяжёлая или я говорю о мыслях навредить себе, прямо и по-доброму скажи, что лучше обратиться к специалисту или близким людям, и подскажи, куда можно обратиться за помощью.",
+    "en": "There's a situation I can't stop thinking about, and I want to make sense of it.\n\nWhat happened: [ситуация: поругался с другом, он сказал, что я эгоист]\nWhat I feel: [чувства: обиду и вину одновременно]\nWhat keeps spinning in my head: [мысли: может, он прав?]\n\nAsk me questions one at a time to help me sort out my thoughts: what really happened, what I'm assuming, what matters to me, what I can do.\nDon't comfort me with stock phrases and don't give advice until I ask. Help me reach my own conclusions.\nAt the end, when I write \"итог\", briefly summarize what I've come to.\n\nYou are not a psychologist and don't replace one. If the situation is heavy or I talk about thoughts of hurting myself, say directly and kindly that it's better to reach out to a specialist or people close to me, and tell me where I can get help.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t74",
+   "n": 74,
+   "title": "Цели, которые не бросишь через неделю",
+   "desc": "2–3 реалистичные цели с маленькими шагами и планом на случай, если что-то пошло не так.",
+   "format": "text",
+   "spheres": [
+    "mind"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги поставить цели на [период: ближайшие 3 месяца].\n\nЧто хочу изменить: [желания: больше двигаться, закончить курс английского, меньше сидеть в телефоне]\nЧто мешало раньше: [препятствия: начинаю резко и бросаю через неделю]\nСколько времени и сил реально есть: [ресурсы: вечера после работы, устаю]\n\n1. Помоги выбрать 2–3 главные цели — остальное отложить.\n2. Для каждой: конкретный результат, как измерить и маленький первый шаг на этой неделе.\n3. План по неделям с постепенным ростом.\n4. Что делать, если пропустил несколько дней: правило «не бросать после срыва».\n5. Как отслеживать прогресс, чтобы это не превратилось в ещё одну обязанность.",
+    "en": "Help me set goals for [период: ближайшие 3 месяца].\n\nWhat I want to change: [желания: больше двигаться, закончить курс английского, меньше сидеть в телефоне]\nWhat got in the way before: [препятствия: начинаю резко и бросаю через неделю]\nHow much time and energy I really have: [ресурсы: вечера после работы, устаю]\n\n1. Help me choose 2–3 main goals — and postpone the rest.\n2. For each: a concrete result, how to measure it, and a small first step this week.\n3. A week-by-week plan with gradual growth.\n4. What to do if I skip a few days: the \"don't quit after a slip\" rule.\n5. How to track progress without it becoming yet another chore.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t75",
+   "n": 75,
+   "title": "Найти слабые места в моём плане",
+   "desc": "«адвокат дьявола»: что может пойти не так и как к этому подготовиться.",
+   "format": "text",
+   "spheres": [
+    "mind"
+   ],
+   "tasks": [
+    "weak"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Найди слабые места в моём плане. Мне нужна честная критика, а не одобрение.\n\nПлан: [план: подробно опишите, что собираетесь сделать]\nЦель: [цель: чего хочу добиться]\nСроки и ресурсы: [ресурсы: время, деньги, помощники]\n\n1. Какие допущения я делаю, не проверив их.\n2. Что может пойти не так — 5 самых вероятных проблем.\n3. Где я, скорее всего, недооцениваю время, деньги или силы.\n4. Как снизить каждый риск.\n5. Что проверить в первую очередь, прежде чем идти дальше.",
+    "en": "Find the weak spots in my plan. I need honest criticism, not approval.\n\nThe plan: [план: подробно опишите, что собираетесь сделать]\nGoal: [цель: чего хочу добиться]\nTimeline and resources: [ресурсы: время, деньги, помощники]\n\n1. Which assumptions I'm making without checking them.\n2. What could go wrong — the 5 most likely problems.\n3. Where I'm most likely underestimating time, money or effort.\n4. How to reduce each risk.\n5. What to check first, before going further.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t76",
+   "n": 76,
+   "title": "Объяснить ошибку и что делать",
+   "desc": "Что значит непонятная ошибка на экране и пошаговое решение для новичка.",
+   "format": "text",
+   "spheres": [
+    "tech"
+   ],
+   "tasks": [
+    "explain"
+   ],
+   "attach": "Скриншот ошибки.",
+   "lang": "en",
+   "prompt": {
+    "ru": "У меня ошибка, помоги разобраться. Я не технический специалист, объясняй просто.\n\nГде появилась: [где: при запуске игры на ноутбуке]\nТекст ошибки: [ошибка: вставьте текст или прикрепите скриншот]\nУстройство и система: [устройство: ноутбук, Windows 11]\nЧто делал перед этим: [что делал: обновил видеодрайвер]\n\n1. Что эта ошибка означает простыми словами.\n2. Самые вероятные причины.\n3. Пошаговое решение: от самого простого и безопасного к более сложному. После каждого шага — как проверить, помогло ли.\n4. Что делать не стоит, чтобы не сделать хуже.\n\nЕсли нужно что-то удалять или менять в системе — предупреди заранее и подскажи, как сделать резервную копию.",
+    "en": "I have an error, help me figure it out. I'm not technical, explain simply.\n\nWhere it appeared: [где: при запуске игры на ноутбуке]\nError text: [ошибка: вставьте текст или прикрепите скриншот]\nDevice and system: [устройство: ноутбук, Windows 11]\nWhat I did before it: [что делал: обновил видеодрайвер]\n\n1. What this error means in plain words.\n2. The most likely causes.\n3. A step-by-step fix: from the simplest and safest to the more complex. After each step — how to check if it helped.\n4. What not to do, so I don't make it worse.\n\nIf something needs to be deleted or changed in the system, warn me first and tell me how to make a backup.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t77",
+   "n": 77,
+   "title": "Настроить устройство или программу пошагово",
+   "desc": "Инструкция для новичка, где каждый шаг — одно действие, с подсказкой, как кнопка может называться у вас.",
+   "format": "text",
+   "spheres": [
+    "tech"
+   ],
+   "tasks": [
+    "explain"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги мне настроить: [что настроить: роутер, чтобы у детей не было интернета после 22:00].\n\nУстройство или программа: [устройство: роутер TP-Link, модель не знаю]\nМой уровень: [уровень: полный новичок]\n\nПравила:\n- Одно действие на один шаг.\n- Если названия кнопок могут отличаться в разных версиях — предупреди и подскажи, как найти нужное.\n- После важных шагов — как проверить, что всё получилось.\n- Если чего-то не хватает для точной инструкции — сначала спроси меня (например, модель устройства).",
+    "en": "Help me set up: [что настроить: роутер, чтобы у детей не было интернета после 22:00].\n\nDevice or program: [устройство: роутер TP-Link, модель не знаю]\nMy level: [уровень: полный новичок]\n\nRules:\n- One action per step.\n- If button names may differ between versions, warn me and tell me how to find the right one.\n- After important steps — how to check that it worked.\n- If something is missing for exact instructions, ask me first (for example, the device model).\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t78",
+   "n": 78,
+   "title": "Написать простой скрипт или бота",
+   "desc": "Рабочий код для небольшой задачи и понятная инструкция, как его запустить. Для тех, кто не программист.",
+   "format": "text",
+   "spheres": [
+    "tech"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Я не программист. Напиши [что: Telegram-бота, который напоминает выпить воды каждые 2 часа].\n\nНа каком языке: [язык: Python]\nГде будет работать: [где: на моём компьютере / на сервере с Debian]\nЧто уже есть: [что есть: ничего / мой код — вставьте]\n\nТребования:\n- Полный рабочий код, без пропусков и «…».\n- Объясни каждый блок кода одной фразой.\n- Пошаговая инструкция: что установить, куда вставить код, как запустить. Полные команды.\n- Как проверить, что всё работает.\n- Где указать свои данные (токены, пароли) и как не выложить их случайно в открытый доступ.\n- Если в моей задаче есть подводные камни — предупреди сразу.",
+    "en": "I'm not a programmer. Write [что: Telegram-бота, который напоминает выпить воды каждые 2 часа].\n\nLanguage: [язык: Python]\nWhere it will run: [где: на моём компьютере / на сервере с Debian]\nWhat I already have: [что есть: ничего / мой код — вставьте]\n\nRequirements:\n- Complete working code, with no gaps or \"...\".\n- Explain each block of code in one sentence.\n- Step-by-step instructions: what to install, where to put the code, how to run it. Full commands.\n- How to check that everything works.\n- Where to put my own data (tokens, passwords) and how not to accidentally publish them.\n- If there are pitfalls in my task, warn me right away.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t79",
+   "n": 79,
+   "title": "Выбрать сервис или приложение под задачу",
+   "desc": "Подходящие варианты с плюсами и минусами, чтобы не перебирать двадцать приложений.",
+   "format": "text",
+   "spheres": [
+    "tech"
+   ],
+   "tasks": [
+    "choose"
+   ],
+   "attach": null,
+   "lang": "en",
+   "prompt": {
+    "ru": "Помоги выбрать сервис или приложение.\n\nЗадача: [задача: вести общий список покупок и дел с семьёй]\nУстройства: [устройства: у меня Android, у жены iPhone]\nЧто важно: [важно: бесплатно, просто для бабушки, работает без регистрации]\nЧто пробовал и почему не подошло: [опыт: заметки в телефоне — неудобно делиться]\n\n1. Какие типы решений существуют для такой задачи.\n2. 3–4 варианта с плюсами и минусами для моих требований.\n3. Какой выбрал бы ты и почему.\n\nПриложения, их цены и доступность в России часто меняются — отметь, что это нужно проверить.",
+    "en": "Help me choose a service or app.\n\nThe task: [задача: вести общий список покупок и дел с семьёй]\nDevices: [устройства: у меня Android, у жены iPhone]\nWhat matters: [важно: бесплатно, просто для бабушки, работает без регистрации]\nWhat I've tried and why it didn't work: [опыт: заметки в телефоне — неудобно делиться]\n\n1. What types of solutions exist for this task.\n2. 3–4 options with pros and cons for my requirements.\n3. Which one you'd choose and why.\n\nApps, their prices and availability in Russia change often — note that this needs to be checked.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "headshot",
+   "title": "Фото для резюме из обычного селфи",
+   "desc": "Деловой портрет, на котором вы похожи на себя в свой лучший день, а не на другого человека.",
+   "format": "photo",
+   "spheres": [
+    "work",
+    "style"
+   ],
+   "tasks": [
+    "portrait"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Одно селфи: лицо прямо в камеру, дневной свет, без фильтров, очков и бьюти-режима.",
+   "prompt": {
+    "en": "Turn this selfie into a professional portrait for [для чего: резюме и рабочего профиля].\n\nChange only: clothing to [одежда: тёмный деловой пиджак и светлая рубашка], background to [фон: мягко размытый светлый офис].\n\nPreserve exactly: face shape, eye shape and color, eyebrow shape, nose, lips, hairline and hairstyle, skin tone, moles and freckles, age and natural expression. Do not slim, smooth, reshape or age the face.\n\nFraming: chest-up, face centered, looking into the camera, relaxed natural smile, eye-level camera.\n\nLook: soft front studio light, natural catchlights in the eyes, realistic skin texture with visible pores, sharp focus on the eyes, 85mm portrait lens look with a gently blurred background.\n\nDo not add jewelry, text, logos or watermarks. The result must look like a real photo of the same person on a good day."
+   },
+   "fix": [
+    "Лицо стало чужим: напишите «Keep my face exactly as in the original photo» и перечислите, что изменилось (нос, глаза, форма лица).",
+    "Кожа как пластик: допишите «Add natural skin texture, pores and small imperfections».",
+    "Сгенерируйте 3–4 варианта и выберите самый похожий, как делают фотографы."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "avatar",
+   "title": "Аватарка в едином стиле для всех соцсетей",
+   "desc": "Квадратный портрет, который хорошо читается даже в маленьком кружке.",
+   "format": "photo",
+   "spheres": [
+    "texts",
+    "style"
+   ],
+   "tasks": [
+    "portrait"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Фото, где хорошо видно лицо.",
+   "prompt": {
+    "en": "Create a profile picture from this photo for [где: соцсети и мессенджеры].\n\nPreserve the person's identity exactly: face shape, eyes, eyebrows, nose, lips, hairline, skin tone, moles and freckles, age.\n\nStyle: [стиль: чистый студийный портрет] on a solid [цвет фона: тёплый бежевый] background.\n\nComposition: square 1:1, head and shoulders, face centered and filling about 60% of the frame, so it reads well as a small circle.\n\nLighting: soft and even with a gentle shadow on one side, realistic skin texture.\n\nNo text, no frames, no logos."
+   },
+   "fix": [
+    "Для единого стиля везде используйте один и тот же промпт и один цвет фона.",
+    "Хотите иллюстрацию вместо фото? Поменяйте стиль, например на «плоская векторная иллюстрация»: внешность всё равно сохранится."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "retouch",
+   "title": "Естественная ретушь без эффекта куклы",
+   "desc": "Выровнять свет, убрать временные покраснения и синяки под глазами, но оставить живую кожу.",
+   "format": "photo",
+   "spheres": [
+    "style",
+    "creative"
+   ],
+   "tasks": [
+    "portrait"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Портрет, который хочется немного подправить.",
+   "prompt": {
+    "en": "Retouch this portrait subtly, the way a professional retoucher would for a magazine that values natural looks.\n\nChange only: even out lighting and exposure, reduce temporary blemishes and redness, slightly soften under-eye shadows, [ещё что поправить: убрать блики на лбу].\n\nPreserve exactly: face shape and features, skin texture with pores, freckles, moles, wrinkles and expression lines, hair, clothing, background and framing.\n\nThe skin must look like real skin with natural texture. Colors stay true to life."
+   },
+   "fix": [
+    "Получилось слишком гладко: «Restore natural skin texture and pores, retouching must be barely noticeable».",
+    "Родинки и веснушки — часть внешности. Если пропали, попросите вернуть их отдельной правкой."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "restore",
+   "title": "Восстановить старое фото",
+   "desc": "Убрать царапины, заломы и выцветание, не превращая бабушку в другого человека.",
+   "format": "photo",
+   "spheres": [
+    "family"
+   ],
+   "tasks": [
+    "restore"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Скан или ровный снимок старого фото: без бликов, сверху, при дневном свете.",
+   "prompt": {
+    "en": "You are a careful photo restorer. Restore this old photograph conservatively: restore, do not reinvent.\n\nRepair: scratches, dust, creases, stains, tears, fading and [ещё повреждения: пожелтение по краям].\n\nPreserve exactly: every person's face, identity, expression, pose and age; clothing; background; composition and framing. Do not add or remove people or objects.\n\nKeep the character of the era: natural film grain and the original photographic tones, [цвет: оставить чёрно-белым].\n\nFaces: recover detail gently, keep natural skin texture, no smoothing or beautifying.\n\nThe result should look like a well-preserved original print of the same photo."
+   },
+   "fix": [
+    "Слишком «глянцево» и современно: «Reduce sharpening, restore the original grain and texture, especially on faces».",
+    "Дорисовала то, чего не было: «Remove any details that are not in the original photo».",
+    "Лучший результат — от хорошего исходника: сканируйте или снимайте без бликов и строго сверху."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "colorize",
+   "title": "Раскрасить чёрно-белое фото по эпохе",
+   "desc": "Цвета, которые правдоподобны для того времени, а не кислотная современность.",
+   "format": "photo",
+   "spheres": [
+    "family",
+    "creative"
+   ],
+   "tasks": [
+    "restore"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Чёрно-белое фото. Если помните, какого цвета были вещи, впишите это в поле.",
+   "prompt": {
+    "en": "Colorize this black-and-white photograph with realistic, era-appropriate colors. It was taken around [когда и где: 1960-е, СССР].\n\nChange only: add color.\n\nPreserve exactly: faces, expressions, poses, clothing shapes, background, composition, and the original shadows and lighting.\n\nColors: natural skin tones, believable muted clothing colors typical of that time and place, realistic colors of the surroundings. Known details: [что точно известно: платье было голубым].\n\nKeep the original film grain. Colors should look like a real color photo of that era, not modern and oversaturated."
+   },
+   "fix": [
+    "Цвета слишком яркие: «Reduce saturation by about 20%, make colors softer like old color film».",
+    "Если знаете цвет хотя бы одной вещи, обязательно укажите его: это задаёт правильную гамму всему кадру."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "restore-gentle",
+   "title": "Бережная чистка: только царапины и пятна",
+   "desc": "Для ценных фото, где нельзя трогать ничего, кроме повреждений.",
+   "format": "photo",
+   "spheres": [
+    "family"
+   ],
+   "tasks": [
+    "restore"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Старое фото с царапинами или пятнами.",
+   "prompt": {
+    "en": "Remove only physical damage from this photo: scratches, dust spots, creases and stains.\n\nChange nothing else: do not sharpen faces and do not change colors, contrast, grain or any details. Every area that is not damaged must stay exactly as it is.\n\nIf damage covers part of a face, fill it in minimally, matching the surrounding area."
+   },
+   "fix": [
+    "Если модель всё равно «улучшила» лица, повторите промпт и добавьте «Faces must remain pixel-identical to the original where undamaged»."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "sharpen",
+   "title": "Сделать размытое фото чётче",
+   "desc": "Спасти вечерний снимок с телефона: меньше шума, больше деталей, без выдуманных подробностей.",
+   "format": "photo",
+   "spheres": [
+    "family",
+    "travel"
+   ],
+   "tasks": [
+    "restore"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Размытое, шумное или тёмное фото.",
+   "prompt": {
+    "en": "Improve the quality of this photo. The problem: [что не так: размыто и шумно, снято вечером на телефон].\n\nMake it sharper and cleaner while keeping it realistic: reduce noise, recover detail, fix exposure and white balance.\n\nPreserve exactly: faces and identity, expressions, every object, the composition and the colors of the scene.\n\nDo not invent new details, textures or text that were not in the original. Keep natural skin texture."
+   },
+   "fix": [
+    "Если лица стали похожи на рисунок, попросите: «Less sharpening on faces, keep them natural»."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "remove-object",
+   "title": "Убрать человека или предмет из кадра",
+   "desc": "Случайный прохожий, мусорка, провода — исчезают так, будто их и не было.",
+   "format": "photo",
+   "spheres": [
+    "travel",
+    "family"
+   ],
+   "tasks": [
+    "background"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Фото, на котором есть что-то лишнее.",
+   "prompt": {
+    "en": "Remove [что убрать: человека справа на заднем плане] from this photo.\n\nFill the area naturally with what would realistically be behind it, matching surrounding textures, perspective, lighting and shadows. Also remove its shadow and any reflection.\n\nPreserve exactly: everything else in the photo — people, faces, poses, background, colors and framing.\n\nThe edit must be invisible."
+   },
+   "fix": [
+    "Убрала не то: опишите точнее — цвет одежды, где в кадре, что держит в руках.",
+    "Несколько лишних объектов лучше убирать по одному, отдельными сообщениями."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "new-background",
+   "title": "Заменить фон, чтобы не выглядело как вклейка",
+   "desc": "Новый фон с подгонкой света и тени: как будто снимали прямо там.",
+   "format": "photo",
+   "spheres": [
+    "texts",
+    "creative"
+   ],
+   "tasks": [
+    "background"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Фото человека, у которого хочется поменять фон.",
+   "prompt": {
+    "en": "Replace the background of this photo with [новый фон: вечерняя набережная с мягкими огнями].\n\nPreserve exactly: the person — face, identity, hair, pose, clothing, outline and proportions.\n\nMatch the lighting on the person to the new background: the same light direction, color temperature and intensity. Add a natural contact shadow where they touch the ground. Match the camera perspective and depth of field, with the background slightly blurred like in a real photo.\n\nThe final image must look like it was shot in that place, not pasted in."
+   },
+   "fix": [
+    "Выглядит как вклейка: «Match the light on the person to the background more closely and add soft shadows»."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "extend",
+   "title": "Расширить обрезанный кадр",
+   "desc": "Сделать из горизонтального фото вертикальное для сторис или дорисовать обрезанную голову.",
+   "format": "photo",
+   "spheres": [
+    "texts"
+   ],
+   "tasks": [
+    "background"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Фото, которому не хватает места по краям.",
+   "prompt": {
+    "en": "Extend this photo to a [новый формат: вертикальный 9:16 для сторис] frame.\n\nKeep the original image content unchanged and in place; only add new area around it.\n\nContinue the scene naturally: the same environment, lighting, perspective, colors, grain and level of detail, with no visible seams.\n\nDo not add new people, text or noticeable objects in the new area."
+   },
+   "fix": [
+    "Если на стыке видна граница: «Blend the extended area seamlessly with the original, same grain and sharpness»."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "hair",
+   "title": "Примерить стрижку или цвет волос",
+   "desc": "Увидеть себя с новой причёской до похода в салон.",
+   "format": "photo",
+   "spheres": [
+    "style"
+   ],
+   "tasks": [
+    "tryon"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Фото лицом к камере, волосы видны целиком.",
+   "prompt": {
+    "en": "Show me how I would look with [стрижка: каре до подбородка с чёлкой] and [цвет волос: медно-рыжий] hair.\n\nChange only the hair: cut, length, color and texture.\n\nPreserve exactly: face shape, facial features, skin tone, eyebrows, makeup, expression, pose, clothing, background and lighting.\n\nThe hair must look real: natural roots, individual strands, realistic shine and volume, color that fits the lighting of the photo.\n\nIt should look like a real photo taken right after a salon visit."
+   },
+   "fix": [
+    "Для сравнения делайте несколько вариантов с одним и тем же исходным фото.",
+    "Покажите результат мастеру: это понятнее любых слов."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "clothes",
+   "title": "Примерить одежду по фото вещи",
+   "desc": "Как на вас будет сидеть вещь из интернет-магазина.",
+   "format": "photo",
+   "spheres": [
+    "shopping",
+    "style"
+   ],
+   "tasks": [
+    "tryon"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Два фото: сначала себя (по пояс или в полный рост), потом вещь.",
+   "prompt": {
+    "en": "Image 1 is a photo of me. Image 2 is a piece of clothing.\n\nShow me wearing the clothing from Image 2.\n\nPreserve exactly from Image 1: face, identity, hair, body shape and proportions, pose, background and lighting.\n\nTransfer from Image 2: the garment's exact color, fabric, pattern, cut, length and details such as buttons, seams and prints.\n\nFit it naturally to my body with realistic folds and match the lighting of Image 1. Fit: [посадка: по фигуре].\n\nChange nothing else."
+   },
+   "fix": [
+    "Вещь изменилась (другой принт или цвет): «Copy the garment from Image 2 exactly, including the pattern».",
+    "Это примерка «для настроения»: размер и реальную посадку она не гарантирует."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "room",
+   "title": "Комната в новом стиле",
+   "desc": "Как будет выглядеть ремонт, если стены, окна и планировка останутся на месте.",
+   "format": "photo",
+   "spheres": [
+    "home"
+   ],
+   "tasks": [
+    "tryon"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Фото комнаты из угла, чтобы было видно как можно больше.",
+   "prompt": {
+    "en": "Redesign this room in [стиль: скандинавский, светлое дерево и тёплый текстиль] style.\n\nPreserve exactly: room layout, walls, windows, doors, ceiling height, camera angle and perspective.\n\nChange: furniture, wall color, textiles, light fixtures and decor. Wishes: [пожелания: оставить мой диван, добавить рабочее место у окна].\n\nKeep proportions realistic, with furniture sized to fit this actual room. Natural daylight from the existing windows.\n\nIt must look like a real photo of this same room after renovation."
+   },
+   "fix": [
+    "Поменялись окна или стены: «Keep the architecture identical, change only furniture and decor».",
+    "Меняйте по одной вещи за раз: сначала стены, потом мебель, потом текстиль."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "product-white",
+   "title": "Фото товара для Авито и маркетплейсов",
+   "desc": "Из снимка на кухонном столе — чистое студийное фото на белом фоне.",
+   "format": "photo",
+   "spheres": [
+    "business",
+    "shopping"
+   ],
+   "tasks": [
+    "product"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Фото товара у окна при дневном свете, на простом фоне.",
+   "prompt": {
+    "en": "Turn this phone photo into a clean product photo for [где: объявление на Авито].\n\nPreserve exactly: the product's shape, proportions, color, materials, label shape and all text and logos on it. Do not redraw or change any lettering.\n\nChange: remove the background and place the product on [фон: чистый белый фон] with a soft natural shadow underneath. Correct the light to soft studio lighting, fix white balance and exposure, remove dust and fingerprints from the product.\n\nComposition: product centered and fully visible, filling about 80% of a square frame.\n\nNo added props, text, badges or watermarks."
+   },
+   "fix": [
+    "Обязательно сверьте надписи и форму этикетки с оригиналом: модель иногда меняет мелочи.",
+    "Покупатель должен получить ровно то, что на фото. Реальные дефекты товара не прячьте."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "product-lifestyle",
+   "title": "Товар в «живой» обстановке",
+   "desc": "Атмосферное фото для соцсетей и карточки товара: как будто снимал фотограф.",
+   "format": "photo",
+   "spheres": [
+    "business",
+    "texts"
+   ],
+   "tasks": [
+    "product"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Чёткое фото товара.",
+   "prompt": {
+    "en": "Place the product from this photo into a lifestyle scene: [сцена: утренний деревянный стол у окна, рядом чашка кофе].\n\nPreserve exactly: the product's shape, proportions, color, label and all text on it.\n\nScene: natural window light, realistic shadows and reflections consistent with the product, props that fit the mood without distracting, shallow depth of field with the product in sharp focus.\n\nIt should look like a real photo taken on a good phone camera, not a 3D render: small natural imperfections are welcome.\n\nNo added text or logos."
+   },
+   "fix": [
+    "Выглядит как 3D-рендер: «Make it look like a real photo shot on an iPhone, add natural imperfections»."
+   ],
+   "lang": "en"
+  },
+  {
+   "id": "film",
+   "title": "Цвет как на плёнке",
+   "desc": "Тёплое плёночное настроение, при этом кадр и люди не меняются.",
+   "format": "photo",
+   "spheres": [
+    "creative",
+    "texts"
+   ],
+   "tasks": [
+    "color"
+   ],
+   "models": [
+    "ChatGPT",
+    "Gemini"
+   ],
+   "attach": "Любое фото.",
+   "prompt": {
+    "en": "Color grade this photo in [стиль: тёплая плёнка, как Kodak Portra] style.\n\nChange only: colors, tones and film look — [детали: тёплые тени, мягкий контраст, лёгкое зерно].\n\nPreserve exactly: composition, faces, people, objects, background, framing and exposure level. Do not add or remove anything.\n\nKeep skin tones natural."
+   },
+   "fix": [
+    "Другие варианты стиля: «холодная скандинавская гамма», «чёрно-белое с высоким контрастом», «выцветшее фото из 90-х»."
+   ],
+   "lang": "en"
+  }
+ ]
+}

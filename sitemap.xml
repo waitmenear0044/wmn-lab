@@ -2,6 +2,7 @@
 <!-- Сюда добавляются разделы, когда они открываются (ready: true в site.js) -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://wmn-lab.ru/</loc></url>
+  <url><loc>https://wmn-lab.ru/prompts/</loc></url>
   <url><loc>https://wmn-lab.ru/dough/</loc></url>
   <url><loc>https://wmn-lab.ru/bot/</loc></url>
 </urlset>
