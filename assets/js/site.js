@@ -8,7 +8,7 @@
 const SITE = {
   name: 'wmn-lab',
   domain: 'wmn-lab.ru',
-  version: '1.1',
+  version: '1.2',
   tagline: 'домашняя страничка: проекты, промпты и прочие приколы',
   shareText: 'wmn-lab — домашняя страничка wmn: промпты для нейросетей, калькулятор теста и прочие приколы. Всё бесплатно и без регистрации.',
   updated: '23.09.2026',            // «Последнее обновление» в футере
@@ -104,6 +104,63 @@ const WMN = {
     return back;
   },
 };
+
+/* ---------------- Плавающие окна (игры и т.п.) ----------------
+   WMN.window({ id, title, icon, width, build(body, win) → cleanup?, onKey(e) → true, если клавиша обработана }) */
+WMN._z = 900;
+WMN._wins = {};
+WMN.activeWin = null;
+WMN.window = function ({ id, title, icon = '🗔', width = 360, build, onKey }) {
+  if (WMN._wins[id]) { WMN._wins[id].focus(); return WMN._wins[id]; }
+  const el = document.createElement('div');
+  el.className = 'gwin';
+  el.style.width = `min(${width}px, calc(100vw - 16px))`;
+  el.innerHTML = `
+    <div class="titlebar"><span aria-hidden="true">${icon}</span><span class="t">${WMN.esc(title)}</span>
+      <button class="tb-btn" data-x aria-label="Закрыть">×</button></div>
+    <div class="gwin-body"></div>`;
+  document.body.appendChild(el);
+  const n = Object.keys(WMN._wins).length;
+  el.style.left = Math.max(8, (innerWidth - el.offsetWidth) / 2 + n * 24) + 'px';
+  el.style.top = Math.max(8, Math.min(90 + n * 24, innerHeight - 120)) + 'px';
+
+  const win = {
+    el, onKey,
+    focus() { el.style.zIndex = ++WMN._z; WMN.activeWin = win; document.querySelectorAll('.gwin').forEach(w => w.classList.toggle('inactive', w !== el)); },
+    close() { win.cleanup && win.cleanup(); el.remove(); delete WMN._wins[id]; if (WMN.activeWin === win) WMN.activeWin = null; },
+  };
+  WMN._wins[id] = win;
+  el.addEventListener('pointerdown', () => win.focus());
+  el.querySelector('[data-x]').addEventListener('click', () => win.close());
+
+  // перетаскивание за заголовок
+  const bar = el.querySelector('.titlebar');
+  bar.addEventListener('pointerdown', e => {
+    if (e.target.closest('button')) return;
+    const r = el.getBoundingClientRect(), ox = e.clientX - r.left, oy = e.clientY - r.top;
+    bar.setPointerCapture(e.pointerId);
+    const move = ev => {
+      el.style.left = Math.min(Math.max(0, ev.clientX - ox), innerWidth - 60) + 'px';
+      el.style.top = Math.min(Math.max(0, ev.clientY - oy), innerHeight - 30) + 'px';
+    };
+    const up = () => { bar.removeEventListener('pointermove', move); bar.removeEventListener('pointerup', up); };
+    bar.addEventListener('pointermove', move); bar.addEventListener('pointerup', up);
+  });
+
+  win.cleanup = build(el.querySelector('.gwin-body'), win);
+  win.focus();
+  return win;
+};
+document.addEventListener('keydown', e => {
+  const w = WMN.activeWin;
+  if (!w || !w.onKey || document.querySelector('.dlg-back')) return;
+  if (e.target.closest && e.target.closest('input, textarea, select')) return;
+  if (w.onKey(e)) {
+    e.preventDefault();
+    // иначе пробел ещё и «нажмёт» последнюю кликнутую кнопку в окне
+    if (document.activeElement && document.activeElement.tagName === 'BUTTON') document.activeElement.blur();
+  }
+});
 
 /* ---------------- Вид: тема, крупный шрифт, без анимации ---------------- */
 const VIEW = {
@@ -254,6 +311,16 @@ const ACTIONS = {
     d.querySelector('.dlg').classList.add('shake');
   },
   write() { window.open(SITE.socials[0].url, '_blank', 'noopener'); },
+  game(id) {
+    const open = () => window.GAMES[id]();
+    if (window.GAMES) return open();
+    WMN.status('Загрузка игры…');
+    const sc = document.createElement('script');
+    sc.src = '/assets/js/games.js?v=2';
+    sc.onload = () => { WMN.status('Готово'); open(); };
+    sc.onerror = () => WMN.status('Не удалось загрузить игру', 4000);
+    document.head.appendChild(sc);
+  },
 };
 
 /* ---------------- Сборка меню ---------------- */
@@ -290,6 +357,13 @@ function buildMenu() {
       ...ready.filter(s => s.id !== 'home').map(s => link(`${s.icon} ${s.title}`, s.href)),
       sep,
       item('Добавить в избранное…<span class="sc">Ctrl+D</span>', 'addFav'),
+    ]],
+    ['И', 'гры', [
+      item('💣 Сапёр', 'game', 'data-arg="mines"'),
+      item('🐍 Змейка', 'game', 'data-arg="snake"'),
+      item('🔢 2048', 'game', 'data-arg="g2048"'),
+      item('❌ Крестики-нолики', 'game', 'data-arg="ttt"'),
+      item('🧱 Кирпичики', 'game', 'data-arg="bricks"'),
     ]],
     ['С', 'правка', [
       item('О сайте…', 'about'),
