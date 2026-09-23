@@ -4,36 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Бот с картинками — wmn-lab</title>
-  <meta name="description" content="Телеграм-бот, который делает мемы с подписями на картинках.">
+  <meta name="description" content="Мем-генератор в браузере и телеграм-бот: подписи на картинках за пару секунд.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="wmn-lab">
   <meta property="og:title" content="Бот с картинками — wmn-lab">
-  <meta property="og:description" content="Телеграм-бот, который делает мемы с подписями на картинках.">
+  <meta property="og:description" content="Мем-генератор в браузере и телеграм-бот: подписи на картинках за пару секунд.">
   <meta property="og:url" content="https://wmn-lab.ru/bot/">
   <meta property="og:image" content="https://wmn-lab.ru/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#2B5CA8">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/css/base.css?v=4">
+  <link rel="stylesheet" href="/assets/css/base.css?v=6">
   <script>try{var v=JSON.parse(localStorage.getItem("wmn-view"))||{},r=document.documentElement;r.dataset.theme=v.theme||"classic";if(v.big)r.classList.add("big");if(v.noanim)r.classList.add("noanim")}catch(e){}</script>
 </head>
 <body data-section="bot">
 
 <main id="page" data-title="Бот с картинками">
   <h1>Бот с подписями на картинках</h1>
-  <p>Телеграм-бот, который делает из картинки мем с подписью. Скоро здесь будет веб-версия, чтобы делать то же самое прямо в браузере.</p>
-  <div class="construction"><div>🚧 Страница строится 🚧</div></div>
-  <p><a class="btn98" id="botlink" href="#">Открыть бота в Telegram</a></p>
-  <p class="muted">Бот живёт на донатах звёздами Telegram: если он вам нравится, внутри есть кнопка «Поддержать бота».</p>
+
+  <div class="bot-win">
+    <div class="titlebar"><span aria-hidden="true">✈️</span><span class="t">@impactpicsbot — Telegram</span></div>
+    <div class="bot-card">
+      <div class="bot-ico" aria-hidden="true">🤖</div>
+      <div>
+        <p><b>Мой бот в Telegram</b> делает мемы из любых картинок: отправляешь фото и получаешь его с подписью. Случайные фразы, свой текст, два шрифта, всё кнопками.</p>
+      </div>
+    </div>
+    <div class="bot-btns">
+      <a class="btn98 big-btn" id="botlink" href="https://t.me/impactpicsbot" target="_blank" rel="noopener">Открыть @impactpicsbot</a>
+    </div>
+  </div>
+
+  <h2>Мем-генератор прямо здесь</h2>
+  <p class="muted">Всё то же самое, что в боте, только в браузере. Картинка никуда не загружается и не покидает ваше устройство.</p>
+
+  <div class="dropzone" id="drop" tabindex="0">
+    <div class="drop-empty" id="dropEmpty">
+      <div class="drop-ico" aria-hidden="true">🖼️</div>
+      <p><b>Перетащите картинку сюда</b><br>или вставьте из буфера обмена (Ctrl+V)</p>
+      <p class="drop-btns">
+        <button class="btn98" id="pickBtn" type="button">📁 Выбрать файл</button>
+        <button class="btn98" id="pasteBtn" type="button">📋 Вставить из буфера</button>
+      </p>
+      <p class="muted drop-note">JPG, PNG, WebP или GIF, до 20 МБ</p>
+    </div>
+    <canvas id="canvas" class="hidden" aria-label="Готовый мем"></canvas>
+    <input type="file" id="file" accept="image/*" hidden>
+  </div>
+
+  <div id="controls" class="hidden">
+    <fieldset>
+      <legend>Подпись</legend>
+      <textarea id="text" rows="2" placeholder="Одна строка — текст снизу. Две строки (через Enter) — сверху и снизу."></textarea>
+      <p class="row"><button class="btn98" id="randomBtn" type="button">🔤 Случайная подпись</button></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Настройки</legend>
+      <div class="gen-row"><span class="gen-label">Шрифт</span>
+        <div class="seg" id="fontSeg">
+          <button class="btn98" type="button" data-v="impact" aria-pressed="true">Impact</button>
+          <button class="btn98" type="button" data-v="lobster" aria-pressed="false">Lobster</button>
+        </div>
+      </div>
+      <div class="gen-row"><span class="gen-label">Позиция</span>
+        <div class="seg" id="posSeg">
+          <button class="btn98" type="button" data-v="original" aria-pressed="true">Обычное</button>
+          <button class="btn98" type="button" data-v="top" aria-pressed="false">Сверху</button>
+          <button class="btn98" type="button" data-v="bottom" aria-pressed="false">Снизу</button>
+        </div>
+      </div>
+      <div class="gen-row"><span class="gen-label">Размер</span>
+        <div class="seg">
+          <button class="btn98" type="button" id="smaller">➖ Мельче</button>
+          <button class="btn98" type="button" id="bigger">➕ Крупнее</button>
+        </div>
+        <span class="muted" id="sizeInfo"></span>
+      </div>
+    </fieldset>
+
+    <div class="gen-actions">
+      <button class="btn98 big-btn" id="copyBtn" type="button">📋 Копировать</button>
+      <button class="btn98 big-btn" id="saveBtn" type="button">💾 Скачать</button>
+      <button class="btn98" id="resetBtn" type="button">🗑 Другая картинка</button>
+    </div>
+  </div>
 </main>
 
-<script src="/assets/js/site.js?v=3"></script>
-<script>
-  // Ссылка на бота: впиши сюда адрес вида https://t.me/имя_бота
-  const BOT_URL = '';
-  const a = document.getElementById('botlink');
-  if (BOT_URL) a.href = BOT_URL; else a.closest('p').innerHTML = '<span class="muted">Ссылка на бота появится здесь совсем скоро.</span>';
-</script>
+<script src="/assets/js/site.js?v=4"></script>
+<script src="/bot/meme.js?v=2"></script>
 </body>
 </html>

@@ -434,3 +434,35 @@ html[data-theme=retro] .site-footer{color:#F7EDFF}
   .statusbar{font-size:12px}
   .sb-bar{width:60px}
 }
+
+/* =========================================================
+   Бот и мем-генератор
+   ========================================================= */
+@font-face{font-family:'MemeImpact';src:local('Impact'),url('/assets/fonts/meme-oswald.woff2') format('woff2');font-display:swap}
+@font-face{font-family:'MemeLobster';src:url('/assets/fonts/meme-lobster.woff2') format('woff2');font-display:swap}
+.bot-win{margin:6px 0 22px;background:var(--silver);padding:3px;
+  border:2px solid;border-color:var(--silver-hi) var(--silver-dk) var(--silver-dk) var(--silver-hi);box-shadow:inset -1px -1px 0 var(--silver-lo),3px 3px 0 rgba(0,0,0,.2)}
+.bot-card{display:flex;gap:14px;align-items:flex-start;padding:12px 14px;color:var(--btn-text)}
+.bot-btns{display:flex;justify-content:flex-end;padding:0 10px 10px}
+@media (max-width:680px){ .bot-btns .big-btn{flex:1;text-align:center} }
+.bot-ico{font-size:40px;line-height:1}
+.bot-card p{margin:0 0 8px;font-size:17px}
+.dropzone{position:relative;margin:10px 0 16px;padding:10px;min-height:220px;display:grid;place-items:center;text-align:center;
+  background:var(--field-bg);border:2px dashed var(--silver-lo);outline:none}
+.dropzone.over{border-color:var(--link);background:var(--note-bg)}
+.dropzone:focus-visible{outline:2px dotted var(--text);outline-offset:2px}
+.drop-ico{font-size:44px}
+.drop-empty p{margin:6px 0;max-width:none}
+.drop-btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px!important}
+.drop-note{font-size:14px}
+#canvas{max-width:100%;height:auto;display:block;
+  background:repeating-conic-gradient(#ccc 0 25%,#fff 0 50%) 0 0/16px 16px;box-shadow:2px 2px 0 rgba(0,0,0,.25)}
+#text{width:100%;font-family:var(--ui);font-size:16px;padding:6px 8px;resize:vertical;background:var(--field-bg);color:var(--text);
+  border:2px solid;border-color:var(--silver-lo) var(--silver-hi) var(--silver-hi) var(--silver-lo);box-shadow:inset 1px 1px 0 var(--silver-dk)}
+.gen-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:8px 0}
+.gen-label{font-family:var(--ui);font-size:14px;min-width:70px}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg .btn98[aria-pressed="true"]{border-color:var(--silver-dk) var(--silver-hi) var(--silver-hi) var(--silver-dk);box-shadow:inset 1px 1px 0 var(--silver-lo);background:var(--pressed);font-weight:bold}
+.gen-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:4px 0 8px}
+.big-btn{font-size:16px;padding:8px 20px}
+@media (max-width:680px){ .gen-actions .big-btn{flex:1} }
