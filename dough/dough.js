@@ -51,10 +51,29 @@
   }
 
   /* ---- ползунок + поле ввода ---- */
+  /* ---- защита от «сломать калькулятор» ---- */
+  const LIMIT = 99;                                           // больше 99 см или 99 штук не бывает
+  let scolded = false;
+  function guard(num) {
+    const v = parseFloat(num.value);
+    if (num.value === '' || isNaN(v)) return;
+    if (v > LIMIT) {
+      num.value = LIMIT;
+      if (!scolded) {
+        scolded = true;
+        WMN.dialog({ title: 'Эээ…', icon: '🤨', html: '<p><b>Друг, зачем тебе столько?</b></p><p class="muted">Поставил 99 — этого точно хватит.</p>',
+          buttons: [{ text: 'Понял, убавлю', default: true, action: () => { scolded = false; } }] });
+        setTimeout(() => { scolded = false; }, 1500);          // даже если окно закрыли крестиком
+      }
+    }
+    if (v < 0) num.value = Math.abs(v);                       // отрицательные размеры — просто убираем минус
+  }
+
   function bind(id) {
     const num = $(id), rng = $(id + '-r');
+    num.max = LIMIT;
     rng.addEventListener('input', () => { num.value = rng.value; num.dispatchEvent(new Event('input')); });
-    num.addEventListener('input', () => { if (num.value !== '') rng.value = num.value; });
+    num.addEventListener('input', () => { guard(num); if (num.value !== '') rng.value = num.value; });
   }
   function setVal(id, v) { $(id).value = v; $(id + '-r').value = v; }
   ['dia', 'w', 'h', 'yieldIn'].forEach(bind);
@@ -104,7 +123,7 @@
       k = (+$('yieldIn').value || 0) / r.yield.v;
     }
 
-    if (!k || !isFinite(k)) {
+    if (!k || !isFinite(k) || k <= 0) {
       $('factor').textContent = byForm ? 'Введите размеры формы' : 'Введите количество';
       $('result').innerHTML = ''; $('hint').textContent = ''; return;
     }
