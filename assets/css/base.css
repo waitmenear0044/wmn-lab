@@ -657,3 +657,5 @@ mark.ph.filled{background:#B8F5B0}
 .sr-list li,.bad li{padding:6px 0;border-bottom:1px dashed var(--line);font-size:16px}
 .bad{background:var(--paper);color:var(--text);padding:4px 12px;border:2px solid;border-color:var(--silver-lo) var(--silver-hi) var(--silver-hi) var(--silver-lo)}
 .bad a{font-size:14px}
+.ex-tags{font-family:var(--ui);font-size:12px;color:var(--muted);margin:0 0 10px;line-height:1.5}
+.sr-hints{display:flex;gap:5px;flex-wrap:wrap;align-items:center;font-family:var(--ui);font-size:12px;margin:0 0 10px}

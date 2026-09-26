@@ -3,82 +3,412 @@
   {
    "id": "work",
    "title": "Работа и карьера",
-   "icon": "💼"
+   "icon": "💼",
+   "tags": [
+    "работа",
+    "карьера",
+    "резюме",
+    "cv",
+    "вакансия",
+    "hh",
+    "хедхантер",
+    "собеседование",
+    "интервью",
+    "начальник",
+    "руководитель",
+    "босс",
+    "коллега",
+    "коллеги",
+    "офис",
+    "зарплата",
+    "повышение",
+    "оффер",
+    "увольнение",
+    "уволиться",
+    "сопроводительное",
+    "письмо",
+    "отчёт",
+    "самооценка",
+    "профессия",
+    "linkedin"
+   ]
   },
   {
    "id": "study",
    "title": "Учёба",
-   "icon": "📚"
+   "icon": "📚",
+   "tags": [
+    "учёба",
+    "обучение",
+    "школа",
+    "вуз",
+    "университет",
+    "институт",
+    "студент",
+    "экзамен",
+    "егэ",
+    "огэ",
+    "сессия",
+    "курсы",
+    "английский",
+    "язык",
+    "иностранный",
+    "объяснить",
+    "тема",
+    "конспект",
+    "эссе",
+    "курсовая",
+    "диплом",
+    "домашка",
+    "навык"
+   ]
   },
   {
    "id": "money",
    "title": "Деньги",
-   "icon": "💰"
+   "icon": "💰",
+   "tags": [
+    "деньги",
+    "бюджет",
+    "траты",
+    "расходы",
+    "накопления",
+    "копить",
+    "сбережения",
+    "кредит",
+    "ипотека",
+    "рассрочка",
+    "долг",
+    "финансы",
+    "экономия",
+    "покупка",
+    "переплата"
+   ]
   },
   {
    "id": "health",
    "title": "Здоровье и спорт",
-   "icon": "🏃"
+   "icon": "🏃",
+   "tags": [
+    "здоровье",
+    "спорт",
+    "тренировки",
+    "фитнес",
+    "зал",
+    "бег",
+    "упражнения",
+    "питание",
+    "еда",
+    "меню",
+    "диета",
+    "сон",
+    "бессонница",
+    "врач",
+    "анализы",
+    "заключение",
+    "симптомы",
+    "самочувствие"
+   ]
   },
   {
    "id": "people",
    "title": "Общение",
-   "icon": "💬"
+   "icon": "💬",
+   "tags": [
+    "общение",
+    "отношения",
+    "разговор",
+    "конфликт",
+    "ссора",
+    "друг",
+    "подруга",
+    "девушка",
+    "парень",
+    "муж",
+    "жена",
+    "мама",
+    "папа",
+    "родители",
+    "свекровь",
+    "извиниться",
+    "извинение",
+    "отказать",
+    "поздравление",
+    "тост",
+    "сообщение",
+    "переписка",
+    "границы",
+    "обида"
+   ]
   },
   {
    "id": "home",
    "title": "Дом и быт",
-   "icon": "🏠"
+   "icon": "🏠",
+   "tags": [
+    "дом",
+    "быт",
+    "квартира",
+    "уборка",
+    "порядок",
+    "расхламление",
+    "готовка",
+    "рецепт",
+    "ужин",
+    "холодильник",
+    "переезд",
+    "ремонт",
+    "мебель",
+    "интерьер",
+    "обязанности"
+   ]
   },
   {
    "id": "travel",
    "title": "Путешествия",
-   "icon": "✈️"
+   "icon": "✈️",
+   "tags": [
+    "путешествие",
+    "поездка",
+    "отпуск",
+    "туризм",
+    "маршрут",
+    "билеты",
+    "отель",
+    "чемодан",
+    "вещи",
+    "виза",
+    "заграница",
+    "страна",
+    "город"
+   ]
   },
   {
    "id": "shopping",
    "title": "Покупки",
-   "icon": "🛒"
+   "icon": "🛒",
+   "tags": [
+    "покупки",
+    "выбрать",
+    "сравнить",
+    "техника",
+    "гаджет",
+    "телефон",
+    "смартфон",
+    "ноутбук",
+    "пылесос",
+    "отзывы",
+    "маркетплейс",
+    "wildberries",
+    "ozon",
+    "авито",
+    "подарок"
+   ]
   },
   {
    "id": "style",
    "title": "Стиль и внешность",
-   "icon": "👗"
+   "icon": "👗",
+   "tags": [
+    "стиль",
+    "внешность",
+    "одежда",
+    "гардероб",
+    "образ",
+    "надеть",
+    "причёска",
+    "стрижка",
+    "волосы",
+    "мода",
+    "капсула"
+   ]
   },
   {
    "id": "docs",
    "title": "Документы и права",
-   "icon": "📄"
+   "icon": "📄",
+   "tags": [
+    "документы",
+    "право",
+    "права",
+    "закон",
+    "юрист",
+    "договор",
+    "претензия",
+    "жалоба",
+    "возврат",
+    "гарантия",
+    "управляющая",
+    "ук",
+    "госуслуги",
+    "заявление",
+    "аренда"
+   ]
   },
   {
    "id": "texts",
    "title": "Тексты и соцсети",
-   "icon": "✍️"
+   "icon": "✍️",
+   "tags": [
+    "тексты",
+    "соцсети",
+    "smm",
+    "пост",
+    "телеграм",
+    "instagram",
+    "инстаграм",
+    "вк",
+    "контент",
+    "контент-план",
+    "рилс",
+    "reels",
+    "шортсы",
+    "видео",
+    "редактура",
+    "копирайтинг",
+    "блог",
+    "канал"
+   ]
   },
   {
    "id": "creative",
    "title": "Творчество",
-   "icon": "🎨"
+   "icon": "🎨",
+   "tags": [
+    "творчество",
+    "история",
+    "сюжет",
+    "рассказ",
+    "книга",
+    "комикс",
+    "стихи",
+    "стихотворение",
+    "песня",
+    "днд",
+    "ролевая",
+    "настолка",
+    "идея",
+    "критика",
+    "хобби"
+   ]
   },
   {
    "id": "business",
    "title": "Своё дело",
-   "icon": "🚀"
+   "icon": "🚀",
+   "tags": [
+    "бизнес",
+    "дело",
+    "стартап",
+    "самозанятый",
+    "фриланс",
+    "клиенты",
+    "клиент",
+    "цена",
+    "прайс",
+    "услуга",
+    "продажи",
+    "маркетинг",
+    "реклама",
+    "идея"
+   ]
   },
   {
    "id": "family",
    "title": "Семья и дети",
-   "icon": "👨‍👩‍👧"
+   "icon": "👨‍👩‍👧",
+   "tags": [
+    "семья",
+    "дети",
+    "ребёнок",
+    "сын",
+    "дочь",
+    "родители",
+    "сказка",
+    "праздник",
+    "день",
+    "рождения",
+    "домашнее",
+    "задание",
+    "уроки",
+    "школа"
+   ]
   },
   {
    "id": "mind",
    "title": "Мысли и решения",
-   "icon": "🧠"
+   "icon": "🧠",
+   "tags": [
+    "мысли",
+    "решение",
+    "выбор",
+    "цели",
+    "планы",
+    "сомнения",
+    "план",
+    "приоритеты",
+    "мотивация",
+    "риски"
+   ]
+  },
+  {
+   "id": "psy",
+   "title": "Психология",
+   "icon": "🧘",
+   "tags": [
+    "психология",
+    "эмоции",
+    "чувства",
+    "тревога",
+    "тревожность",
+    "паника",
+    "стресс",
+    "выгорание",
+    "усталость",
+    "апатия",
+    "прокрастинация",
+    "откладываю",
+    "самооценка",
+    "самокритика",
+    "злость",
+    "гнев",
+    "обида",
+    "одиночество",
+    "горе",
+    "утрата",
+    "расставание",
+    "психолог",
+    "психотерапевт",
+    "терапия",
+    "дневник",
+    "записи",
+    "заметки",
+    "страх",
+    "волнение"
+   ]
   },
   {
    "id": "tech",
    "title": "Техника",
-   "icon": "🛠"
+   "icon": "🛠",
+   "tags": [
+    "техника",
+    "компьютер",
+    "ноутбук",
+    "телефон",
+    "ошибка",
+    "настроить",
+    "роутер",
+    "wifi",
+    "вайфай",
+    "программа",
+    "приложение",
+    "код",
+    "скрипт",
+    "бот",
+    "python",
+    "вайбкодинг"
+   ]
   }
  ],
  "tasks": [
@@ -2019,7 +2349,8 @@
    "desc": "Спокойный разговор-дневник: вопросы, которые помогают разложить мысли. Не терапия, а инструмент.",
    "format": "text",
    "spheres": [
-    "mind"
+    "mind",
+    "psy"
    ],
    "tasks": [
     "analyze"
@@ -2181,6 +2512,363 @@
     "en": "Help me choose a service or app.\n\nThe task: [задача: вести общий список покупок и дел с семьёй]\nDevices: [устройства: у меня Android, у жены iPhone]\nWhat matters: [важно: бесплатно, просто для бабушки, работает без регистрации]\nWhat I've tried and why it didn't work: [опыт: заметки в телефоне — неудобно делиться]\n\n1. What types of solutions exist for this task.\n2. 3–4 options with pros and cons for my requirements.\n3. Which one you'd choose and why.\n\nApps, their prices and availability in Russia change often — note that this needs to be checked.\n\nReply in Russian."
    },
    "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t80",
+   "n": 80,
+   "title": "Тревога накрыла прямо сейчас",
+   "desc": "Спокойное сопровождение шаг за шагом, чтобы вернуться в «здесь и сейчас»: дыхание и заземление, без лишних слов.",
+   "format": "text",
+   "spheres": [
+    "psy"
+   ],
+   "tasks": [
+    "practice"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Мне сейчас очень тревожно, и я хочу немного успокоиться.\n\nЧто происходит: [что происходит: сердце колотится, мысли скачут, не могу сосредоточиться]\nГде я сейчас: [где я: дома / на работе / в транспорте]\n\nПроведи меня через короткое упражнение, чтобы вернуться в настоящий момент.\n- Пиши коротко и спокойно, по одному шагу за раз, и жди, пока я отвечу «готово» или опишу, что чувствую.\n- Начни с медленного дыхания, потом — заземление через органы чувств (что я вижу, слышу, чего касаюсь).\n- Не анализируй причины тревоги и не давай советов на жизнь — сейчас задача только успокоиться.\n- В конце спроси, как я себя чувствую по шкале от 0 до 10, и если стало легче, предложи одно маленькое доброе действие для себя.\n\nЕсли приступы тревоги повторяются часто, в конце мягко скажи, что с этим стоит обратиться к специалисту.\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "I feel very anxious right now and want to calm down a little.\n\nWhat's happening: [что происходит: сердце колотится, мысли скачут, не могу сосредоточиться]\nWhere I am: [где я: дома / на работе / в транспорте]\n\nGuide me through a short exercise to come back to the present moment.\n- Write briefly and calmly, one step at a time, and wait until I reply \"готово\" or describe how I feel.\n- Start with slow breathing, then grounding through the senses (what I see, hear, touch).\n- Don't analyze the causes of the anxiety and don't give life advice — right now the only goal is to calm down.\n- At the end, ask how I feel on a scale from 0 to 10, and if it got easier, suggest one small kind thing to do for myself.\n\nIf anxiety attacks happen often, gently say at the end that it's worth seeing a specialist.\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t81",
+   "n": 81,
+   "title": "Разобрать тревожную мысль",
+   "desc": "Дневник мыслей по методу когнитивно-поведенческой терапии: отделить факты от страхов и найти более реалистичный взгляд.",
+   "format": "text",
+   "spheres": [
+    "psy"
+   ],
+   "tasks": [
+    "analyze"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Помоги мне разобрать мысль, которая не даёт покоя, по методу дневника мыслей из когнитивно-поведенческой терапии.\n\nСитуация: [ситуация: начальник не ответил на моё сообщение]\nМысль, которая пришла: [мысль: он недоволен моей работой, меня уволят]\nЧто я чувствую и насколько сильно (0–100): [чувства: тревога 80]\n\nВеди меня по шагам, задавая вопросы по одному и дожидаясь ответа:\n1. Какие факты говорят в пользу этой мысли?\n2. Какие факты говорят против неё?\n3. Есть ли тут типичные «ловушки мышления» (катастрофизация, чтение мыслей, всё-или-ничего)? Объясни простыми словами, если заметишь.\n4. Как бы я посмотрел на это, если бы то же самое случилось с другом?\n5. Какая мысль будет более взвешенной и реалистичной?\n6. Как изменилась сила чувства (0–100) и что я могу сделать дальше?\n\nНе переубеждай меня и не говори «всё будет хорошо». Помогай прийти к выводу самому.\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "Help me work through a thought that won't leave me alone, using the thought record method from cognitive behavioral therapy.\n\nSituation: [ситуация: начальник не ответил на моё сообщение]\nThe thought that came up: [мысль: он недоволен моей работой, меня уволят]\nWhat I feel and how strongly (0–100): [чувства: тревога 80]\n\nGuide me step by step, asking one question at a time and waiting for my answer:\n1. What facts support this thought?\n2. What facts go against it?\n3. Are there typical \"thinking traps\" here (catastrophizing, mind reading, all-or-nothing)? Explain in simple words if you notice any.\n4. How would I see this if the same thing happened to a friend?\n5. What would be a more balanced, realistic thought?\n6. How has the strength of the feeling (0–100) changed, and what can I do next?\n\nDon't try to talk me out of it and don't say \"everything will be fine\". Help me reach the conclusion myself.\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t82",
+   "n": 82,
+   "title": "Похоже на выгорание",
+   "desc": "Разобраться, что забирает силы, а что их даёт, и найти изменения, которые реально сделать.",
+   "format": "text",
+   "spheres": [
+    "psy"
+   ],
+   "tasks": [
+    "analyze",
+    "plan"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Мне кажется, я выгорел, и хочу понять, что с этим делать.\n\nЧто со мной: [что со мной: утром не хочу вставать, всё раздражает, работа не радует, постоянно устаю]\nКак давно: [как давно: месяца три]\nЧто сейчас в жизни: [обстоятельства: много работы, мало сна, почти не вижусь с друзьями]\n\n1. Задай мне по одному 5–6 вопросов, чтобы понять, что забирает у меня больше всего сил, а что восстанавливает.\n2. Помоги составить два списка: «что меня истощает» и «что даёт силы» — по моим ответам.\n3. Предложи 3 небольших изменения на ближайшие 2 недели, которые реально сделать в моих обстоятельствах, а не «уволиться и уехать на Бали».\n4. Подскажи, как понять, что само не проходит и пора к специалисту или врачу (например, если состояние держится неделями или мешает жить).\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "I think I'm burned out and want to understand what to do about it.\n\nWhat's going on with me: [что со мной: утром не хочу вставать, всё раздражает, работа не радует, постоянно устаю]\nFor how long: [как давно: месяца три]\nWhat's happening in my life: [обстоятельства: много работы, мало сна, почти не вижусь с друзьями]\n\n1. Ask me 5–6 questions, one at a time, to understand what drains my energy most and what restores it.\n2. Help me make two lists based on my answers: \"what drains me\" and \"what gives me energy\".\n3. Suggest 3 small changes for the next 2 weeks that are realistic in my circumstances — not \"quit and move to Bali\".\n4. Tell me how to recognize that it's not going away on its own and it's time to see a specialist or a doctor (for example, if it lasts for weeks or gets in the way of daily life).\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t83",
+   "n": 83,
+   "title": "Не могу заставить себя начать",
+   "desc": "Понять, что на самом деле мешает (страх, неясность, перфекционизм, усталость), и сделать первый шаг на 5 минут.",
+   "format": "text",
+   "spheres": [
+    "psy"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Я давно откладываю важное дело и не могу себя заставить.\n\nЧто откладываю: [дело: доделать портфолио]\nКак давно: [срок: второй месяц]\nЧто чувствую, когда думаю об этом: [чувства: тяжесть, хочется отвлечься на телефон]\n\n1. Задай мне по одному 3–4 вопроса, чтобы понять, что мешает на самом деле: страх результата, непонятно с чего начать, задача слишком большая, перфекционизм или просто нет сил.\n2. Назови, что, по-твоему, мешает больше всего, и объясни, почему так бывает — без упрёков в лени.\n3. Разбей дело на шаги, где первый занимает не больше 5 минут.\n4. Помоги договориться с собой: когда именно я сделаю первый шаг и что сделаю, если снова захочется отложить.\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "I've been putting off something important for a long time and can't make myself start.\n\nWhat I'm putting off: [дело: доделать портфолио]\nFor how long: [срок: второй месяц]\nWhat I feel when I think about it: [чувства: тяжесть, хочется отвлечься на телефон]\n\n1. Ask me 3–4 questions, one at a time, to understand what's really in the way: fear of the result, not knowing where to start, the task being too big, perfectionism, or simply no energy.\n2. Name what you think is getting in the way most, and explain why this happens — without calling me lazy.\n3. Break the task into steps where the first one takes no more than 5 minutes.\n4. Help me make a deal with myself: exactly when I'll take the first step, and what I'll do if I feel like putting it off again.\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t84",
+   "n": 84,
+   "title": "Приглушить внутреннего критика",
+   "desc": "Переписать жёсткий внутренний голос в поддерживающий — честный, но без унижения. Техника самосострадания.",
+   "format": "text",
+   "spheres": [
+    "psy"
+   ],
+   "tasks": [
+    "improve"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Я постоянно себя ругаю, и хочу научиться говорить с собой по-другому.\n\nЧто произошло: [ситуация: ошибся в отчёте, начальник заметил]\nЧто я себе говорю: [внутренний голос: «ты ни на что не способен, вечно всё портишь»]\n\n1. Покажи, чем этот внутренний голос несправедлив: где преувеличение, где обобщение.\n2. Перепиши мои слова так, как сказал бы мудрый и добрый друг — честно признавая ошибку, но без унижения.\n3. Объясни простыми словами, почему самокритика обычно не помогает стать лучше, а поддержка — помогает.\n4. Дай короткую фразу, которую я могу говорить себе в похожих ситуациях.\n\nНе превращай это в «ты идеален, ты ни в чём не виноват» — мне нужна честная поддержка.\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "I constantly beat myself up, and I want to learn to talk to myself differently.\n\nWhat happened: [ситуация: ошибся в отчёте, начальник заметил]\nWhat I tell myself: [внутренний голос: «ты ни на что не способен, вечно всё портишь»]\n\n1. Show me how this inner voice is unfair: where it exaggerates, where it overgeneralizes.\n2. Rewrite my words the way a wise and kind friend would say them — honestly admitting the mistake, but without humiliation.\n3. Explain in simple words why self-criticism usually doesn't help us get better, while support does.\n4. Give me a short phrase I can tell myself in similar situations.\n\nDon't turn it into \"you're perfect, it's not your fault\" — I need honest support.\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t85",
+   "n": 85,
+   "title": "Увидеть себя объективнее",
+   "desc": "«досье» ваших реальных достижений и качеств — для дней, когда кажется, что вы ничего не стоите.",
+   "format": "text",
+   "spheres": [
+    "psy"
+   ],
+   "tasks": [
+    "analyze"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Мне кажется, что я ничего не добился и ничего из себя не представляю. Помоги посмотреть на себя объективнее.\n\nСколько мне лет и чем занимаюсь: [о себе: 27 лет, дизайнер]\nЧто я думаю о себе: [мысли: все вокруг успешнее, я топчусь на месте]\n\n1. Задай мне по одному 6–8 вопросов о том, что я сделал за последние годы: трудности, которые пережил, чему научился, кому помог, что у меня получается.\n2. По моим ответам собери «досье»: достижения, навыки, качества — только то, что я сам рассказал, без выдумок и без лести.\n3. Отметь, где я обесцениваю себя, сравнивая с другими.\n4. Предложи простую привычку, чтобы замечать свои результаты, а не только промахи.\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "I feel like I haven't achieved anything and I'm nothing special. Help me see myself more objectively.\n\nMy age and what I do: [о себе: 27 лет, дизайнер]\nWhat I think about myself: [мысли: все вокруг успешнее, я топчусь на месте]\n\n1. Ask me 6–8 questions, one at a time, about what I've done in recent years: difficulties I've got through, what I've learned, who I've helped, what I'm good at.\n2. From my answers, put together a \"file\": achievements, skills, qualities — only what I told you, no inventions and no flattery.\n3. Point out where I devalue myself by comparing myself to others.\n4. Suggest a simple habit for noticing my results, not just my failures.\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t86",
+   "n": 86,
+   "title": "Накрыло злостью",
+   "desc": "Спокойно выпустить пар и понять, что стоит за злостью: какая граница нарушена или какая потребность не удовлетворена.",
+   "format": "text",
+   "spheres": [
+    "psy"
+   ],
+   "tasks": [
+    "analyze"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Я очень зол и хочу разобраться, прежде чем что-то сказать или сделать.\n\nЧто случилось: [ситуация: друг опять опоздал на час и даже не извинился]\nНа кого или на что злюсь: [на кого: на друга и немного на себя]\n\n1. Сначала дай мне возможность выговориться: задай один открытый вопрос и выслушай.\n2. Потом помоги понять, что стоит за злостью: какая моя граница нарушена или чего мне не хватает (уважения, справедливости, внимания).\n3. Помоги отделить: что в ситуации — факт, а что я додумываю.\n4. Предложи, как выразить это человеку спокойно, когда я остыну, — одной-двумя фразами.\n5. Подскажи 2–3 способа безопасно сбросить напряжение прямо сейчас.\n\nНе говори мне «не злись» — злость нормальна. Помоги с ней разобраться.\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "I'm really angry and want to sort it out before I say or do something.\n\nWhat happened: [ситуация: друг опять опоздал на час и даже не извинился]\nWho or what I'm angry at: [на кого: на друга и немного на себя]\n\n1. First let me vent: ask one open question and listen.\n2. Then help me understand what's behind the anger: which of my boundaries was crossed or what I'm missing (respect, fairness, attention).\n3. Help me separate what is fact in this situation from what I'm assuming.\n4. Suggest how to express this to the person calmly once I've cooled down — in one or two sentences.\n5. Suggest 2–3 safe ways to release the tension right now.\n\nDon't tell me \"don't be angry\" — anger is normal. Help me deal with it.\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t87",
+   "n": 87,
+   "title": "Одиноко",
+   "desc": "Бережный разговор и маленькие реальные шаги к общению — без «просто сходи куда-нибудь».",
+   "format": "text",
+   "spheres": [
+    "psy"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Мне одиноко, и я хочу что-то с этим сделать.\n\nМоя ситуация: [ситуация: переехал в новый город полгода назад, друзей здесь нет]\nЧто мне сложно: [сложности: не знаю, с чего начать, стесняюсь]\nЧто мне интересно: [интересы: настолки, кино, прогулки]\n\n1. Задай мне по одному 3–4 вопроса, чтобы понять, какого общения мне не хватает и что уже есть в жизни.\n2. Предложи 5 маленьких шагов — от самого простого (написать старому знакомому) до более смелых — с учётом моих интересов и того, что я стесняюсь.\n3. Помоги выбрать один шаг на эту неделю и подготовиться к нему.\n4. Подскажи, что делать, если первая попытка не сработает.\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "I feel lonely, and I want to do something about it.\n\nMy situation: [ситуация: переехал в новый город полгода назад, друзей здесь нет]\nWhat's hard for me: [сложности: не знаю, с чего начать, стесняюсь]\nWhat I'm interested in: [интересы: настолки, кино, прогулки]\n\n1. Ask me 3–4 questions, one at a time, to understand what kind of connection I'm missing and what I already have in my life.\n2. Suggest 5 small steps — from the simplest (message an old acquaintance) to braver ones — taking into account my interests and my shyness.\n3. Help me choose one step for this week and prepare for it.\n4. Tell me what to do if the first attempt doesn't work out.\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t88",
+   "n": 88,
+   "title": "Письмо тому, кого нет рядом",
+   "desc": "Бережная помощь в горе или расставании — написать неотправленное письмо, сказать то, что не успели.",
+   "format": "text",
+   "spheres": [
+    "psy"
+   ],
+   "tasks": [
+    "write"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Я хочу написать письмо, которое никогда не отправлю. Это помогает прожить то, что не успел сказать.\n\nКому: [кому: бабушке, которой не стало весной / человеку, с которым мы расстались]\nЧто я чувствую: [чувства: тоска, вина, благодарность]\n\nНе пиши письмо за меня. Вместо этого:\n1. Помоги начать: задай мне по одному несколько мягких вопросов — что я хочу сказать, за что благодарен, о чём жалею, что хочу пожелать.\n2. Собери мои ответы в письмо моими словами, лишь немного выровняв текст.\n3. Не торопи меня и не говори, как я «должен» себя чувствовать.\n\nЕсли горе очень тяжёлое или не становится легче месяцами, мягко скажи, что поддержка психолога или близких может помочь.\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "I want to write a letter that I will never send. It helps to process what I didn't get to say.\n\nTo whom: [кому: бабушке, которой не стало весной / человеку, с которым мы расстались]\nWhat I feel: [чувства: тоска, вина, благодарность]\n\nDon't write the letter for me. Instead:\n1. Help me begin: ask me some gentle questions, one at a time — what I want to say, what I'm grateful for, what I regret, what I want to wish.\n2. Put my answers together into a letter in my own words, only slightly smoothing the text.\n3. Don't rush me and don't tell me how I \"should\" feel.\n\nIf the grief is very heavy or doesn't ease for months, gently say that support from a psychologist or loved ones can help.\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t89",
+   "n": 89,
+   "title": "Подготовиться к первой встрече с психологом",
+   "desc": "Как выбрать специалиста, о чём рассказать на первой встрече и какие вопросы задать, чтобы понять, ваш ли это человек.",
+   "format": "text",
+   "spheres": [
+    "psy"
+   ],
+   "tasks": [
+    "plan"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Я хочу пойти к психологу впервые и не знаю, с чего начать.\n\nС чем хочу прийти: [запрос: постоянная тревога, плохо сплю]\nЧто меня останавливает: [сомнения: страшно, не знаю, как выбрать, дорого]\nФормат: [формат: онлайн или очно, бюджет до 3000 за встречу]\n\n1. Объясни простыми словами, чем отличаются психолог, психотерапевт и психиатр и к кому с чем идут.\n2. Подскажи, на что смотреть при выборе специалиста (образование, подход, отзывы) и какие тревожные сигналы должны насторожить.\n3. Помоги сформулировать мой запрос в 3–4 предложениях для первой встречи.\n4. Составь список вопросов, которые стоит задать специалисту на первой встрече.\n5. Расскажи, чего ожидать от первых встреч и что нормально, если с первым специалистом не сложилось.\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "I want to see a psychologist for the first time and don't know where to start.\n\nWhat I want to work on: [запрос: постоянная тревога, плохо сплю]\nWhat's stopping me: [сомнения: страшно, не знаю, как выбрать, дорого]\nFormat: [формат: онлайн или очно, бюджет до 3000 за встречу]\n\n1. Explain in simple words the difference between a psychologist, a psychotherapist and a psychiatrist in Russia, and who to go to with what.\n2. Tell me what to look for when choosing a specialist (education, approach, reviews) and which red flags should make me cautious.\n3. Help me put my request into 3–4 sentences for the first session.\n4. Make a list of questions worth asking the specialist at the first session.\n5. Tell me what to expect from the first sessions, and that it's normal if the first specialist isn't the right fit.\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t90",
+   "n": 90,
+   "title": "Разобраться в повторяющемся сценарии",
+   "desc": "Увидеть, какой сценарий повторяется в отношениях, работе или дружбе, — без ярлыков на себя и других.",
+   "format": "text",
+   "spheres": [
+    "psy"
+   ],
+   "tasks": [
+    "analyze"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Мне кажется, в моей жизни повторяется один и тот же сценарий, и я хочу его понять.\n\nЧто повторяется: [сценарий: в каждых отношениях через полгода начинаю отдаляться]\nПримеры из жизни: [примеры: опишите 2–3 случая]\n\n1. Задай мне по одному 4–5 вопросов об этих ситуациях: что происходило до, что я чувствовал, как реагировал, чем заканчивалось.\n2. Помоги найти общее между случаями: что запускает сценарий, какие мысли и чувства появляются, что я делаю.\n3. Предложи 1–2 гипотезы, почему так может быть, — именно как гипотезы, а не как вывод.\n4. Что я могу попробовать сделать иначе в следующий раз, в момент, когда сценарий запускается.\n\nНе ставь ярлыков ни мне, ни другим людям (никаких «нарцисс», «абьюзер», «тревожный тип»). Если тема глубокая, подскажи, что такие вещи лучше разбирать с психологом.\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "I feel like the same scenario keeps repeating in my life, and I want to understand it.\n\nWhat keeps repeating: [сценарий: в каждых отношениях через полгода начинаю отдаляться]\nExamples from my life: [примеры: опишите 2–3 случая]\n\n1. Ask me 4–5 questions, one at a time, about these situations: what happened before, what I felt, how I reacted, how it ended.\n2. Help me find what the cases have in common: what triggers the scenario, which thoughts and feelings appear, what I do.\n3. Offer 1–2 hypotheses about why this might happen — as hypotheses, not conclusions.\n4. What I could try doing differently next time, at the moment the scenario starts.\n\nDon't label me or anyone else (no \"narcissist\", \"abuser\", \"anxious type\"). If the topic runs deep, mention that such things are better explored with a psychologist.\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t91",
+   "n": 91,
+   "title": "Вечерний разбор дня",
+   "desc": "5-минутный дневник эмоций перед сном: заметить, что чувствовал, за что себя похвалить и что отпустить.",
+   "format": "text",
+   "spheres": [
+    "psy"
+   ],
+   "tasks": [
+    "practice"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Давай коротко разберём мой день, как дневник эмоций. Займёт 5 минут.\n\nЗадавай по одному вопросу и жди ответа:\n1. Какое чувство было главным сегодня и в какой момент?\n2. Что сегодня получилось, даже если это мелочь?\n3. Что было трудно и как я с этим справился?\n4. За что я благодарен сегодня — одна вещь?\n5. Что я хочу отпустить и не забирать с собой в завтра?\n\nВ конце коротко и тепло подведи итог моими словами — без пафоса и нравоучений.\nЕсли я несколько дней подряд пишу о подавленности или отсутствии сил, мягко скажи, что об этом стоит поговорить с близкими или специалистом.\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "Let's briefly review my day, like an emotion journal. It will take 5 minutes.\n\nAsk one question at a time and wait for my answer:\n1. What was the main feeling today, and at what moment?\n2. What went well today, even if it's something small?\n3. What was hard, and how did I cope with it?\n4. What am I grateful for today — one thing?\n5. What do I want to let go of and not carry into tomorrow?\n\nAt the end, briefly and warmly sum up in my own words — without pathos or lecturing.\nIf for several days in a row I write about feeling low or having no energy, gently say it's worth talking about it with loved ones or a specialist.\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t92",
+   "n": 92,
+   "title": "Страшно перед важным событием",
+   "desc": "Подготовка к выступлению, экзамену, собеседованию или сложному дню: разобрать страх, план и фраза-якорь на момент волнения.",
+   "format": "text",
+   "spheres": [
+    "psy"
+   ],
+   "tasks": [
+    "plan",
+    "practice"
+   ],
+   "attach": null,
+   "lang": "ru",
+   "prompt": {
+    "ru": "Мне страшно перед важным событием, помоги подготовиться.\n\nСобытие: [событие: выступление перед всем отделом]\nКогда: [когда: через 3 дня]\nЧего больше всего боюсь: [страх: забуду текст и все будут смеяться]\n\n1. Помоги разобрать страх: что самое плохое может случиться, насколько это вероятно и что я сделаю, если это всё-таки произойдёт.\n2. Составь план подготовки на оставшиеся дни.\n3. Дай короткое упражнение, чтобы успокоиться прямо перед событием (дыхание, 1–2 минуты).\n4. Придумай со мной одну фразу-якорь, которую я скажу себе в момент волнения.\n5. Если хочешь — предложи отрепетировать: сыграй слушателя или экзаменатора, по одной реплике.\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "I'm scared before an important event, help me prepare.\n\nThe event: [событие: выступление перед всем отделом]\nWhen: [когда: через 3 дня]\nWhat I fear most: [страх: забуду текст и все будут смеяться]\n\n1. Help me break down the fear: what's the worst that could happen, how likely it is, and what I'll do if it does happen.\n2. Make a preparation plan for the remaining days.\n3. Give me a short exercise to calm down right before the event (breathing, 1–2 minutes).\n4. Come up with one anchor phrase together with me that I'll tell myself in the moment of nerves.\n5. If I want — offer to rehearse: play a listener or an examiner, one message at a time.\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [],
+   "models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+   ]
+  },
+  {
+   "id": "t93",
+   "n": 93,
+   "title": "Разбор моих записей: дневник, заметки, мысли",
+   "desc": "Взгляд со стороны на ваши записи за недели или месяцы: повторяющиеся темы, что влияет на настроение, что помогает, как вы менялись. Каждый вывод — со ссылкой на конкретные записи.",
+   "format": "text",
+   "spheres": [
+    "psy",
+    "mind"
+   ],
+   "tasks": [
+    "analyze"
+   ],
+   "attach": "Свои записи файлом (текст, PDF, экспорт из заметок) или вставкой в сообщение. Лучше с датами.",
+   "lang": "ru",
+   "prompt": {
+    "ru": "Я прикладываю свои личные записи: [что за записи: дневник за последние полгода / заметки из телефона / мысли, которые записывал перед сном].\nХочу, чтобы ты внимательно их прочитал и дал взгляд со стороны.\n\nЧто мне сейчас важнее всего понять: [мой вопрос: почему я так часто чувствую себя без сил / что вообще происходит со мной последние месяцы]\nКакой формат нужен: [формат: общий анализ / короткий комментарий к каждой записи / и то и другое]\n\nКак работать:\n1. Сначала скажи, какой период охватывают записи и все ли ты смог прочитать. Если записей слишком много — честно предупреди, что учёл не всё.\n2. Найди повторяющиеся темы, чувства и мысли: о чём я пишу чаще всего.\n3. Покажи связи: что обычно происходит перед хорошими днями, а что — перед тяжёлыми (люди, события, сон, работа, привычки).\n4. Отметь, что мне помогает, даже если я сам этого не замечаю.\n5. Покажи, как менялось моё состояние и взгляды со временем.\n6. Назови 1–2 слепых пятна: то, что видно из записей, но о чём я, похоже, сам не задумываюсь. Говори честно, но бережно.\n7. Каждый вывод подтверждай конкретной записью (дата и короткая цитата), чтобы я мог проверить. Не додумывай того, чего в записях нет.\n8. В конце — 2–3 вопроса мне для размышления и одно небольшое действие на ближайшую неделю.\n\nНичего не пересказывай целиком и не оценивай меня как человека. Никаких ярлыков мне и людям, которые упоминаются в записях.\n\nТы не психолог и не заменяешь его. Не ставь мне диагнозов. Если я напишу о мыслях о суициде, о том, чтобы навредить себе, или о том, что мне угрожает опасность, — остановись, ответь с заботой и прямо посоветуй позвонить 112 или на линию психологической помощи в моей стране, а также связаться с близким человеком.",
+    "en": "I'm attaching my personal notes: [что за записи: дневник за последние полгода / заметки из телефона / мысли, которые записывал перед сном].\nI want you to read them carefully and give me an outside view.\n\nWhat matters most for me to understand right now: [мой вопрос: почему я так часто чувствую себя без сил / что вообще происходит со мной последние месяцы]\nThe format I need: [формат: общий анализ / короткий комментарий к каждой записи / и то и другое]\n\nHow to work:\n1. First tell me what period the notes cover and whether you were able to read all of them. If there are too many, honestly warn me that you didn't take everything into account.\n2. Find recurring themes, feelings and thoughts: what I write about most often.\n3. Show connections: what usually happens before good days and before hard ones (people, events, sleep, work, habits).\n4. Point out what helps me, even if I don't notice it myself.\n5. Show how my state and views changed over time.\n6. Name 1–2 blind spots: things visible in the notes that I don't seem to think about. Be honest, but gentle.\n7. Support every conclusion with a specific entry (date and a short quote) so I can check it. Don't infer anything that isn't in the notes.\n8. At the end — 2–3 questions for me to reflect on and one small action for the coming week.\n\nDon't retell everything and don't judge me as a person. No labels for me or for the people mentioned in the notes.\n\nYou are not a psychologist and don't replace one. Don't diagnose me. If I mention thoughts of suicide, of hurting myself, or that I'm in danger, stop, respond with care, and directly advise me to call 112 or a mental health crisis line in my country, and to reach out to someone close to me.\n\nReply in Russian."
+   },
+   "fix": [
+    "Записей очень много: разбейте на части по месяцам и попросите «Сначала проанализируй этот период, потом я пришлю следующий, а в конце сравни».",
+    "Перед отправкой уберите или замените то, чем не хотите делиться: настоящие имена, адреса, номера телефонов, чужие секреты. Можно заменить имена на «А.», «коллега», «мама».",
+    "Посмотрите настройки приватности в своей нейросети: во многих можно запретить использовать ваши переписки для обучения."
+   ],
    "models": [
     "ChatGPT",
     "Claude",
@@ -2594,5 +3282,28 @@
    ],
    "lang": "en"
   }
+ ],
+ "photoTags": [
+  "фото",
+  "фотография",
+  "картинка",
+  "изображение",
+  "селфи",
+  "портрет",
+  "аватарка",
+  "ретушь",
+  "реставрация",
+  "старое",
+  "фон",
+  "убрать",
+  "примерка",
+  "товар",
+  "чёрно-белое",
+  "раскрасить",
+  "плёнка",
+  "nano",
+  "banana",
+  "chatgpt",
+  "gemini"
  ]
 }

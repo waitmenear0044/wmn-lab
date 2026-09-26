@@ -41,13 +41,13 @@
     if (key === 'readme') return readme();
     if (key === 'search') return search();
     if (key === 'trash') return trash();
-    if (key === 'photo') return explorer({ id: 'photo', title: PHOTO.title, icon: 'photo', list: P.filter(p => p.format === 'photo') });
+    if (key === 'photo') return explorer({ id: 'photo', title: PHOTO.title, icon: 'photo', list: P.filter(p => p.format === 'photo'), tags: data.photoTags || [] });
     const id = key.split(':')[1], s = sph[id];
-    explorer({ id, title: s.title, icon: id, list: P.filter(p => p.spheres.includes(id)) });
+    explorer({ id, title: s.title, icon: id, list: P.filter(p => p.spheres.includes(id)), tags: s.tags || [] });
   }
 
   /* ---------------- Проводник: папки + оглавление ---------------- */
-  function explorer({ id, title, icon, list }) {
+  function explorer({ id, title, icon, list, tags = [] }) {
     // папки = задачи, в порядке из prompts.json
     const folders = data.tasks.map(t => ({ ...t, items: list.filter(p => p.tasks[0] === t.id) })).filter(f => f.items.length);
     const num = new Map(); let k = 0;
@@ -66,6 +66,7 @@
               <button class="btn98" data-back ${f ? '' : 'disabled'}>← Назад</button>
               <div class="ex-addr" title="${esc(path)}">${esc(path)}</div>
             </div>
+            ${!f && tags.length ? `<p class="ex-tags">Здесь про: ${tags.slice(0, 14).map(esc).join(', ')}…</p>` : ''}
             ${f ? `
               <div class="ex-icons">${f.items.map(p => fileIcon(p, num.get(p.id))).join('')}</div>
               <h3 class="ex-h">Оглавление папки «${esc(f.title)}»</h3>
@@ -167,28 +168,58 @@
     });
   }
 
-  /* ---------------- Поиск ---------------- */
+  /* ---------------- Поиск ----------------
+     Понимает разные формы слов (ребёнок / ребенку / детям — по общей основе), «ё» = «е».
+     Каждое слово запроса должно найтись; выше — совпадения в названии, ниже — в тэгах сферы и тексте промпта. */
+  const norm = t => String(t || '').toLowerCase().replace(/ё/g, 'е');
+  const stem = w => w.length > 6 ? w.slice(0, -3) : w.length > 4 ? w.slice(0, -2) : w;
+  const tagsOf = p => (p.format === 'photo' ? (data.photoTags || []) : []).concat(...p.spheres.map(x => sph[x]?.tags || []));
+  const INDEX = P.map(p => ({ p, f: [
+    [norm(p.title), 6],
+    [norm(p.desc), 3],
+    [norm(tagsOf(p).join(' ') + ' ' + p.spheres.map(x => sph[x]?.title).join(' ') + ' ' + p.tasks.map(x => tsk[x]?.title).join(' ')), 2],
+    [norm((p.attach || '') + ' ' + (p.prompt.ru || '')), 1],
+  ] }));
+  function find(q) {
+    const words = norm(q).split(/[^a-zа-я0-9]+/).filter(w => w.length > 1).map(stem);
+    if (!words.length) return [];
+    return INDEX.map(({ p, f }) => {
+      let score = 0;
+      for (const w of words) {
+        const best = Math.max(0, ...f.map(([txt, wt]) => txt.includes(w) ? wt : 0));
+        if (!best) return null;                                        // каждое слово должно найтись
+        score += best;
+      }
+      return { p, score };
+    }).filter(Boolean).sort((a, b) => b.score - a.score).map(x => x.p);
+  }
+
   function search() {
     WMN.window({
       id: 'search', title: 'Найти: промпты', icon: img('search', 'tb-ico'), width: 520, big: true,
       build(body) {
+        const hints = ['резюме', 'тревога', 'старое фото', 'ребёнок', 'кредит', 'начальник', 'переезд', 'выгорание'];
         body.innerHTML = `
-          <div class="sr-box"><label>Искать:</label><input type="text" id="srq" placeholder="например: резюме, старое фото, ребёнок" autocomplete="off"></div>
+          <div class="sr-box"><label for="srq">Искать:</label><input type="text" id="srq" placeholder="опишите задачу своими словами" autocomplete="off"></div>
+          <div class="sr-hints">Например: ${hints.map(h => `<button class="chip" data-hint="${h}">${h}</button>`).join('')}</div>
           <div class="sr-res"></div>`;
         const res = body.querySelector('.sr-res'), q = body.querySelector('#srq');
         const run = () => {
-          const v = q.value.trim().toLowerCase();
-          if (v.length < 2) { res.innerHTML = '<p class="muted">Введите хотя бы 2 буквы.</p>'; return; }
-          const found = P.filter(p => [p.title, p.desc, p.attach, ...p.tasks.map(x => tsk[x]?.title), ...p.spheres.map(x => sph[x]?.title)]
-            .join(' ').toLowerCase().includes(v));
+          const v = q.value.trim();
+          if (v.length < 2) { res.innerHTML = '<p class="muted">Введите хотя бы 2 буквы или нажмите на пример выше.</p>'; return; }
+          const found = find(v);
           res.innerHTML = found.length
             ? `<p class="muted">Найдено: ${found.length}</p><ul class="sr-list">${found.map(p => `
                 <li><a href="#" data-prompt="${p.id}" onclick="return false">${img(p.format === 'photo' ? 'file-photo' : 'file-text', 'toc-ico')}${esc(p.title)}</a>
-                <div class="toc-d">${p.spheres.map(x => sph[x]?.title).join(', ')}</div></li>`).join('')}</ul>`
-            : '<p class="muted">Ничего не нашлось. Попробуйте другое слово.</p>';
+                <div class="toc-d">${esc(p.desc)}</div>
+                <div class="toc-d">${p.spheres.map(x => sph[x]?.title).join(' · ')}</div></li>`).join('')}</ul>`
+            : '<p class="muted">Ничего не нашлось. Попробуйте другое слово или откройте папку нужной сферы.</p>';
         };
         let t = 0; q.addEventListener('input', () => { clearTimeout(t); t = setTimeout(run, 150); });
-        res.addEventListener('click', e => { const a = e.target.closest('[data-prompt]'); if (a) openPrompt(a.dataset.prompt); });
+        body.addEventListener('click', e => {
+          const h = e.target.closest('[data-hint]'); if (h) { q.value = h.dataset.hint; run(); return; }
+          const a = e.target.closest('[data-prompt]'); if (a) openPrompt(a.dataset.prompt);
+        });
         run(); setTimeout(() => q.focus(), 50);
       },
     });
