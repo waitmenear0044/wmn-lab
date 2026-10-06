@@ -659,3 +659,21 @@ mark.ph.filled{background:#B8F5B0}
 .bad a{font-size:14px}
 .ex-tags{font-family:var(--ui);font-size:12px;color:var(--muted);margin:0 0 10px;line-height:1.5}
 .sr-hints{display:flex;gap:5px;flex-wrap:wrap;align-items:center;font-family:var(--ui);font-size:12px;margin:0 0 10px}
+
+/* --- Мем-генератор v2: коллаж, раскрывающиеся настройки --- */
+.mode-seg{margin:6px 0 4px}
+.col-list{list-style:none;padding:0;margin:8px 0;display:grid;gap:6px}
+.col-list li{display:flex;align-items:center;gap:8px;padding:4px;background:var(--field-bg);border:1px solid var(--line)}
+.col-list img{width:56px;height:56px;object-fit:cover;border:1px solid var(--line)}
+.col-list span{flex:1;font-family:var(--ui);font-size:14px}
+.col-list .btn98{min-height:28px;padding:2px 9px}
+.col-list .btn98:disabled,#pinBtn:disabled{color:var(--silver-lo);text-shadow:1px 1px 0 var(--silver-hi);cursor:default}
+details.opt{margin:0 0 10px;border:2px groove #d0d0d0;padding:4px 12px}
+details.opt[open]{padding-bottom:10px}
+details.opt summary{cursor:pointer;font-family:var(--ui);font-size:14px;font-weight:bold;color:var(--navy);padding:4px 0}
+.seg .btn98[aria-pressed="true"]{border-color:var(--silver-dk) var(--silver-hi) var(--silver-hi) var(--silver-dk);box-shadow:inset 1px 1px 0 var(--silver-lo);background:var(--pressed);font-weight:bold}
+.size-now,.size-own,.wm-on{font-family:var(--ui);font-size:14px}
+.size-own input{width:64px}
+#wmText{flex:1;min-width:150px}
+.pin-note{font-size:14px;margin:6px 0 0}
+.sticker-note{font-size:13px;margin:4px 0 0}
